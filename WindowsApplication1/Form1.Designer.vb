@@ -22,7 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.ToMain = New System.Windows.Forms.Button()
+        Me.components = New System.ComponentModel.Container()
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.PassKeyCor = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.PassKeyEnter = New MaterialSkin.Controls.MaterialRaisedButton()
@@ -37,16 +37,10 @@ Partial Class Form1
         Me.PassKey1 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.PassField = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.Cancel = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.ToMain = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.SuspendLayout()
-        '
-        'ToMain
-        '
-        Me.ToMain.Location = New System.Drawing.Point(0, 2)
-        Me.ToMain.Name = "ToMain"
-        Me.ToMain.Size = New System.Drawing.Size(75, 23)
-        Me.ToMain.TabIndex = 1
-        Me.ToMain.Text = "ToMain"
-        Me.ToMain.UseVisualStyleBackColor = True
         '
         'MaterialLabel1
         '
@@ -234,11 +228,38 @@ Partial Class Form1
         Me.Cancel.UseVisualStyleBackColor = True
         Me.Cancel.Visible = False
         '
+        'ToMain
+        '
+        Me.ToMain.Depth = 0
+        Me.ToMain.Location = New System.Drawing.Point(204, 291)
+        Me.ToMain.MouseState = MaterialSkin.MouseState.HOVER
+        Me.ToMain.Name = "ToMain"
+        Me.ToMain.Primary = True
+        Me.ToMain.Size = New System.Drawing.Size(271, 83)
+        Me.ToMain.TabIndex = 14
+        Me.ToMain.Text = "Please Swipe Your Card"
+        Me.ToMain.UseVisualStyleBackColor = True
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ProgressBar1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ProgressBar1.Location = New System.Drawing.Point(204, 158)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(271, 23)
+        Me.ProgressBar1.TabIndex = 15
+        Me.ProgressBar1.Visible = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(711, 599)
+        Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.ToMain)
         Me.Controls.Add(Me.MaterialLabel1)
         Me.Controls.Add(Me.Cancel)
@@ -261,7 +282,6 @@ Partial Class Form1
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents ToMain As System.Windows.Forms.Button
     Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents PassKeyCor As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents PassKeyEnter As MaterialSkin.Controls.MaterialRaisedButton
@@ -276,8 +296,8 @@ Partial Class Form1
     Friend WithEvents PassKey1 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents PassField As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents Cancel As MaterialSkin.Controls.MaterialRaisedButton
-
-
-
+    Friend WithEvents ToMain As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents ProgressBar1 As ProgressBar
 
 End Class
