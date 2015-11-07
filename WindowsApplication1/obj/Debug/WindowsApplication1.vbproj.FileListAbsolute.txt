@@ -10,3 +10,15 @@ c:\users\jeremy\documents\visual studio 2015\Projects\WindowsApplication1\Window
 c:\users\jeremy\documents\visual studio 2015\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.exe
 c:\users\jeremy\documents\visual studio 2015\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.xml
 c:\users\jeremy\documents\visual studio 2015\Projects\WindowsApplication1\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\bin\Debug\WindowsApplication1.exe.config
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\obj\Debug\WindowsApplication1.exe
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\obj\Debug\WindowsApplication1.xml
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\obj\Debug\WindowsApplication1.pdb
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\bin\Debug\MaterialSkin.dll
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\obj\Debug\WindowsApplication1.vbprojResolveAssemblyReference.cache
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\obj\Debug\WindowsApplication1.Form1.resources
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\obj\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
