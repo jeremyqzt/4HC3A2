@@ -12,4 +12,24 @@ Public Class Form2
     Private Sub Form2_Closing(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
         Form1.Close()
     End Sub
+
+    Private Sub TransferMB_Click(sender As Object, e As EventArgs) Handles TransferMB.Click
+
+    End Sub
+    Private Sub CheckBalanceB_Click(sender As Object, e As EventArgs) Handles CheckBalanceB.Click
+
+    End Sub
+    Private Sub Deposit_Click(sender As Object, e As EventArgs) Handles DepositB.Click
+
+    End Sub
+
+    Private Sub Withdraw_Click(sender As Object, e As EventArgs) Handles WithdrawB.Click
+        Me.Hide()
+        Withdraw.Show()
+
+    End Sub
+    Private Sub Logout_Click(sender As Object, e As EventArgs) Handles Logout.Click
+        Me.Hide()
+        Form1.Show()
+    End Sub
 End Class

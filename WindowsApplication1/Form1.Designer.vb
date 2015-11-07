@@ -23,6 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.PassKeyCor = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.PassKeyEnter = New MaterialSkin.Controls.MaterialRaisedButton()
@@ -40,6 +41,7 @@ Partial Class Form1
         Me.ToMain = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.Logout = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'MaterialLabel1
@@ -254,11 +256,24 @@ Partial Class Form1
         Me.ProgressBar1.TabIndex = 15
         Me.ProgressBar1.Visible = False
         '
+        'Logout
+        '
+        Me.Logout.BackColor = System.Drawing.Color.SlateGray
+        Me.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Logout.ForeColor = System.Drawing.Color.Black
+        Me.Logout.Image = CType(resources.GetObject("Logout.Image"), System.Drawing.Image)
+        Me.Logout.Location = New System.Drawing.Point(669, 28)
+        Me.Logout.Name = "Logout"
+        Me.Logout.Size = New System.Drawing.Size(30, 30)
+        Me.Logout.TabIndex = 16
+        Me.Logout.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(711, 599)
+        Me.Controls.Add(Me.Logout)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.ToMain)
         Me.Controls.Add(Me.MaterialLabel1)
@@ -299,5 +314,6 @@ Partial Class Form1
     Friend WithEvents ToMain As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents Timer1 As Timer
     Friend WithEvents ProgressBar1 As ProgressBar
+    Friend WithEvents Logout As System.Windows.Forms.Button
 
 End Class

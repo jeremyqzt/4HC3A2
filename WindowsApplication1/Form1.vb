@@ -92,27 +92,34 @@ Public Class Form1
         MaterialLabel1.Show()
         PassKeyEnter.Show()
         Cancel.Show()
+        MaterialLabel1.Text = "Please enter your pin"
         Me.Text = "Welcome Ian"
     End Sub
     Private Sub PassKeyEnter_Click(sender As Object, e As EventArgs) Handles PassKeyEnter.Click
-        PassField.Hide()
-        PassKey1.Hide()
-        PassKey2.Hide()
-        PassKey3.Hide()
-        PassKey4.Hide()
-        PassKey5.Hide()
-        PassKey6.Hide()
-        PassKey7.Hide()
-        PassKey8.Hide()
-        PassKey9.Hide()
-        PassKeyCor.Hide()
-        MaterialLabel1.Text = "Please Wait While We Fetch Your Account Details..."
-        PassKeyEnter.Hide()
-        Cancel.Hide()
+        'If (pinTrack = 4) Then
+        If (True) Then
+            PassField.Hide()
+            PassKey1.Hide()
+            PassKey2.Hide()
+            PassKey3.Hide()
+            PassKey4.Hide()
+            PassKey5.Hide()
+            PassKey6.Hide()
+            PassKey7.Hide()
+            PassKey8.Hide()
+            PassKey9.Hide()
+            PassKeyCor.Hide()
+            MaterialLabel1.Text = "Please Wait While We Fetch Your Account Details..."
+            PassKeyEnter.Hide()
+            Cancel.Hide()
 
-        ProgressBar1.Visible = True
-        ProgressBar1.ForeColor = Color.Blue
-        Timer1.Enabled = True
+            ProgressBar1.Visible = True
+            ProgressBar1.ForeColor = Color.Blue
+            Timer1.Enabled = True
+        Else
+            MsgBox("Pin invalid, please try again")
+        End If
+
 
     End Sub
     Private Sub PassField_Click(sender As Object, e As EventArgs) Handles PassField.Click
@@ -142,11 +149,16 @@ Public Class Form1
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        tick = tick + 1
-        ProgressBar1.Increment(35)
-        If tick > 3 Then
+        'tick = tick + 1
+        'ProgressBar1.Increment(35)
+        'If tick > 3 Then
+        If (True) Then
             Timer1.Enabled = False
             tick = 0
+            ProgressBar1.Visible = False
+            Timer1.Enabled = False
+            MaterialLabel1.Text = ""
+            ToMain.Show()
             Me.Hide()
             Form2.Show()
         End If
