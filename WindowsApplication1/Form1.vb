@@ -9,13 +9,6 @@ Public Class Form1
         SkinManager.ColorScheme = New ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
     End Sub
 
-    Private Sub mainPage_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs)
-        ' Determine whether the key entered is the F1 key. Display help if it is.
-        If e.KeyCode = Keys.Q Then
-            ' Display a pop-up help topic to assist the user.
-            PassKey2.Hide()
-        End If
-    End Sub
 
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles PassKey1.Click
         Call AddStar()
@@ -99,12 +92,18 @@ Public Class Form1
         Me.Text = "Welcome User"
     End Sub
 
-    Private Sub Withdraw_Click(sender As Object, e As EventArgs)
+
+    Private Sub PassKeyEnter_Click(sender As Object, e As EventArgs) Handles PassKeyEnter.Click
+        Me.Visible = False
+        objForm2.ShowDialog()
+    End Sub
+    Private Sub PassField_Click(sender As Object, e As EventArgs) Handles PassField.Click
 
     End Sub
+    Private Sub MaterialLabel1_Click(sender As Object, e As EventArgs) Handles MaterialLabel1.Click
 
-    Private Sub Deposit_Click(sender As Object, e As EventArgs)
-        Throw New NotImplementedException
     End Sub
+    Private Sub Cancel_Click(sender As Object, e As EventArgs) Handles Cancel.Click
 
+    End Sub
 End Class

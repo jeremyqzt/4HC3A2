@@ -22,48 +22,22 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.PassKey1 = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.PassKey2 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.ToMain = New System.Windows.Forms.Button()
-        Me.PassKey3 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
+        Me.PassKeyCor = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.PassKeyEnter = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.PassKey9 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.PassKey8 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.PassKey7 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.PassKey4 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.PassKey5 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.PassKey6 = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.PassKey7 = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.PassKey8 = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.PassKey9 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.PassKey3 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.PassKey2 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.PassKey1 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.PassField = New MaterialSkin.Controls.MaterialSingleLineTextField()
-        Me.PassKeyEnter = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.PassKeyCor = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.Cancel = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.SuspendLayout()
-        '
-        'PassKey1
-        '
-        Me.PassKey1.Depth = 0
-        Me.PassKey1.Location = New System.Drawing.Point(204, 217)
-        Me.PassKey1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.PassKey1.Name = "PassKey1"
-        Me.PassKey1.Primary = True
-        Me.PassKey1.Size = New System.Drawing.Size(72, 68)
-        Me.PassKey1.TabIndex = 0
-        Me.PassKey1.Text = "1"
-        Me.PassKey1.UseVisualStyleBackColor = True
-        Me.PassKey1.Visible = False
-        '
-        'PassKey2
-        '
-        Me.PassKey2.Depth = 0
-        Me.PassKey2.Location = New System.Drawing.Point(304, 217)
-        Me.PassKey2.MouseState = MaterialSkin.MouseState.HOVER
-        Me.PassKey2.Name = "PassKey2"
-        Me.PassKey2.Primary = True
-        Me.PassKey2.Size = New System.Drawing.Size(72, 68)
-        Me.PassKey2.TabIndex = 1
-        Me.PassKey2.Text = "2"
-        Me.PassKey2.UseVisualStyleBackColor = True
-        Me.PassKey2.Visible = False
         '
         'ToMain
         '
@@ -74,18 +48,84 @@ Partial Class Form1
         Me.ToMain.Text = "ToMain"
         Me.ToMain.UseVisualStyleBackColor = True
         '
-        'PassKey3
+        'MaterialLabel1
         '
-        Me.PassKey3.Depth = 0
-        Me.PassKey3.Location = New System.Drawing.Point(403, 217)
-        Me.PassKey3.MouseState = MaterialSkin.MouseState.HOVER
-        Me.PassKey3.Name = "PassKey3"
-        Me.PassKey3.Primary = True
-        Me.PassKey3.Size = New System.Drawing.Size(72, 68)
-        Me.PassKey3.TabIndex = 2
-        Me.PassKey3.Text = "3"
-        Me.PassKey3.UseVisualStyleBackColor = True
-        Me.PassKey3.Visible = False
+        Me.MaterialLabel1.AutoSize = True
+        Me.MaterialLabel1.Depth = 0
+        Me.MaterialLabel1.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.MaterialLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialLabel1.Location = New System.Drawing.Point(200, 112)
+        Me.MaterialLabel1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel1.Name = "MaterialLabel1"
+        Me.MaterialLabel1.Size = New System.Drawing.Size(153, 19)
+        Me.MaterialLabel1.TabIndex = 13
+        Me.MaterialLabel1.Text = "Please Enter Your Pin"
+        Me.MaterialLabel1.Visible = False
+        '
+        'PassKeyCor
+        '
+        Me.PassKeyCor.Depth = 0
+        Me.PassKeyCor.Location = New System.Drawing.Point(204, 484)
+        Me.PassKeyCor.MouseState = MaterialSkin.MouseState.HOVER
+        Me.PassKeyCor.Name = "PassKeyCor"
+        Me.PassKeyCor.Primary = True
+        Me.PassKeyCor.Size = New System.Drawing.Size(72, 68)
+        Me.PassKeyCor.TabIndex = 11
+        Me.PassKeyCor.Text = "<-"
+        Me.PassKeyCor.UseVisualStyleBackColor = True
+        Me.PassKeyCor.Visible = False
+        '
+        'PassKeyEnter
+        '
+        Me.PassKeyEnter.Depth = 0
+        Me.PassKeyEnter.Location = New System.Drawing.Point(304, 484)
+        Me.PassKeyEnter.MouseState = MaterialSkin.MouseState.HOVER
+        Me.PassKeyEnter.Name = "PassKeyEnter"
+        Me.PassKeyEnter.Primary = True
+        Me.PassKeyEnter.Size = New System.Drawing.Size(171, 68)
+        Me.PassKeyEnter.TabIndex = 10
+        Me.PassKeyEnter.Text = "Enter"
+        Me.PassKeyEnter.UseVisualStyleBackColor = True
+        Me.PassKeyEnter.Visible = False
+        '
+        'PassKey9
+        '
+        Me.PassKey9.Depth = 0
+        Me.PassKey9.Location = New System.Drawing.Point(403, 398)
+        Me.PassKey9.MouseState = MaterialSkin.MouseState.HOVER
+        Me.PassKey9.Name = "PassKey9"
+        Me.PassKey9.Primary = True
+        Me.PassKey9.Size = New System.Drawing.Size(72, 68)
+        Me.PassKey9.TabIndex = 8
+        Me.PassKey9.Text = "9"
+        Me.PassKey9.UseVisualStyleBackColor = True
+        Me.PassKey9.Visible = False
+        '
+        'PassKey8
+        '
+        Me.PassKey8.Depth = 0
+        Me.PassKey8.Location = New System.Drawing.Point(304, 398)
+        Me.PassKey8.MouseState = MaterialSkin.MouseState.HOVER
+        Me.PassKey8.Name = "PassKey8"
+        Me.PassKey8.Primary = True
+        Me.PassKey8.Size = New System.Drawing.Size(72, 68)
+        Me.PassKey8.TabIndex = 7
+        Me.PassKey8.Text = "8"
+        Me.PassKey8.UseVisualStyleBackColor = True
+        Me.PassKey8.Visible = False
+        '
+        'PassKey7
+        '
+        Me.PassKey7.Depth = 0
+        Me.PassKey7.Location = New System.Drawing.Point(204, 398)
+        Me.PassKey7.MouseState = MaterialSkin.MouseState.HOVER
+        Me.PassKey7.Name = "PassKey7"
+        Me.PassKey7.Primary = True
+        Me.PassKey7.Size = New System.Drawing.Size(72, 68)
+        Me.PassKey7.TabIndex = 6
+        Me.PassKey7.Text = "7"
+        Me.PassKey7.UseVisualStyleBackColor = True
+        Me.PassKey7.Visible = False
         '
         'PassKey4
         '
@@ -126,44 +166,44 @@ Partial Class Form1
         Me.PassKey6.UseVisualStyleBackColor = True
         Me.PassKey6.Visible = False
         '
-        'PassKey7
+        'PassKey3
         '
-        Me.PassKey7.Depth = 0
-        Me.PassKey7.Location = New System.Drawing.Point(204, 398)
-        Me.PassKey7.MouseState = MaterialSkin.MouseState.HOVER
-        Me.PassKey7.Name = "PassKey7"
-        Me.PassKey7.Primary = True
-        Me.PassKey7.Size = New System.Drawing.Size(72, 68)
-        Me.PassKey7.TabIndex = 6
-        Me.PassKey7.Text = "7"
-        Me.PassKey7.UseVisualStyleBackColor = True
-        Me.PassKey7.Visible = False
+        Me.PassKey3.Depth = 0
+        Me.PassKey3.Location = New System.Drawing.Point(403, 217)
+        Me.PassKey3.MouseState = MaterialSkin.MouseState.HOVER
+        Me.PassKey3.Name = "PassKey3"
+        Me.PassKey3.Primary = True
+        Me.PassKey3.Size = New System.Drawing.Size(72, 68)
+        Me.PassKey3.TabIndex = 2
+        Me.PassKey3.Text = "3"
+        Me.PassKey3.UseVisualStyleBackColor = True
+        Me.PassKey3.Visible = False
         '
-        'PassKey8
+        'PassKey2
         '
-        Me.PassKey8.Depth = 0
-        Me.PassKey8.Location = New System.Drawing.Point(304, 398)
-        Me.PassKey8.MouseState = MaterialSkin.MouseState.HOVER
-        Me.PassKey8.Name = "PassKey8"
-        Me.PassKey8.Primary = True
-        Me.PassKey8.Size = New System.Drawing.Size(72, 68)
-        Me.PassKey8.TabIndex = 7
-        Me.PassKey8.Text = "8"
-        Me.PassKey8.UseVisualStyleBackColor = True
-        Me.PassKey8.Visible = False
+        Me.PassKey2.Depth = 0
+        Me.PassKey2.Location = New System.Drawing.Point(304, 217)
+        Me.PassKey2.MouseState = MaterialSkin.MouseState.HOVER
+        Me.PassKey2.Name = "PassKey2"
+        Me.PassKey2.Primary = True
+        Me.PassKey2.Size = New System.Drawing.Size(72, 68)
+        Me.PassKey2.TabIndex = 1
+        Me.PassKey2.Text = "2"
+        Me.PassKey2.UseVisualStyleBackColor = True
+        Me.PassKey2.Visible = False
         '
-        'PassKey9
+        'PassKey1
         '
-        Me.PassKey9.Depth = 0
-        Me.PassKey9.Location = New System.Drawing.Point(403, 398)
-        Me.PassKey9.MouseState = MaterialSkin.MouseState.HOVER
-        Me.PassKey9.Name = "PassKey9"
-        Me.PassKey9.Primary = True
-        Me.PassKey9.Size = New System.Drawing.Size(72, 68)
-        Me.PassKey9.TabIndex = 8
-        Me.PassKey9.Text = "9"
-        Me.PassKey9.UseVisualStyleBackColor = True
-        Me.PassKey9.Visible = False
+        Me.PassKey1.Depth = 0
+        Me.PassKey1.Location = New System.Drawing.Point(204, 217)
+        Me.PassKey1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.PassKey1.Name = "PassKey1"
+        Me.PassKey1.Primary = True
+        Me.PassKey1.Size = New System.Drawing.Size(72, 68)
+        Me.PassKey1.TabIndex = 0
+        Me.PassKey1.Text = "1"
+        Me.PassKey1.UseVisualStyleBackColor = True
+        Me.PassKey1.Visible = False
         '
         'PassField
         '
@@ -181,32 +221,6 @@ Partial Class Form1
         Me.PassField.UseSystemPasswordChar = False
         Me.PassField.Visible = False
         '
-        'PassKeyEnter
-        '
-        Me.PassKeyEnter.Depth = 0
-        Me.PassKeyEnter.Location = New System.Drawing.Point(304, 484)
-        Me.PassKeyEnter.MouseState = MaterialSkin.MouseState.HOVER
-        Me.PassKeyEnter.Name = "PassKeyEnter"
-        Me.PassKeyEnter.Primary = True
-        Me.PassKeyEnter.Size = New System.Drawing.Size(171, 68)
-        Me.PassKeyEnter.TabIndex = 10
-        Me.PassKeyEnter.Text = "Enter"
-        Me.PassKeyEnter.UseVisualStyleBackColor = True
-        Me.PassKeyEnter.Visible = False
-        '
-        'PassKeyCor
-        '
-        Me.PassKeyCor.Depth = 0
-        Me.PassKeyCor.Location = New System.Drawing.Point(204, 484)
-        Me.PassKeyCor.MouseState = MaterialSkin.MouseState.HOVER
-        Me.PassKeyCor.Name = "PassKeyCor"
-        Me.PassKeyCor.Primary = True
-        Me.PassKeyCor.Size = New System.Drawing.Size(72, 68)
-        Me.PassKeyCor.TabIndex = 11
-        Me.PassKeyCor.Text = "<-"
-        Me.PassKeyCor.UseVisualStyleBackColor = True
-        Me.PassKeyCor.Visible = False
-        '
         'Cancel
         '
         Me.Cancel.Depth = 0
@@ -219,20 +233,6 @@ Partial Class Form1
         Me.Cancel.Text = "Cancel"
         Me.Cancel.UseVisualStyleBackColor = True
         Me.Cancel.Visible = False
-        '
-        'MaterialLabel1
-        '
-        Me.MaterialLabel1.AutoSize = True
-        Me.MaterialLabel1.Depth = 0
-        Me.MaterialLabel1.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.MaterialLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel1.Location = New System.Drawing.Point(200, 112)
-        Me.MaterialLabel1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialLabel1.Name = "MaterialLabel1"
-        Me.MaterialLabel1.Size = New System.Drawing.Size(153, 19)
-        Me.MaterialLabel1.TabIndex = 13
-        Me.MaterialLabel1.Text = "Please Enter Your Pin"
-        Me.MaterialLabel1.Visible = False
         '
         'Form1
         '
@@ -261,23 +261,23 @@ Partial Class Form1
         Me.PerformLayout()
 
     End Sub
-
-
     Friend WithEvents ToMain As System.Windows.Forms.Button
-
-    Friend WithEvents PassKey1 As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents PassKey2 As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents PassKey3 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents PassKeyCor As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents PassKeyEnter As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents PassKey9 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents PassKey8 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents PassKey7 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents PassKey4 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents PassKey5 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents PassKey6 As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents PassKey7 As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents PassKey8 As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents PassKey9 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents PassKey3 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents PassKey2 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents PassKey1 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents PassField As MaterialSkin.Controls.MaterialSingleLineTextField
-    Friend WithEvents PassKeyEnter As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents PassKeyCor As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents Cancel As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
+
+
+
 
 End Class
