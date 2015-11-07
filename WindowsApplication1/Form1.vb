@@ -2,7 +2,7 @@
 
 Public Class Form1
     Dim tick As Integer
-
+    Dim pinTrack As Integer = 0
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
         SkinManager.AddFormToManage(Me)
@@ -17,10 +17,14 @@ Public Class Form1
         Call AddStar()
     End Sub
     Public Function AddStar() As Integer
-        Dim current As String
-        current = PassField.Text
-        current = current + "   *"
-        PassField.Text = current
+        If (pinTrack < 4) Then
+            Dim current As String
+            current = PassField.Text
+            current = current + "   *"
+            PassField.Text = current
+            pinTrack = pinTrack + 1
+
+        End If
         Return 0
     End Function
 
@@ -66,6 +70,8 @@ Public Class Form1
         Amount = Removed.Length
         If Amount > 3 Then
             PassField.Text = Removed.Substring(0, Amount - 4)
+            pinTrack = pinTrack - 1
+
         End If
 
     End Sub
@@ -132,6 +138,7 @@ Public Class Form1
         MaterialLabel1.Hide()
         PassKeyEnter.Hide()
         Cancel.Hide()
+        pinTrack = 0
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
