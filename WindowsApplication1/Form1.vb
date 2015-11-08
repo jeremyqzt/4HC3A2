@@ -10,12 +10,12 @@ Public Class Form1
         SkinManager.ColorScheme = New ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
     End Sub
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles PassKey1.Click
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Message Nudge.wav")
         Call AddStar()
-        Beep()
-
     End Sub
 
     Private Sub MaterialRaisedButton1_Click_1(sender As Object, e As EventArgs) Handles PassKey2.Click
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Message Nudge.wav")
         Call AddStar()
     End Sub
     Public Function AddStar() As Integer
@@ -32,57 +32,50 @@ Public Class Form1
 
     Private Sub MaterialRaisedButton2_Click(sender As Object, e As EventArgs) Handles PassKey3.Click
         Call AddStar()
-        Beep()
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Message Nudge.wav")
     End Sub
 
     Private Sub MaterialRaisedButton3_Click(sender As Object, e As EventArgs) Handles PassKey4.Click
         Call AddStar()
-        Beep()
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Message Nudge.wav")
 
     End Sub
 
     Private Sub MaterialRaisedButton4_Click(sender As Object, e As EventArgs) Handles PassKey5.Click
         Call AddStar()
-        Beep()
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Message Nudge.wav")
 
     End Sub
 
     Private Sub MaterialRaisedButton5_Click(sender As Object, e As EventArgs) Handles PassKey6.Click
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Message Nudge.wav")
         Call AddStar()
-        Beep()
-
     End Sub
 
     Private Sub MaterialRaisedButton6_Click(sender As Object, e As EventArgs) Handles PassKey7.Click
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Message Nudge.wav")
         Call AddStar()
-        Beep()
-
     End Sub
 
     Private Sub MaterialRaisedButton7_Click(sender As Object, e As EventArgs) Handles PassKey8.Click
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Message Nudge.wav")
         Call AddStar()
-        Beep()
-
     End Sub
 
     Private Sub MaterialRaisedButton8_Click(sender As Object, e As EventArgs) Handles PassKey9.Click
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Message Nudge.wav")
         Call AddStar()
-        Beep()
-
     End Sub
 
 
     Private Sub MaterialRaisedButton1_Click_2(sender As Object, e As EventArgs) Handles PassKey0.Click
         Call AddStar()
-        Beep()
-
     End Sub
 
     Private Sub MaterialRaisedButton10_Click(sender As Object, e As EventArgs) Handles PassKeyCor.Click
         Dim Removed As String
         Dim Amount As Integer
-        Beep()
-
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Message Nudge.wav")
         Removed = PassField.Text
         Amount = Removed.Length
         If Amount > 3 Then
@@ -94,6 +87,7 @@ Public Class Form1
     End Sub
 
     Private Sub ToMain_Click_1(sender As Object, e As EventArgs) Handles ToMain.Click
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Message Nudge.wav")
         ToMain.Visible = False
         PassField.Show()
         PassKey1.Show()
@@ -130,6 +124,7 @@ Public Class Form1
             MaterialLabel1.Text = "Please Wait While We Fetch Your Account Details..."
             PassKeyEnter.Hide()
             Cancel.Hide()
+            My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Message Nudge.wav")
 
             ProgressBar1.Visible = True
             ProgressBar1.ForeColor = Color.Blue
@@ -148,6 +143,7 @@ Public Class Form1
     End Sub
     Private Sub Cancel_Click(sender As Object, e As EventArgs) Handles Cancel.Click
         ToMain.Visible = True
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Message Nudge.wav")
         PassField.Text = ""
         PassField.Hide()
         PassKey1.Hide()
