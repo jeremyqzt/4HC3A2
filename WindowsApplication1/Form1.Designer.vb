@@ -48,6 +48,7 @@ Partial Class Form1
         'MaterialLabel1
         '
         Me.MaterialLabel1.AutoSize = True
+        Me.MaterialLabel1.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.MaterialLabel1.Depth = 0
         Me.MaterialLabel1.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))

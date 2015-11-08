@@ -107,15 +107,14 @@ Public Class Form1
         PassKey9.Show()
         PassKey0.Show()
         PassKeyCor.Show()
-        MaterialLabel1.Show()
         PassKeyEnter.Show()
+        MaterialLabel1.Show()
         Cancel.Show()
         MaterialLabel1.Text = "Please enter your pin"
         Me.Text = "Welcome Ian"
     End Sub
     Private Sub PassKeyEnter_Click(sender As Object, e As EventArgs) Handles PassKeyEnter.Click
-        'If (pinTrack = 4) Then
-        If (True) Then
+        If (pinTrack = 4) Then
             PassField.Hide()
             PassKey1.Hide()
             PassKey2.Hide()
@@ -172,13 +171,13 @@ Public Class Form1
         tick = tick + 1
         ProgressBar1.Increment(35)
         If tick > 3 Then
-            'If (True) Then
             ProgressBar1.Value = 0
             Timer1.Enabled = False
             tick = 0
             ProgressBar1.Visible = False
             Timer1.Enabled = False
             MaterialLabel1.Text = ""
+            PassField.Text = ""
             ToMain.Show()
             Me.Hide()
             Form2.Show()

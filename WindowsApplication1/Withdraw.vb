@@ -65,6 +65,25 @@ Public Class Withdraw
 
     End Sub
     Private Sub Logout_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        PassField.Hide()
+        PassKey1.Hide()
+        PassKey2.Hide()
+        PassKey3.Hide()
+        PassKey4.Hide()
+        PassKey5.Hide()
+        PassKey6.Hide()
+        PassKey7.Hide()
+        PassKey8.Hide()
+        PassKey9.Hide()
+        PassKey0.Hide()
+        PassKeyCor.Hide()
+        PassKeyEnter.Hide()
+        PassField.Text = "$"
+        current = 0
+        WithdrawTrack = 0
+        Cancel.Hide()
+
+        WithdrawReset()
         Me.Hide()
         Form1.Show()
     End Sub
@@ -291,5 +310,9 @@ Public Class Withdraw
         WithdrawReset()
         Me.Hide()
         Form1.Show()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
     End Sub
 End Class
