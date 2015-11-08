@@ -42,6 +42,7 @@ Partial Class Form1
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Logout = New System.Windows.Forms.Button()
+        Me.PassKey0 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.SuspendLayout()
         '
         'MaterialLabel1
@@ -61,7 +62,7 @@ Partial Class Form1
         'PassKeyCor
         '
         Me.PassKeyCor.Depth = 0
-        Me.PassKeyCor.Location = New System.Drawing.Point(204, 484)
+        Me.PassKeyCor.Location = New System.Drawing.Point(304, 484)
         Me.PassKeyCor.MouseState = MaterialSkin.MouseState.HOVER
         Me.PassKeyCor.Name = "PassKeyCor"
         Me.PassKeyCor.Primary = True
@@ -74,11 +75,11 @@ Partial Class Form1
         'PassKeyEnter
         '
         Me.PassKeyEnter.Depth = 0
-        Me.PassKeyEnter.Location = New System.Drawing.Point(304, 484)
+        Me.PassKeyEnter.Location = New System.Drawing.Point(403, 484)
         Me.PassKeyEnter.MouseState = MaterialSkin.MouseState.HOVER
         Me.PassKeyEnter.Name = "PassKeyEnter"
         Me.PassKeyEnter.Primary = True
-        Me.PassKeyEnter.Size = New System.Drawing.Size(171, 68)
+        Me.PassKeyEnter.Size = New System.Drawing.Size(72, 68)
         Me.PassKeyEnter.TabIndex = 10
         Me.PassKeyEnter.Text = "Enter"
         Me.PassKeyEnter.UseVisualStyleBackColor = True
@@ -268,11 +269,25 @@ Partial Class Form1
         Me.Logout.TabIndex = 16
         Me.Logout.UseVisualStyleBackColor = False
         '
+        'PassKey0
+        '
+        Me.PassKey0.Depth = 0
+        Me.PassKey0.Location = New System.Drawing.Point(204, 484)
+        Me.PassKey0.MouseState = MaterialSkin.MouseState.HOVER
+        Me.PassKey0.Name = "PassKey0"
+        Me.PassKey0.Primary = True
+        Me.PassKey0.Size = New System.Drawing.Size(72, 68)
+        Me.PassKey0.TabIndex = 17
+        Me.PassKey0.Text = "0"
+        Me.PassKey0.UseVisualStyleBackColor = True
+        Me.PassKey0.Visible = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(711, 599)
+        Me.Controls.Add(Me.PassKey0)
         Me.Controls.Add(Me.Logout)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.ToMain)
@@ -315,5 +330,6 @@ Partial Class Form1
     Friend WithEvents Timer1 As Timer
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents Logout As System.Windows.Forms.Button
+    Friend WithEvents PassKey0 As MaterialSkin.Controls.MaterialRaisedButton
 
 End Class

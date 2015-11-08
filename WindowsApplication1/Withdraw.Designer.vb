@@ -22,6 +22,7 @@ Partial Class Withdraw
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Withdraw))
         Me.CheckBalance = New System.Windows.Forms.Button()
         Me.TransferM = New System.Windows.Forms.Button()
@@ -32,13 +33,32 @@ Partial Class Withdraw
         Me.Button2 = New System.Windows.Forms.Button()
         Me.W20 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.W40 = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.MaterialRaisedButton2 = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.MaterialRaisedButton3 = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.MaterialRaisedButton4 = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.MaterialRaisedButton5 = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.MaterialRaisedButton6 = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.MaterialRaisedButton7 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.W60 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.W80 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.CustomAmountB = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.W200 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.W140 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.W100 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
+        Me.PassKeyCor = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.PassKeyEnter = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.PassKey9 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.PassKey8 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.PassKey7 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.PassKey6 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.PassKey5 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.PassKey4 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.PassKey3 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.PassKey2 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.PassKey1 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.PassField = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.BackB = New System.Windows.Forms.Button()
+        Me.Cancel = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.PassKey0 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.WithdrawReciptNo = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.WithdrawReciptYes = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.WithdrawTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.WithdrawFinish = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.SuspendLayout()
         '
         'CheckBalance
@@ -150,77 +170,77 @@ Partial Class Withdraw
         Me.W40.Text = "$40.00"
         Me.W40.UseVisualStyleBackColor = True
         '
-        'MaterialRaisedButton2
+        'W60
         '
-        Me.MaterialRaisedButton2.Depth = 0
-        Me.MaterialRaisedButton2.Location = New System.Drawing.Point(12, 366)
-        Me.MaterialRaisedButton2.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRaisedButton2.Name = "MaterialRaisedButton2"
-        Me.MaterialRaisedButton2.Primary = True
-        Me.MaterialRaisedButton2.Size = New System.Drawing.Size(320, 88)
-        Me.MaterialRaisedButton2.TabIndex = 20
-        Me.MaterialRaisedButton2.Text = "$60.00"
-        Me.MaterialRaisedButton2.UseVisualStyleBackColor = True
+        Me.W60.Depth = 0
+        Me.W60.Location = New System.Drawing.Point(12, 366)
+        Me.W60.MouseState = MaterialSkin.MouseState.HOVER
+        Me.W60.Name = "W60"
+        Me.W60.Primary = True
+        Me.W60.Size = New System.Drawing.Size(320, 88)
+        Me.W60.TabIndex = 20
+        Me.W60.Text = "$60.00"
+        Me.W60.UseVisualStyleBackColor = True
         '
-        'MaterialRaisedButton3
+        'W80
         '
-        Me.MaterialRaisedButton3.Depth = 0
-        Me.MaterialRaisedButton3.Location = New System.Drawing.Point(12, 460)
-        Me.MaterialRaisedButton3.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRaisedButton3.Name = "MaterialRaisedButton3"
-        Me.MaterialRaisedButton3.Primary = True
-        Me.MaterialRaisedButton3.Size = New System.Drawing.Size(320, 88)
-        Me.MaterialRaisedButton3.TabIndex = 21
-        Me.MaterialRaisedButton3.Text = "$80.00"
-        Me.MaterialRaisedButton3.UseVisualStyleBackColor = True
+        Me.W80.Depth = 0
+        Me.W80.Location = New System.Drawing.Point(12, 460)
+        Me.W80.MouseState = MaterialSkin.MouseState.HOVER
+        Me.W80.Name = "W80"
+        Me.W80.Primary = True
+        Me.W80.Size = New System.Drawing.Size(320, 88)
+        Me.W80.TabIndex = 21
+        Me.W80.Text = "$80.00"
+        Me.W80.UseVisualStyleBackColor = True
         '
-        'MaterialRaisedButton4
+        'CustomAmountB
         '
-        Me.MaterialRaisedButton4.Depth = 0
-        Me.MaterialRaisedButton4.Location = New System.Drawing.Point(379, 460)
-        Me.MaterialRaisedButton4.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRaisedButton4.Name = "MaterialRaisedButton4"
-        Me.MaterialRaisedButton4.Primary = True
-        Me.MaterialRaisedButton4.Size = New System.Drawing.Size(320, 88)
-        Me.MaterialRaisedButton4.TabIndex = 25
-        Me.MaterialRaisedButton4.Text = "Custom Amount"
-        Me.MaterialRaisedButton4.UseVisualStyleBackColor = True
+        Me.CustomAmountB.Depth = 0
+        Me.CustomAmountB.Location = New System.Drawing.Point(379, 460)
+        Me.CustomAmountB.MouseState = MaterialSkin.MouseState.HOVER
+        Me.CustomAmountB.Name = "CustomAmountB"
+        Me.CustomAmountB.Primary = True
+        Me.CustomAmountB.Size = New System.Drawing.Size(320, 88)
+        Me.CustomAmountB.TabIndex = 25
+        Me.CustomAmountB.Text = "Custom Amount"
+        Me.CustomAmountB.UseVisualStyleBackColor = True
         '
-        'MaterialRaisedButton5
+        'W200
         '
-        Me.MaterialRaisedButton5.Depth = 0
-        Me.MaterialRaisedButton5.Location = New System.Drawing.Point(379, 366)
-        Me.MaterialRaisedButton5.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRaisedButton5.Name = "MaterialRaisedButton5"
-        Me.MaterialRaisedButton5.Primary = True
-        Me.MaterialRaisedButton5.Size = New System.Drawing.Size(320, 88)
-        Me.MaterialRaisedButton5.TabIndex = 24
-        Me.MaterialRaisedButton5.Text = "$200.00"
-        Me.MaterialRaisedButton5.UseVisualStyleBackColor = True
+        Me.W200.Depth = 0
+        Me.W200.Location = New System.Drawing.Point(379, 366)
+        Me.W200.MouseState = MaterialSkin.MouseState.HOVER
+        Me.W200.Name = "W200"
+        Me.W200.Primary = True
+        Me.W200.Size = New System.Drawing.Size(320, 88)
+        Me.W200.TabIndex = 24
+        Me.W200.Text = "$200.00"
+        Me.W200.UseVisualStyleBackColor = True
         '
-        'MaterialRaisedButton6
+        'W140
         '
-        Me.MaterialRaisedButton6.Depth = 0
-        Me.MaterialRaisedButton6.Location = New System.Drawing.Point(379, 272)
-        Me.MaterialRaisedButton6.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRaisedButton6.Name = "MaterialRaisedButton6"
-        Me.MaterialRaisedButton6.Primary = True
-        Me.MaterialRaisedButton6.Size = New System.Drawing.Size(320, 88)
-        Me.MaterialRaisedButton6.TabIndex = 23
-        Me.MaterialRaisedButton6.Text = "$140.00"
-        Me.MaterialRaisedButton6.UseVisualStyleBackColor = True
+        Me.W140.Depth = 0
+        Me.W140.Location = New System.Drawing.Point(379, 272)
+        Me.W140.MouseState = MaterialSkin.MouseState.HOVER
+        Me.W140.Name = "W140"
+        Me.W140.Primary = True
+        Me.W140.Size = New System.Drawing.Size(320, 88)
+        Me.W140.TabIndex = 23
+        Me.W140.Text = "$140.00"
+        Me.W140.UseVisualStyleBackColor = True
         '
-        'MaterialRaisedButton7
+        'W100
         '
-        Me.MaterialRaisedButton7.Depth = 0
-        Me.MaterialRaisedButton7.Location = New System.Drawing.Point(379, 178)
-        Me.MaterialRaisedButton7.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRaisedButton7.Name = "MaterialRaisedButton7"
-        Me.MaterialRaisedButton7.Primary = True
-        Me.MaterialRaisedButton7.Size = New System.Drawing.Size(320, 88)
-        Me.MaterialRaisedButton7.TabIndex = 22
-        Me.MaterialRaisedButton7.Text = "$100.00"
-        Me.MaterialRaisedButton7.UseVisualStyleBackColor = True
+        Me.W100.Depth = 0
+        Me.W100.Location = New System.Drawing.Point(379, 178)
+        Me.W100.MouseState = MaterialSkin.MouseState.HOVER
+        Me.W100.Name = "W100"
+        Me.W100.Primary = True
+        Me.W100.Size = New System.Drawing.Size(320, 88)
+        Me.W100.TabIndex = 22
+        Me.W100.Text = "$100.00"
+        Me.W100.UseVisualStyleBackColor = True
         '
         'MaterialLabel2
         '
@@ -236,16 +256,273 @@ Partial Class Withdraw
         Me.MaterialLabel2.TabIndex = 26
         Me.MaterialLabel2.Text = "Please select the amount you want to withdraw"
         '
+        'PassKeyCor
+        '
+        Me.PassKeyCor.Depth = 0
+        Me.PassKeyCor.Location = New System.Drawing.Point(304, 484)
+        Me.PassKeyCor.MouseState = MaterialSkin.MouseState.HOVER
+        Me.PassKeyCor.Name = "PassKeyCor"
+        Me.PassKeyCor.Primary = True
+        Me.PassKeyCor.Size = New System.Drawing.Size(72, 68)
+        Me.PassKeyCor.TabIndex = 37
+        Me.PassKeyCor.Text = "<-"
+        Me.PassKeyCor.UseVisualStyleBackColor = True
+        Me.PassKeyCor.Visible = False
+        '
+        'PassKeyEnter
+        '
+        Me.PassKeyEnter.Depth = 0
+        Me.PassKeyEnter.Location = New System.Drawing.Point(403, 484)
+        Me.PassKeyEnter.MouseState = MaterialSkin.MouseState.HOVER
+        Me.PassKeyEnter.Name = "PassKeyEnter"
+        Me.PassKeyEnter.Primary = True
+        Me.PassKeyEnter.Size = New System.Drawing.Size(72, 68)
+        Me.PassKeyEnter.TabIndex = 36
+        Me.PassKeyEnter.Text = "Enter"
+        Me.PassKeyEnter.UseVisualStyleBackColor = True
+        Me.PassKeyEnter.Visible = False
+        '
+        'PassKey9
+        '
+        Me.PassKey9.Depth = 0
+        Me.PassKey9.Location = New System.Drawing.Point(403, 398)
+        Me.PassKey9.MouseState = MaterialSkin.MouseState.HOVER
+        Me.PassKey9.Name = "PassKey9"
+        Me.PassKey9.Primary = True
+        Me.PassKey9.Size = New System.Drawing.Size(72, 68)
+        Me.PassKey9.TabIndex = 35
+        Me.PassKey9.Text = "9"
+        Me.PassKey9.UseVisualStyleBackColor = True
+        Me.PassKey9.Visible = False
+        '
+        'PassKey8
+        '
+        Me.PassKey8.Depth = 0
+        Me.PassKey8.Location = New System.Drawing.Point(304, 398)
+        Me.PassKey8.MouseState = MaterialSkin.MouseState.HOVER
+        Me.PassKey8.Name = "PassKey8"
+        Me.PassKey8.Primary = True
+        Me.PassKey8.Size = New System.Drawing.Size(72, 68)
+        Me.PassKey8.TabIndex = 34
+        Me.PassKey8.Text = "8"
+        Me.PassKey8.UseVisualStyleBackColor = True
+        Me.PassKey8.Visible = False
+        '
+        'PassKey7
+        '
+        Me.PassKey7.Depth = 0
+        Me.PassKey7.Location = New System.Drawing.Point(204, 398)
+        Me.PassKey7.MouseState = MaterialSkin.MouseState.HOVER
+        Me.PassKey7.Name = "PassKey7"
+        Me.PassKey7.Primary = True
+        Me.PassKey7.Size = New System.Drawing.Size(72, 68)
+        Me.PassKey7.TabIndex = 33
+        Me.PassKey7.Text = "7"
+        Me.PassKey7.UseVisualStyleBackColor = True
+        Me.PassKey7.Visible = False
+        '
+        'PassKey6
+        '
+        Me.PassKey6.Depth = 0
+        Me.PassKey6.Location = New System.Drawing.Point(403, 306)
+        Me.PassKey6.MouseState = MaterialSkin.MouseState.HOVER
+        Me.PassKey6.Name = "PassKey6"
+        Me.PassKey6.Primary = True
+        Me.PassKey6.Size = New System.Drawing.Size(72, 68)
+        Me.PassKey6.TabIndex = 32
+        Me.PassKey6.Text = "6"
+        Me.PassKey6.UseVisualStyleBackColor = True
+        Me.PassKey6.Visible = False
+        '
+        'PassKey5
+        '
+        Me.PassKey5.Depth = 0
+        Me.PassKey5.Location = New System.Drawing.Point(304, 306)
+        Me.PassKey5.MouseState = MaterialSkin.MouseState.HOVER
+        Me.PassKey5.Name = "PassKey5"
+        Me.PassKey5.Primary = True
+        Me.PassKey5.Size = New System.Drawing.Size(72, 68)
+        Me.PassKey5.TabIndex = 31
+        Me.PassKey5.Text = "5"
+        Me.PassKey5.UseVisualStyleBackColor = True
+        Me.PassKey5.Visible = False
+        '
+        'PassKey4
+        '
+        Me.PassKey4.Depth = 0
+        Me.PassKey4.Location = New System.Drawing.Point(204, 306)
+        Me.PassKey4.MouseState = MaterialSkin.MouseState.HOVER
+        Me.PassKey4.Name = "PassKey4"
+        Me.PassKey4.Primary = True
+        Me.PassKey4.Size = New System.Drawing.Size(72, 68)
+        Me.PassKey4.TabIndex = 30
+        Me.PassKey4.Text = "4"
+        Me.PassKey4.UseVisualStyleBackColor = True
+        Me.PassKey4.Visible = False
+        '
+        'PassKey3
+        '
+        Me.PassKey3.Depth = 0
+        Me.PassKey3.Location = New System.Drawing.Point(403, 217)
+        Me.PassKey3.MouseState = MaterialSkin.MouseState.HOVER
+        Me.PassKey3.Name = "PassKey3"
+        Me.PassKey3.Primary = True
+        Me.PassKey3.Size = New System.Drawing.Size(72, 68)
+        Me.PassKey3.TabIndex = 29
+        Me.PassKey3.Text = "3"
+        Me.PassKey3.UseVisualStyleBackColor = True
+        Me.PassKey3.Visible = False
+        '
+        'PassKey2
+        '
+        Me.PassKey2.Depth = 0
+        Me.PassKey2.Location = New System.Drawing.Point(304, 217)
+        Me.PassKey2.MouseState = MaterialSkin.MouseState.HOVER
+        Me.PassKey2.Name = "PassKey2"
+        Me.PassKey2.Primary = True
+        Me.PassKey2.Size = New System.Drawing.Size(72, 68)
+        Me.PassKey2.TabIndex = 28
+        Me.PassKey2.Text = "2"
+        Me.PassKey2.UseVisualStyleBackColor = True
+        Me.PassKey2.Visible = False
+        '
+        'PassKey1
+        '
+        Me.PassKey1.Depth = 0
+        Me.PassKey1.Location = New System.Drawing.Point(204, 217)
+        Me.PassKey1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.PassKey1.Name = "PassKey1"
+        Me.PassKey1.Primary = True
+        Me.PassKey1.Size = New System.Drawing.Size(72, 68)
+        Me.PassKey1.TabIndex = 27
+        Me.PassKey1.Text = "1"
+        Me.PassKey1.UseVisualStyleBackColor = True
+        Me.PassKey1.Visible = False
+        '
+        'PassField
+        '
+        Me.PassField.Depth = 0
+        Me.PassField.Hint = ""
+        Me.PassField.Location = New System.Drawing.Point(204, 158)
+        Me.PassField.MouseState = MaterialSkin.MouseState.HOVER
+        Me.PassField.Name = "PassField"
+        Me.PassField.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.PassField.SelectedText = ""
+        Me.PassField.SelectionLength = 0
+        Me.PassField.SelectionStart = 0
+        Me.PassField.Size = New System.Drawing.Size(271, 23)
+        Me.PassField.TabIndex = 38
+        Me.PassField.Text = "$"
+        Me.PassField.UseSystemPasswordChar = False
+        Me.PassField.Visible = False
+        '
+        'BackB
+        '
+        Me.BackB.BackColor = System.Drawing.Color.SlateGray
+        Me.BackB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BackB.Image = CType(resources.GetObject("BackB.Image"), System.Drawing.Image)
+        Me.BackB.Location = New System.Drawing.Point(585, 28)
+        Me.BackB.Name = "BackB"
+        Me.BackB.Size = New System.Drawing.Size(30, 30)
+        Me.BackB.TabIndex = 39
+        Me.BackB.UseVisualStyleBackColor = False
+        '
+        'Cancel
+        '
+        Me.Cancel.Depth = 0
+        Me.Cancel.Location = New System.Drawing.Point(527, 73)
+        Me.Cancel.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Cancel.Name = "Cancel"
+        Me.Cancel.Primary = True
+        Me.Cancel.Size = New System.Drawing.Size(172, 68)
+        Me.Cancel.TabIndex = 40
+        Me.Cancel.Text = "Cancel"
+        Me.Cancel.UseVisualStyleBackColor = True
+        Me.Cancel.Visible = False
+        '
+        'PassKey0
+        '
+        Me.PassKey0.Depth = 0
+        Me.PassKey0.Location = New System.Drawing.Point(204, 484)
+        Me.PassKey0.MouseState = MaterialSkin.MouseState.HOVER
+        Me.PassKey0.Name = "PassKey0"
+        Me.PassKey0.Primary = True
+        Me.PassKey0.Size = New System.Drawing.Size(72, 68)
+        Me.PassKey0.TabIndex = 41
+        Me.PassKey0.Text = "0"
+        Me.PassKey0.UseVisualStyleBackColor = True
+        Me.PassKey0.Visible = False
+        '
+        'WithdrawReciptNo
+        '
+        Me.WithdrawReciptNo.Depth = 0
+        Me.WithdrawReciptNo.Location = New System.Drawing.Point(12, 366)
+        Me.WithdrawReciptNo.MouseState = MaterialSkin.MouseState.HOVER
+        Me.WithdrawReciptNo.Name = "WithdrawReciptNo"
+        Me.WithdrawReciptNo.Primary = True
+        Me.WithdrawReciptNo.Size = New System.Drawing.Size(320, 88)
+        Me.WithdrawReciptNo.TabIndex = 43
+        Me.WithdrawReciptNo.Text = "No"
+        Me.WithdrawReciptNo.UseVisualStyleBackColor = True
+        Me.WithdrawReciptNo.Visible = False
+        '
+        'WithdrawReciptYes
+        '
+        Me.WithdrawReciptYes.Depth = 0
+        Me.WithdrawReciptYes.Location = New System.Drawing.Point(12, 272)
+        Me.WithdrawReciptYes.MouseState = MaterialSkin.MouseState.HOVER
+        Me.WithdrawReciptYes.Name = "WithdrawReciptYes"
+        Me.WithdrawReciptYes.Primary = True
+        Me.WithdrawReciptYes.Size = New System.Drawing.Size(320, 88)
+        Me.WithdrawReciptYes.TabIndex = 42
+        Me.WithdrawReciptYes.Text = "Yes"
+        Me.WithdrawReciptYes.UseVisualStyleBackColor = True
+        Me.WithdrawReciptYes.Visible = False
+        '
+        'WithdrawTimer
+        '
+        '
+        'WithdrawFinish
+        '
+        Me.WithdrawFinish.Depth = 0
+        Me.WithdrawFinish.Location = New System.Drawing.Point(379, 460)
+        Me.WithdrawFinish.MouseState = MaterialSkin.MouseState.HOVER
+        Me.WithdrawFinish.Name = "WithdrawFinish"
+        Me.WithdrawFinish.Primary = True
+        Me.WithdrawFinish.Size = New System.Drawing.Size(320, 88)
+        Me.WithdrawFinish.TabIndex = 44
+        Me.WithdrawFinish.Text = "Finish"
+        Me.WithdrawFinish.UseVisualStyleBackColor = True
+        Me.WithdrawFinish.Visible = False
+        '
         'Withdraw
         '
         Me.ClientSize = New System.Drawing.Size(711, 599)
+        Me.Controls.Add(Me.WithdrawFinish)
+        Me.Controls.Add(Me.WithdrawReciptNo)
+        Me.Controls.Add(Me.WithdrawReciptYes)
+        Me.Controls.Add(Me.PassKey0)
+        Me.Controls.Add(Me.Cancel)
+        Me.Controls.Add(Me.BackB)
+        Me.Controls.Add(Me.PassField)
+        Me.Controls.Add(Me.PassKeyCor)
+        Me.Controls.Add(Me.PassKeyEnter)
+        Me.Controls.Add(Me.PassKey9)
+        Me.Controls.Add(Me.PassKey8)
+        Me.Controls.Add(Me.PassKey7)
+        Me.Controls.Add(Me.PassKey6)
+        Me.Controls.Add(Me.PassKey5)
+        Me.Controls.Add(Me.PassKey4)
+        Me.Controls.Add(Me.PassKey3)
+        Me.Controls.Add(Me.PassKey2)
+        Me.Controls.Add(Me.PassKey1)
         Me.Controls.Add(Me.MaterialLabel2)
-        Me.Controls.Add(Me.MaterialRaisedButton4)
-        Me.Controls.Add(Me.MaterialRaisedButton5)
-        Me.Controls.Add(Me.MaterialRaisedButton6)
-        Me.Controls.Add(Me.MaterialRaisedButton7)
-        Me.Controls.Add(Me.MaterialRaisedButton3)
-        Me.Controls.Add(Me.MaterialRaisedButton2)
+        Me.Controls.Add(Me.CustomAmountB)
+        Me.Controls.Add(Me.W200)
+        Me.Controls.Add(Me.W140)
+        Me.Controls.Add(Me.W100)
+        Me.Controls.Add(Me.W80)
+        Me.Controls.Add(Me.W60)
         Me.Controls.Add(Me.W40)
         Me.Controls.Add(Me.W20)
         Me.Controls.Add(Me.Button1)
@@ -267,13 +544,32 @@ Partial Class Withdraw
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents W20 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents W40 As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents MaterialRaisedButton2 As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents MaterialRaisedButton3 As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents MaterialRaisedButton4 As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents MaterialRaisedButton5 As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents MaterialRaisedButton6 As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents MaterialRaisedButton7 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents W60 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents W80 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents CustomAmountB As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents W200 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents W140 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents W100 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents MaterialLabel2 As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents PassKeyCor As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents PassKeyEnter As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents PassKey9 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents PassKey8 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents PassKey7 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents PassKey6 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents PassKey5 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents PassKey4 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents PassKey3 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents PassKey2 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents PassKey1 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents PassField As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents BackB As System.Windows.Forms.Button
+    Friend WithEvents Cancel As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents PassKey0 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents WithdrawReciptNo As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents WithdrawReciptYes As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents WithdrawTimer As System.Windows.Forms.Timer
+    Friend WithEvents WithdrawFinish As MaterialSkin.Controls.MaterialRaisedButton
 
 
 

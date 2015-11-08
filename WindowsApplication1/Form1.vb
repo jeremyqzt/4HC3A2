@@ -63,6 +63,11 @@ Public Class Form1
 
     End Sub
 
+
+    Private Sub MaterialRaisedButton1_Click_2(sender As Object, e As EventArgs) Handles PassKey0.Click
+        Call AddStar()
+    End Sub
+
     Private Sub MaterialRaisedButton10_Click(sender As Object, e As EventArgs) Handles PassKeyCor.Click
         Dim Removed As String
         Dim Amount As Integer
@@ -88,6 +93,7 @@ Public Class Form1
         PassKey7.Show()
         PassKey8.Show()
         PassKey9.Show()
+        PassKey0.Show()
         PassKeyCor.Show()
         MaterialLabel1.Show()
         PassKeyEnter.Show()
@@ -108,6 +114,7 @@ Public Class Form1
             PassKey7.Hide()
             PassKey8.Hide()
             PassKey9.Hide()
+            PassKey0.Hide()
             PassKeyCor.Hide()
             MaterialLabel1.Text = "Please Wait While We Fetch Your Account Details..."
             PassKeyEnter.Hide()
@@ -141,6 +148,7 @@ Public Class Form1
         PassKey7.Hide()
         PassKey8.Hide()
         PassKey9.Hide()
+        PassKey0.Hide()
         PassKeyCor.Hide()
         MaterialLabel1.Hide()
         PassKeyEnter.Hide()
@@ -163,4 +171,5 @@ Public Class Form1
             Form2.Show()
         End If
     End Sub
+
 End Class
