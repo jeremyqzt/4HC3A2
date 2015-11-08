@@ -22,6 +22,7 @@ Partial Class Deposit
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Deposit))
         Me.PassKey1 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.PassKey2 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.PassKey3 = New MaterialSkin.Controls.MaterialRaisedButton()
@@ -41,6 +42,10 @@ Partial Class Deposit
         Me.WithdrawReciptNo = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.WithdrawReciptYes = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialSingleLineTextField1 = New MaterialSkin.Controls.MaterialSingleLineTextField()
+        Me.BackB = New System.Windows.Forms.Button()
+        Me.info = New System.Windows.Forms.Button()
+        Me.Logout = New System.Windows.Forms.Button()
+        Me.Another = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.SuspendLayout()
         '
         'PassKey1
@@ -285,6 +290,7 @@ Partial Class Deposit
         'MaterialSingleLineTextField1
         '
         Me.MaterialSingleLineTextField1.Depth = 0
+        Me.MaterialSingleLineTextField1.Enabled = False
         Me.MaterialSingleLineTextField1.Hint = ""
         Me.MaterialSingleLineTextField1.Location = New System.Drawing.Point(12, 72)
         Me.MaterialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER
@@ -298,11 +304,62 @@ Partial Class Deposit
         Me.MaterialSingleLineTextField1.Text = "Please Enter The Amounts You Wish To Deposit"
         Me.MaterialSingleLineTextField1.UseSystemPasswordChar = False
         '
+        'BackB
+        '
+        Me.BackB.BackColor = System.Drawing.Color.SlateGray
+        Me.BackB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BackB.Image = CType(resources.GetObject("BackB.Image"), System.Drawing.Image)
+        Me.BackB.Location = New System.Drawing.Point(585, 28)
+        Me.BackB.Name = "BackB"
+        Me.BackB.Size = New System.Drawing.Size(30, 30)
+        Me.BackB.TabIndex = 49
+        Me.BackB.UseVisualStyleBackColor = False
+        '
+        'info
+        '
+        Me.info.BackColor = System.Drawing.Color.SlateGray
+        Me.info.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.info.ForeColor = System.Drawing.Color.Black
+        Me.info.Image = CType(resources.GetObject("info.Image"), System.Drawing.Image)
+        Me.info.Location = New System.Drawing.Point(669, 28)
+        Me.info.Name = "info"
+        Me.info.Size = New System.Drawing.Size(30, 30)
+        Me.info.TabIndex = 48
+        Me.info.UseVisualStyleBackColor = False
+        '
+        'Logout
+        '
+        Me.Logout.BackColor = System.Drawing.Color.SlateGray
+        Me.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Logout.Image = CType(resources.GetObject("Logout.Image"), System.Drawing.Image)
+        Me.Logout.Location = New System.Drawing.Point(627, 28)
+        Me.Logout.Name = "Logout"
+        Me.Logout.Size = New System.Drawing.Size(30, 30)
+        Me.Logout.TabIndex = 47
+        Me.Logout.UseVisualStyleBackColor = False
+        '
+        'Another
+        '
+        Me.Another.Depth = 0
+        Me.Another.Location = New System.Drawing.Point(12, 465)
+        Me.Another.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Another.Name = "Another"
+        Me.Another.Primary = True
+        Me.Another.Size = New System.Drawing.Size(320, 88)
+        Me.Another.TabIndex = 50
+        Me.Another.Text = "Perform Another Transaction"
+        Me.Another.UseVisualStyleBackColor = True
+        Me.Another.Visible = False
+        '
         'Deposit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(711, 599)
+        Me.Controls.Add(Me.Another)
+        Me.Controls.Add(Me.BackB)
+        Me.Controls.Add(Me.info)
+        Me.Controls.Add(Me.Logout)
         Me.Controls.Add(Me.MaterialSingleLineTextField1)
         Me.Controls.Add(Me.WithdrawReciptNo)
         Me.Controls.Add(Me.WithdrawReciptYes)
@@ -348,4 +405,8 @@ Partial Class Deposit
     Friend WithEvents WithdrawReciptNo As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents WithdrawReciptYes As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents MaterialSingleLineTextField1 As MaterialSkin.Controls.MaterialSingleLineTextField
+    Friend WithEvents BackB As Button
+    Friend WithEvents info As Button
+    Friend WithEvents Logout As Button
+    Friend WithEvents Another As MaterialSkin.Controls.MaterialRaisedButton
 End Class

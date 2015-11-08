@@ -208,31 +208,70 @@ Public Class Deposit
 
     Private Sub PassKeyEnter_Click(sender As Object, e As EventArgs) Handles PassKeyEnter.Click
         Dim Total As Integer
-        Total = CInt((cash.Text.Substring(0, cash.Text.Length - 1)))
-        Total = Total + CInt(cheque.Text.Substring(0, cheque.Text.Length - 1))
-        MaterialSingleLineTextField1.Text = "Please Confirm Total Deposit: $" + CType(Total, String)
-        PassKey0.Visible = False
-        PassKey1.Visible = False
-        PassKey2.Visible = False
-        PassKey3.Visible = False
-        PassKey4.Visible = False
-        PassKey5.Visible = False
-        PassKey6.Visible = False
-        PassKey7.Visible = False
-        PassKey8.Visible = False
-        PassKey9.Visible = False
-        PassKeyEnter.Visible = False
-        MaterialRadioButton1.Visible = False
-        MaterialRadioButton2.Visible = False
-        PassKeyCor.Visible = False
-        cash.Visible = False
-        cheque.Visible = False
-        WithdrawReciptYes.Visible = True
-        WithdrawReciptNo.Visible = True
+        If cash.Text.Length > 1 Then
+            Total = CInt((cash.Text.Substring(0, cash.Text.Length)))
+        End If
+        If cheque.Text.Length > 1 Then
+            Total = Total + CInt(cheque.Text.Substring(0, cheque.Text.Length))
+        End If
+        If Total > 0 Then
+            MaterialSingleLineTextField1.Text = "Please Confirm Total Deposit: $" + CType(Total, String)
+            PassKey0.Visible = False
+            PassKey1.Visible = False
+            PassKey2.Visible = False
+            PassKey3.Visible = False
+            PassKey4.Visible = False
+            PassKey5.Visible = False
+            PassKey6.Visible = False
+            PassKey7.Visible = False
+            PassKey8.Visible = False
+            PassKey9.Visible = False
+            PassKeyEnter.Visible = False
+            MaterialRadioButton1.Visible = False
+            MaterialRadioButton2.Visible = False
+            PassKeyCor.Visible = False
+            cash.Visible = False
+            cheque.Visible = False
+            WithdrawReciptYes.Visible = True
+            WithdrawReciptNo.Visible = True
+        Else
+            MsgBox("Please Deposit More Than $0!")
+        End If
     End Sub
 
     Private Sub WithdrawReciptYes_Click(sender As Object, e As EventArgs) Handles WithdrawReciptYes.Click
-
+        If WithdrawReciptYes.Text = "YES" Then
+            WithdrawReciptYes.Text = "Press Here to Finish"
+            WithdrawReciptNo.Visible = False
+            Another.Visible = True
+            MaterialSingleLineTextField1.Text = "Your Deposit Has Been Completed"
+        Else
+            PassKey0.Visible = True
+            PassKey1.Visible = True
+            PassKey2.Visible = True
+            PassKey3.Visible = True
+            PassKey4.Visible = True
+            PassKey5.Visible = True
+            PassKey6.Visible = True
+            PassKey7.Visible = True
+            PassKey8.Visible = True
+            PassKey9.Visible = True
+            PassKeyEnter.Visible = True
+            MaterialRadioButton1.Visible = True
+            MaterialRadioButton2.Visible = True
+            PassKeyCor.Visible = True
+            cash.Visible = True
+            cheque.Visible = True
+            WithdrawReciptYes.Visible = False
+            WithdrawReciptNo.Visible = False
+            MaterialRadioButton1.Checked = True
+            MaterialRadioButton2.Checked = False
+            MaterialSingleLineTextField1.Text = "Please Enter The Amounts You Wish To Deposit "
+            cheque.Text = "$"
+            cash.Text = "$"
+            Me.Hide()
+            Form1.Show()
+        End If
     End Sub
 
     Private Sub WithdrawReciptNo_Click(sender As Object, e As EventArgs) Handles WithdrawReciptNo.Click
@@ -252,7 +291,93 @@ Public Class Deposit
         PassKeyCor.Visible = True
         cash.Visible = True
         cheque.Visible = True
-        WithdrawReciptYes.Visible = True
-        WithdrawReciptNo.Visible = True
+        WithdrawReciptYes.Visible = False
+        WithdrawReciptNo.Visible = False
+    End Sub
+
+    Private Sub Logout_Click(sender As Object, e As EventArgs) Handles Logout.Click
+        PassKey0.Visible = True
+        PassKey1.Visible = True
+        PassKey2.Visible = True
+        PassKey3.Visible = True
+        PassKey4.Visible = True
+        PassKey5.Visible = True
+        PassKey6.Visible = True
+        PassKey7.Visible = True
+        PassKey8.Visible = True
+        PassKey9.Visible = True
+        PassKeyEnter.Visible = True
+        MaterialRadioButton1.Visible = True
+        MaterialRadioButton2.Visible = True
+        PassKeyCor.Visible = True
+        cash.Visible = True
+        Another.Visible = False
+        cheque.Visible = True
+        WithdrawReciptYes.Visible = False
+        WithdrawReciptNo.Visible = False
+        MaterialRadioButton1.Checked = False
+        MaterialRadioButton2.Checked = False
+        MaterialSingleLineTextField1.Text = "Please Enter The Amounts You Wish To Deposit "
+        cheque.Text = "$"
+        cash.Text = "$"
+        Me.Hide()
+        Form1.Show()
+    End Sub
+
+    Private Sub BackB_Click(sender As Object, e As EventArgs) Handles BackB.Click
+        Another.Visible = False
+        PassKey0.Visible = True
+        PassKey1.Visible = True
+        PassKey2.Visible = True
+        PassKey3.Visible = True
+        PassKey4.Visible = True
+        PassKey5.Visible = True
+        PassKey6.Visible = True
+        PassKey7.Visible = True
+        PassKey8.Visible = True
+        PassKey9.Visible = True
+        PassKeyEnter.Visible = True
+        MaterialRadioButton1.Visible = True
+        MaterialRadioButton2.Visible = True
+        PassKeyCor.Visible = True
+        cash.Visible = True
+        cheque.Visible = True
+        WithdrawReciptYes.Visible = False
+        WithdrawReciptNo.Visible = False
+        MaterialRadioButton1.Enabled = True
+        MaterialSingleLineTextField1.Text = "Please Enter The Amounts You Wish To Deposit "
+        cheque.Text = "$"
+        cash.Text = "$"
+        Me.Hide()
+        Form2.Show()
+    End Sub
+
+    Private Sub Another_Click(sender As Object, e As EventArgs) Handles Another.Click
+        Another.Visible = False
+        PassKey0.Visible = True
+        PassKey1.Visible = True
+        PassKey2.Visible = True
+        PassKey3.Visible = True
+        PassKey4.Visible = True
+        PassKey5.Visible = True
+        PassKey6.Visible = True
+        PassKey7.Visible = True
+        PassKey8.Visible = True
+        PassKey9.Visible = True
+        PassKeyEnter.Visible = True
+        MaterialRadioButton1.Visible = True
+        MaterialRadioButton2.Visible = True
+        PassKeyCor.Visible = True
+        cash.Visible = True
+        cheque.Visible = True
+        WithdrawReciptYes.Visible = False
+        WithdrawReciptNo.Visible = False
+        MaterialRadioButton1.Checked = True
+        MaterialRadioButton2.Checked = False
+        MaterialSingleLineTextField1.Text = "Please Enter The Amounts You Wish To Deposit "
+        cheque.Text = "$"
+        cash.Text = "$"
+        Me.Hide()
+        Form2.Show()
     End Sub
 End Class
