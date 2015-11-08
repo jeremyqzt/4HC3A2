@@ -38,6 +38,9 @@ Partial Class Deposit
         Me.cheque = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.MaterialRadioButton1 = New MaterialSkin.Controls.MaterialRadioButton()
         Me.MaterialRadioButton2 = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.WithdrawReciptNo = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.WithdrawReciptYes = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.MaterialSingleLineTextField1 = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.SuspendLayout()
         '
         'PassKey1
@@ -157,7 +160,7 @@ Partial Class Deposit
         Me.PassKeyEnter.Primary = True
         Me.PassKeyEnter.Size = New System.Drawing.Size(72, 68)
         Me.PassKeyEnter.TabIndex = 27
-        Me.PassKeyEnter.Text = "Enter"
+        Me.PassKeyEnter.Text = "Deposit"
         Me.PassKeyEnter.UseVisualStyleBackColor = True
         '
         'PassKeyCor
@@ -222,7 +225,7 @@ Partial Class Deposit
         Me.MaterialRadioButton1.BackColor = System.Drawing.Color.Transparent
         Me.MaterialRadioButton1.Checked = True
         Me.MaterialRadioButton1.Depth = 0
-        Me.MaterialRadioButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.MaterialRadioButton1.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.MaterialRadioButton1.Location = New System.Drawing.Point(9, 108)
         Me.MaterialRadioButton1.Margin = New System.Windows.Forms.Padding(0)
         Me.MaterialRadioButton1.MouseLocation = New System.Drawing.Point(-1, -1)
@@ -253,11 +256,56 @@ Partial Class Deposit
         Me.MaterialRadioButton2.Text = "Enter Total Cheque Value:"
         Me.MaterialRadioButton2.UseVisualStyleBackColor = False
         '
+        'WithdrawReciptNo
+        '
+        Me.WithdrawReciptNo.Depth = 0
+        Me.WithdrawReciptNo.Location = New System.Drawing.Point(12, 465)
+        Me.WithdrawReciptNo.MouseState = MaterialSkin.MouseState.HOVER
+        Me.WithdrawReciptNo.Name = "WithdrawReciptNo"
+        Me.WithdrawReciptNo.Primary = True
+        Me.WithdrawReciptNo.Size = New System.Drawing.Size(320, 88)
+        Me.WithdrawReciptNo.TabIndex = 45
+        Me.WithdrawReciptNo.Text = "No"
+        Me.WithdrawReciptNo.UseVisualStyleBackColor = True
+        Me.WithdrawReciptNo.Visible = False
+        '
+        'WithdrawReciptYes
+        '
+        Me.WithdrawReciptYes.Depth = 0
+        Me.WithdrawReciptYes.Location = New System.Drawing.Point(12, 371)
+        Me.WithdrawReciptYes.MouseState = MaterialSkin.MouseState.HOVER
+        Me.WithdrawReciptYes.Name = "WithdrawReciptYes"
+        Me.WithdrawReciptYes.Primary = True
+        Me.WithdrawReciptYes.Size = New System.Drawing.Size(320, 88)
+        Me.WithdrawReciptYes.TabIndex = 44
+        Me.WithdrawReciptYes.Text = "Yes"
+        Me.WithdrawReciptYes.UseVisualStyleBackColor = True
+        Me.WithdrawReciptYes.Visible = False
+        '
+        'MaterialSingleLineTextField1
+        '
+        Me.MaterialSingleLineTextField1.Depth = 0
+        Me.MaterialSingleLineTextField1.Hint = ""
+        Me.MaterialSingleLineTextField1.Location = New System.Drawing.Point(12, 72)
+        Me.MaterialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialSingleLineTextField1.Name = "MaterialSingleLineTextField1"
+        Me.MaterialSingleLineTextField1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.MaterialSingleLineTextField1.SelectedText = ""
+        Me.MaterialSingleLineTextField1.SelectionLength = 0
+        Me.MaterialSingleLineTextField1.SelectionStart = 0
+        Me.MaterialSingleLineTextField1.Size = New System.Drawing.Size(326, 23)
+        Me.MaterialSingleLineTextField1.TabIndex = 46
+        Me.MaterialSingleLineTextField1.Text = "Please Enter The Amounts You Wish To Deposit"
+        Me.MaterialSingleLineTextField1.UseSystemPasswordChar = False
+        '
         'Deposit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(711, 599)
+        Me.Controls.Add(Me.MaterialSingleLineTextField1)
+        Me.Controls.Add(Me.WithdrawReciptNo)
+        Me.Controls.Add(Me.WithdrawReciptYes)
         Me.Controls.Add(Me.MaterialRadioButton2)
         Me.Controls.Add(Me.MaterialRadioButton1)
         Me.Controls.Add(Me.cheque)
@@ -297,4 +345,7 @@ Partial Class Deposit
     Friend WithEvents cheque As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialRadioButton1 As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents MaterialRadioButton2 As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents WithdrawReciptNo As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents WithdrawReciptYes As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents MaterialSingleLineTextField1 As MaterialSkin.Controls.MaterialSingleLineTextField
 End Class
