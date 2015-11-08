@@ -345,11 +345,7 @@ Partial Class Deposit
     Friend WithEvents cheque As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents MaterialRadioButton1 As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents MaterialRadioButton2 As MaterialSkin.Controls.MaterialRadioButton
-<<<<<<< HEAD:WindowsApplication1/depositDEAD/DD.vb
-End Class
-=======
     Friend WithEvents WithdrawReciptNo As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents WithdrawReciptYes As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents MaterialSingleLineTextField1 As MaterialSkin.Controls.MaterialSingleLineTextField
 End Class
->>>>>>> 6a1a44e26bb72641a10e0af1f3e6353ec798eb4b:WindowsApplication1/Deposit.Designer.vb

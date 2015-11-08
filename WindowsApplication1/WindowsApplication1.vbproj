@@ -94,6 +94,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TransferMoney.Designer.vb">
+      <DependentUpon>TransferMoney.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransferMoney.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Withdraw.Designer.vb">
       <DependentUpon>Withdraw.vb</DependentUpon>
     </Compile>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferMoney.resx">
+      <DependentUpon>TransferMoney.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Withdraw.resx">
       <DependentUpon>Withdraw.vb</DependentUpon>
