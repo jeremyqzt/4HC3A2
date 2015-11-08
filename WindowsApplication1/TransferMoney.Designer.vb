@@ -25,12 +25,12 @@ Partial Class TransferMoney
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TransferMoney))
         Me.Logout = New System.Windows.Forms.Button()
         Me.info = New System.Windows.Forms.Button()
-        Me.CheckBalanceB = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.TransferMB = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.WithdrawB = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.DepositB = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.MPaymentB = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.TBetweenAccB = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.TByEmailB = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.BackB = New System.Windows.Forms.Button()
         Me.MainFinish = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.Cancel = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.SuspendLayout()
         '
         'Logout
@@ -56,53 +56,41 @@ Partial Class TransferMoney
         Me.info.TabIndex = 5
         Me.info.UseVisualStyleBackColor = False
         '
-        'CheckBalanceB
+        'MPaymentB
         '
-        Me.CheckBalanceB.Depth = 0
-        Me.CheckBalanceB.Location = New System.Drawing.Point(379, 261)
-        Me.CheckBalanceB.MouseState = MaterialSkin.MouseState.HOVER
-        Me.CheckBalanceB.Name = "CheckBalanceB"
-        Me.CheckBalanceB.Primary = True
-        Me.CheckBalanceB.Size = New System.Drawing.Size(320, 88)
-        Me.CheckBalanceB.TabIndex = 15
-        Me.CheckBalanceB.Text = "Check Balance"
-        Me.CheckBalanceB.UseVisualStyleBackColor = True
+        Me.MPaymentB.Depth = 0
+        Me.MPaymentB.Location = New System.Drawing.Point(379, 261)
+        Me.MPaymentB.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MPaymentB.Name = "MPaymentB"
+        Me.MPaymentB.Primary = True
+        Me.MPaymentB.Size = New System.Drawing.Size(320, 88)
+        Me.MPaymentB.TabIndex = 15
+        Me.MPaymentB.Text = "Make a Payment"
+        Me.MPaymentB.UseVisualStyleBackColor = True
         '
-        'TransferMB
+        'TBetweenAccB
         '
-        Me.TransferMB.Depth = 0
-        Me.TransferMB.Location = New System.Drawing.Point(379, 400)
-        Me.TransferMB.MouseState = MaterialSkin.MouseState.HOVER
-        Me.TransferMB.Name = "TransferMB"
-        Me.TransferMB.Primary = True
-        Me.TransferMB.Size = New System.Drawing.Size(320, 88)
-        Me.TransferMB.TabIndex = 16
-        Me.TransferMB.Text = "Transfer Money"
-        Me.TransferMB.UseVisualStyleBackColor = True
+        Me.TBetweenAccB.Depth = 0
+        Me.TBetweenAccB.Location = New System.Drawing.Point(12, 400)
+        Me.TBetweenAccB.MouseState = MaterialSkin.MouseState.HOVER
+        Me.TBetweenAccB.Name = "TBetweenAccB"
+        Me.TBetweenAccB.Primary = True
+        Me.TBetweenAccB.Size = New System.Drawing.Size(320, 88)
+        Me.TBetweenAccB.TabIndex = 18
+        Me.TBetweenAccB.Text = "Transfer Between Accounts"
+        Me.TBetweenAccB.UseVisualStyleBackColor = True
         '
-        'WithdrawB
+        'TByEmailB
         '
-        Me.WithdrawB.Depth = 0
-        Me.WithdrawB.Location = New System.Drawing.Point(12, 400)
-        Me.WithdrawB.MouseState = MaterialSkin.MouseState.HOVER
-        Me.WithdrawB.Name = "WithdrawB"
-        Me.WithdrawB.Primary = True
-        Me.WithdrawB.Size = New System.Drawing.Size(320, 88)
-        Me.WithdrawB.TabIndex = 18
-        Me.WithdrawB.Text = "Withdraw"
-        Me.WithdrawB.UseVisualStyleBackColor = True
-        '
-        'DepositB
-        '
-        Me.DepositB.Depth = 0
-        Me.DepositB.Location = New System.Drawing.Point(12, 261)
-        Me.DepositB.MouseState = MaterialSkin.MouseState.HOVER
-        Me.DepositB.Name = "DepositB"
-        Me.DepositB.Primary = True
-        Me.DepositB.Size = New System.Drawing.Size(320, 88)
-        Me.DepositB.TabIndex = 17
-        Me.DepositB.Text = "Deposit"
-        Me.DepositB.UseVisualStyleBackColor = True
+        Me.TByEmailB.Depth = 0
+        Me.TByEmailB.Location = New System.Drawing.Point(12, 261)
+        Me.TByEmailB.MouseState = MaterialSkin.MouseState.HOVER
+        Me.TByEmailB.Name = "TByEmailB"
+        Me.TByEmailB.Primary = True
+        Me.TByEmailB.Size = New System.Drawing.Size(320, 88)
+        Me.TByEmailB.TabIndex = 17
+        Me.TByEmailB.Text = "Transfer By E-mail"
+        Me.TByEmailB.UseVisualStyleBackColor = True
         '
         'BackB
         '
@@ -128,20 +116,33 @@ Partial Class TransferMoney
         Me.MainFinish.UseVisualStyleBackColor = True
         Me.MainFinish.Visible = False
         '
-        'Form2
+        'Cancel
+        '
+        Me.Cancel.Depth = 0
+        Me.Cancel.Location = New System.Drawing.Point(527, 73)
+        Me.Cancel.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Cancel.Name = "Cancel"
+        Me.Cancel.Primary = True
+        Me.Cancel.Size = New System.Drawing.Size(172, 68)
+        Me.Cancel.TabIndex = 47
+        Me.Cancel.Text = "Cancel"
+        Me.Cancel.UseVisualStyleBackColor = True
+        Me.Cancel.Visible = False
+        '
+        'TransferMoney
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(711, 599)
+        Me.Controls.Add(Me.Cancel)
         Me.Controls.Add(Me.MainFinish)
         Me.Controls.Add(Me.BackB)
-        Me.Controls.Add(Me.WithdrawB)
-        Me.Controls.Add(Me.DepositB)
-        Me.Controls.Add(Me.TransferMB)
-        Me.Controls.Add(Me.CheckBalanceB)
+        Me.Controls.Add(Me.TBetweenAccB)
+        Me.Controls.Add(Me.TByEmailB)
+        Me.Controls.Add(Me.MPaymentB)
         Me.Controls.Add(Me.info)
         Me.Controls.Add(Me.Logout)
-        Me.Name = "Form2"
+        Me.Name = "TransferMoney"
         Me.ShowIcon = False
         Me.Text = "Welcome to X Bank"
         Me.ResumeLayout(False)
@@ -149,12 +150,12 @@ Partial Class TransferMoney
     End Sub
     Friend WithEvents Logout As System.Windows.Forms.Button
     Friend WithEvents info As System.Windows.Forms.Button
-    Friend WithEvents CheckBalanceB As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents TransferMB As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents WithdrawB As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents DepositB As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents MPaymentB As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents TBetweenAccB As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents TByEmailB As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents BackB As System.Windows.Forms.Button
     Friend WithEvents MainFinish As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents Cancel As MaterialSkin.Controls.MaterialRaisedButton
 
 
 

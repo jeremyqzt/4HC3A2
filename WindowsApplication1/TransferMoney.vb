@@ -13,24 +13,25 @@ Public Class TransferMoney
         Form1.Close()
     End Sub
 
+    Private Function unloadTransfer() As Integer
+        MPaymentB.Hide()
+        TBetweenAccB.Hide()
+        TByEmailB.Hide()
+        Return 0
+    End Function
 
-    Private Sub Withdraw_Click(sender As Object, e As EventArgs) Handles WithdrawB.Click
-        Me.Hide()
-        Withdraw.Show()
-
-    End Sub
     Private Sub Logout_Click(sender As Object, e As EventArgs) Handles Logout.Click
         Me.Hide()
         Form1.Show()
     End Sub
 
-    Private Sub DepositB_Click(sender As Object, e As EventArgs) Handles DepositB.Click
-        Me.Hide()
-        Deposit.Show()
-    End Sub
 
     Private Sub BackB_Click(sender As Object, e As EventArgs) Handles BackB.Click
 
     End Sub
 
+
+    Private Sub MPaymentB_Click(sender As Object, e As EventArgs) Handles MPaymentB.Click
+
+    End Sub
 End Class
