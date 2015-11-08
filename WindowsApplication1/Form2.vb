@@ -13,15 +13,6 @@ Public Class Form2
         Form1.Close()
     End Sub
 
-    Private Sub TransferMB_Click(sender As Object, e As EventArgs) Handles TransferMB.Click
-
-    End Sub
-    Private Sub CheckBalanceB_Click(sender As Object, e As EventArgs) Handles CheckBalanceB.Click
-
-    End Sub
-    Private Sub Deposit_Click(sender As Object, e As EventArgs) Handles DepositB.Click
-
-    End Sub
 
     Private Sub Withdraw_Click(sender As Object, e As EventArgs) Handles WithdrawB.Click
         Me.Hide()
@@ -31,5 +22,10 @@ Public Class Form2
     Private Sub Logout_Click(sender As Object, e As EventArgs) Handles Logout.Click
         Me.Hide()
         Form1.Show()
+    End Sub
+
+    Private Sub DepositB_Click(sender As Object, e As EventArgs) Handles DepositB.Click
+        Me.Hide()
+        Deposit.Show()
     End Sub
 End Class

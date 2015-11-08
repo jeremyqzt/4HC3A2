@@ -11,6 +11,8 @@ Public Class Form1
     End Sub
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles PassKey1.Click
         Call AddStar()
+        Beep()
+
     End Sub
 
     Private Sub MaterialRaisedButton1_Click_1(sender As Object, e As EventArgs) Handles PassKey2.Click
@@ -30,47 +32,57 @@ Public Class Form1
 
     Private Sub MaterialRaisedButton2_Click(sender As Object, e As EventArgs) Handles PassKey3.Click
         Call AddStar()
-
+        Beep()
     End Sub
 
     Private Sub MaterialRaisedButton3_Click(sender As Object, e As EventArgs) Handles PassKey4.Click
         Call AddStar()
+        Beep()
 
     End Sub
 
     Private Sub MaterialRaisedButton4_Click(sender As Object, e As EventArgs) Handles PassKey5.Click
         Call AddStar()
+        Beep()
 
     End Sub
 
     Private Sub MaterialRaisedButton5_Click(sender As Object, e As EventArgs) Handles PassKey6.Click
         Call AddStar()
+        Beep()
 
     End Sub
 
     Private Sub MaterialRaisedButton6_Click(sender As Object, e As EventArgs) Handles PassKey7.Click
         Call AddStar()
+        Beep()
 
     End Sub
 
     Private Sub MaterialRaisedButton7_Click(sender As Object, e As EventArgs) Handles PassKey8.Click
         Call AddStar()
+        Beep()
 
     End Sub
 
     Private Sub MaterialRaisedButton8_Click(sender As Object, e As EventArgs) Handles PassKey9.Click
         Call AddStar()
+        Beep()
 
     End Sub
 
 
     Private Sub MaterialRaisedButton1_Click_2(sender As Object, e As EventArgs) Handles PassKey0.Click
         Call AddStar()
+        Beep()
+
     End Sub
 
     Private Sub MaterialRaisedButton10_Click(sender As Object, e As EventArgs) Handles PassKeyCor.Click
         Dim Removed As String
         Dim Amount As Integer
+        Beep()
+
         Removed = PassField.Text
         Amount = Removed.Length
         If Amount > 3 Then
@@ -157,10 +169,11 @@ Public Class Form1
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        'tick = tick + 1
-        'ProgressBar1.Increment(35)
-        'If tick > 3 Then
-        If (True) Then
+        tick = tick + 1
+        ProgressBar1.Increment(35)
+        If tick > 3 Then
+            'If (True) Then
+            ProgressBar1.Value = 0
             Timer1.Enabled = False
             tick = 0
             ProgressBar1.Visible = False

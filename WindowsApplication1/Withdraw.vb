@@ -10,9 +10,6 @@ Public Class Withdraw
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
         SkinManager.ColorScheme = New ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
     End Sub
-    Private Sub Withdraw_Closing(sender As Object, e As System.ComponentModel.CancelEventArgs)
-        Form1.Close()
-    End Sub
     Private Function WithdrawReset() As Integer
         W60.Show()
         W80.Show()
@@ -60,7 +57,10 @@ Public Class Withdraw
     Private Sub WithdrawTxt_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
-
+    Private Sub Withdraw_Closing(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
+        Form1.Close()
+        Form2.Close()
+    End Sub
     Private Sub Withdraw_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
