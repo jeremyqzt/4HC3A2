@@ -339,6 +339,7 @@ Partial Class Deposit
         'MaterialRadioButton3
         '
         Me.MaterialRadioButton3.AutoSize = True
+        Me.MaterialRadioButton3.BackColor = System.Drawing.Color.Transparent
         Me.MaterialRadioButton3.Depth = 0
         Me.MaterialRadioButton3.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.MaterialRadioButton3.Location = New System.Drawing.Point(12, 190)
@@ -350,12 +351,13 @@ Partial Class Deposit
         Me.MaterialRadioButton3.Size = New System.Drawing.Size(77, 30)
         Me.MaterialRadioButton3.TabIndex = 51
         Me.MaterialRadioButton3.Text = "Savings"
-        Me.MaterialRadioButton3.UseVisualStyleBackColor = True
+        Me.MaterialRadioButton3.UseVisualStyleBackColor = False
         Me.MaterialRadioButton3.Visible = False
         '
         'MaterialRadioButton4
         '
         Me.MaterialRadioButton4.AutoSize = True
+        Me.MaterialRadioButton4.BackColor = System.Drawing.Color.Transparent
         Me.MaterialRadioButton4.Depth = 0
         Me.MaterialRadioButton4.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.MaterialRadioButton4.Location = New System.Drawing.Point(12, 220)
@@ -367,12 +369,13 @@ Partial Class Deposit
         Me.MaterialRadioButton4.Size = New System.Drawing.Size(93, 30)
         Me.MaterialRadioButton4.TabIndex = 52
         Me.MaterialRadioButton4.Text = "Checkings"
-        Me.MaterialRadioButton4.UseVisualStyleBackColor = True
+        Me.MaterialRadioButton4.UseVisualStyleBackColor = False
         Me.MaterialRadioButton4.Visible = False
         '
         'MaterialLabel1
         '
         Me.MaterialLabel1.AutoSize = True
+        Me.MaterialLabel1.BackColor = System.Drawing.Color.Transparent
         Me.MaterialLabel1.Depth = 0
         Me.MaterialLabel1.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -387,6 +390,7 @@ Partial Class Deposit
         'MaterialSingleLineTextField1
         '
         Me.MaterialSingleLineTextField1.AutoSize = True
+        Me.MaterialSingleLineTextField1.BackColor = System.Drawing.Color.Transparent
         Me.MaterialSingleLineTextField1.Depth = 0
         Me.MaterialSingleLineTextField1.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialSingleLineTextField1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))

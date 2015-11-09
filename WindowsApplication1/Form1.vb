@@ -106,7 +106,7 @@ Public Class Form1
         MaterialLabel1.Show()
         Cancel.Show()
         MaterialLabel1.Text = "Please enter your pin"
-        Me.Text = "Welcome Ian"
+        Me.Text = "Welcome"
     End Sub
     Private Sub PassKeyEnter_Click(sender As Object, e As EventArgs) Handles PassKeyEnter.Click
         If (pinTrack = 4) Then
@@ -126,6 +126,7 @@ Public Class Form1
             PassKeyEnter.Hide()
             Cancel.Hide()
             My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech On.wav")
+            pinTrack = 0
 
             ProgressBar1.Visible = True
             ProgressBar1.ForeColor = Color.Blue
@@ -145,7 +146,7 @@ Public Class Form1
     End Sub
     Private Sub Cancel_Click(sender As Object, e As EventArgs) Handles Cancel.Click
         ToMain.Visible = True
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech Off.wav")
         PassField.Text = ""
         PassField.Hide()
         PassKey1.Hide()

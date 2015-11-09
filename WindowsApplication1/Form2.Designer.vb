@@ -26,7 +26,6 @@ Partial Class Form2
         Me.Logout = New System.Windows.Forms.Button()
         Me.info = New System.Windows.Forms.Button()
         Me.CheckBalanceB = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.TransferMB = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.WithdrawB = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.DepositB = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.BackB = New System.Windows.Forms.Button()
@@ -68,18 +67,6 @@ Partial Class Form2
         Me.CheckBalanceB.TabIndex = 15
         Me.CheckBalanceB.Text = "Check Balance"
         Me.CheckBalanceB.UseVisualStyleBackColor = True
-        '
-        'TransferMB
-        '
-        Me.TransferMB.Depth = 0
-        Me.TransferMB.Location = New System.Drawing.Point(379, 314)
-        Me.TransferMB.MouseState = MaterialSkin.MouseState.HOVER
-        Me.TransferMB.Name = "TransferMB"
-        Me.TransferMB.Primary = True
-        Me.TransferMB.Size = New System.Drawing.Size(320, 88)
-        Me.TransferMB.TabIndex = 16
-        Me.TransferMB.Text = "Transfer Money"
-        Me.TransferMB.UseVisualStyleBackColor = True
         '
         'WithdrawB
         '
@@ -127,7 +114,6 @@ Partial Class Form2
         Me.MainTransfer.TabIndex = 46
         Me.MainTransfer.Text = "Make a Transfer"
         Me.MainTransfer.UseVisualStyleBackColor = True
-        Me.MainTransfer.Visible = False
         '
         'WithdrawReciptYes
         '
@@ -151,7 +137,6 @@ Partial Class Form2
         Me.Controls.Add(Me.BackB)
         Me.Controls.Add(Me.WithdrawB)
         Me.Controls.Add(Me.DepositB)
-        Me.Controls.Add(Me.TransferMB)
         Me.Controls.Add(Me.CheckBalanceB)
         Me.Controls.Add(Me.info)
         Me.Controls.Add(Me.Logout)
@@ -164,7 +149,6 @@ Partial Class Form2
     Friend WithEvents Logout As System.Windows.Forms.Button
     Friend WithEvents info As System.Windows.Forms.Button
     Friend WithEvents CheckBalanceB As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents TransferMB As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents WithdrawB As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents DepositB As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents BackB As System.Windows.Forms.Button

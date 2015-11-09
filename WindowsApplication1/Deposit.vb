@@ -221,10 +221,11 @@ Public Class Deposit
     End Sub
 
     Private Sub PassKeyEnter_Click(sender As Object, e As EventArgs) Handles PassKeyEnter.Click
+        WithdrawReciptYes.Text = "Deposit"
 
         MaterialRadioButton3.Checked = True
         My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
-        Dim Total As Integer
+        Dim Total As Long
         If cash.Text.Length > 1 Then
             Total = CInt((cash.Text.Substring(0, cash.Text.Length)))
         End If
@@ -293,6 +294,7 @@ Public Class Deposit
             MaterialRadioButton1.Checked = True
             My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech Off.wav")
             Another.Visible = False
+            WithdrawReciptYes.Text = "Deposit"
 
             MaterialRadioButton2.Checked = False
             MaterialSingleLineTextField1.Text = "Please Enter The Amounts You Wish To Deposit "

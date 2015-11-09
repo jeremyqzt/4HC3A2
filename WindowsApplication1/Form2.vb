@@ -54,7 +54,8 @@ Public Class Form2
     End Sub
 
     Private Sub MainTransfer_Click(sender As Object, e As EventArgs) Handles MainTransfer.Click
+        TransferMoney.Show()
         My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
-
+        Me.Hide()
     End Sub
 End Class
