@@ -34,4 +34,12 @@ Public Class TransferMoney
     Private Sub MPaymentB_Click(sender As Object, e As EventArgs) Handles MPaymentB.Click
 
     End Sub
+
+    Private Sub MainFinish_Click(sender As Object, e As EventArgs) Handles MainFinish.Click
+
+    End Sub
+
+    Private Sub Another_Click(sender As Object, e As EventArgs) Handles Another.Click
+
+    End Sub
 End Class

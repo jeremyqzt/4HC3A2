@@ -30,7 +30,8 @@ Partial Class Form2
         Me.WithdrawB = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.DepositB = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.BackB = New System.Windows.Forms.Button()
-        Me.MainFinish = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.MainTransfer = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.WithdrawReciptYes = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.SuspendLayout()
         '
         'Logout
@@ -59,7 +60,7 @@ Partial Class Form2
         'CheckBalanceB
         '
         Me.CheckBalanceB.Depth = 0
-        Me.CheckBalanceB.Location = New System.Drawing.Point(379, 261)
+        Me.CheckBalanceB.Location = New System.Drawing.Point(379, 206)
         Me.CheckBalanceB.MouseState = MaterialSkin.MouseState.HOVER
         Me.CheckBalanceB.Name = "CheckBalanceB"
         Me.CheckBalanceB.Primary = True
@@ -71,7 +72,7 @@ Partial Class Form2
         'TransferMB
         '
         Me.TransferMB.Depth = 0
-        Me.TransferMB.Location = New System.Drawing.Point(379, 400)
+        Me.TransferMB.Location = New System.Drawing.Point(379, 314)
         Me.TransferMB.MouseState = MaterialSkin.MouseState.HOVER
         Me.TransferMB.Name = "TransferMB"
         Me.TransferMB.Primary = True
@@ -83,7 +84,7 @@ Partial Class Form2
         'WithdrawB
         '
         Me.WithdrawB.Depth = 0
-        Me.WithdrawB.Location = New System.Drawing.Point(12, 400)
+        Me.WithdrawB.Location = New System.Drawing.Point(12, 314)
         Me.WithdrawB.MouseState = MaterialSkin.MouseState.HOVER
         Me.WithdrawB.Name = "WithdrawB"
         Me.WithdrawB.Primary = True
@@ -95,7 +96,7 @@ Partial Class Form2
         'DepositB
         '
         Me.DepositB.Depth = 0
-        Me.DepositB.Location = New System.Drawing.Point(12, 261)
+        Me.DepositB.Location = New System.Drawing.Point(12, 206)
         Me.DepositB.MouseState = MaterialSkin.MouseState.HOVER
         Me.DepositB.Name = "DepositB"
         Me.DepositB.Primary = True
@@ -115,25 +116,38 @@ Partial Class Form2
         Me.BackB.TabIndex = 43
         Me.BackB.UseVisualStyleBackColor = False
         '
-        'MainFinish
+        'MainTransfer
         '
-        Me.MainFinish.Depth = 0
-        Me.MainFinish.Location = New System.Drawing.Point(379, 400)
-        Me.MainFinish.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MainFinish.Name = "MainFinish"
-        Me.MainFinish.Primary = True
-        Me.MainFinish.Size = New System.Drawing.Size(320, 88)
-        Me.MainFinish.TabIndex = 46
-        Me.MainFinish.Text = "Finish"
-        Me.MainFinish.UseVisualStyleBackColor = True
-        Me.MainFinish.Visible = False
+        Me.MainTransfer.Depth = 0
+        Me.MainTransfer.Location = New System.Drawing.Point(379, 314)
+        Me.MainTransfer.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MainTransfer.Name = "MainTransfer"
+        Me.MainTransfer.Primary = True
+        Me.MainTransfer.Size = New System.Drawing.Size(320, 88)
+        Me.MainTransfer.TabIndex = 46
+        Me.MainTransfer.Text = "Make a Transfer"
+        Me.MainTransfer.UseVisualStyleBackColor = True
+        Me.MainTransfer.Visible = False
+        '
+        'WithdrawReciptYes
+        '
+        Me.WithdrawReciptYes.Depth = 0
+        Me.WithdrawReciptYes.Location = New System.Drawing.Point(12, 499)
+        Me.WithdrawReciptYes.MouseState = MaterialSkin.MouseState.HOVER
+        Me.WithdrawReciptYes.Name = "WithdrawReciptYes"
+        Me.WithdrawReciptYes.Primary = True
+        Me.WithdrawReciptYes.Size = New System.Drawing.Size(320, 88)
+        Me.WithdrawReciptYes.TabIndex = 54
+        Me.WithdrawReciptYes.Text = "Finish"
+        Me.WithdrawReciptYes.UseVisualStyleBackColor = True
         '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(711, 599)
-        Me.Controls.Add(Me.MainFinish)
+        Me.Controls.Add(Me.WithdrawReciptYes)
+        Me.Controls.Add(Me.MainTransfer)
         Me.Controls.Add(Me.BackB)
         Me.Controls.Add(Me.WithdrawB)
         Me.Controls.Add(Me.DepositB)
@@ -154,8 +168,8 @@ Partial Class Form2
     Friend WithEvents WithdrawB As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents DepositB As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents BackB As System.Windows.Forms.Button
-    Friend WithEvents MainFinish As MaterialSkin.Controls.MaterialRaisedButton
-
+    Friend WithEvents MainTransfer As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents WithdrawReciptYes As MaterialSkin.Controls.MaterialRaisedButton
 
 
 

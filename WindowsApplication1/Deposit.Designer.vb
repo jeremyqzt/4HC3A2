@@ -41,11 +41,14 @@ Partial Class Deposit
         Me.MaterialRadioButton2 = New MaterialSkin.Controls.MaterialRadioButton()
         Me.WithdrawReciptNo = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.WithdrawReciptYes = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.MaterialSingleLineTextField1 = New MaterialSkin.Controls.MaterialSingleLineTextField()
         Me.BackB = New System.Windows.Forms.Button()
         Me.info = New System.Windows.Forms.Button()
         Me.Logout = New System.Windows.Forms.Button()
         Me.Another = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.MaterialRadioButton3 = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.MaterialRadioButton4 = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
+        Me.MaterialSingleLineTextField1 = New MaterialSkin.Controls.MaterialLabel()
         Me.SuspendLayout()
         '
         'PassKey1
@@ -257,7 +260,6 @@ Partial Class Deposit
         Me.MaterialRadioButton2.Ripple = True
         Me.MaterialRadioButton2.Size = New System.Drawing.Size(188, 30)
         Me.MaterialRadioButton2.TabIndex = 34
-        Me.MaterialRadioButton2.TabStop = True
         Me.MaterialRadioButton2.Text = "Enter Total Cheque Value:"
         Me.MaterialRadioButton2.UseVisualStyleBackColor = False
         '
@@ -270,39 +272,22 @@ Partial Class Deposit
         Me.WithdrawReciptNo.Primary = True
         Me.WithdrawReciptNo.Size = New System.Drawing.Size(320, 88)
         Me.WithdrawReciptNo.TabIndex = 45
-        Me.WithdrawReciptNo.Text = "No"
+        Me.WithdrawReciptNo.Text = "Make Changes"
         Me.WithdrawReciptNo.UseVisualStyleBackColor = True
         Me.WithdrawReciptNo.Visible = False
         '
         'WithdrawReciptYes
         '
         Me.WithdrawReciptYes.Depth = 0
-        Me.WithdrawReciptYes.Location = New System.Drawing.Point(12, 371)
+        Me.WithdrawReciptYes.Location = New System.Drawing.Point(9, 361)
         Me.WithdrawReciptYes.MouseState = MaterialSkin.MouseState.HOVER
         Me.WithdrawReciptYes.Name = "WithdrawReciptYes"
         Me.WithdrawReciptYes.Primary = True
         Me.WithdrawReciptYes.Size = New System.Drawing.Size(320, 88)
         Me.WithdrawReciptYes.TabIndex = 44
-        Me.WithdrawReciptYes.Text = "Yes"
+        Me.WithdrawReciptYes.Text = "Deposit"
         Me.WithdrawReciptYes.UseVisualStyleBackColor = True
         Me.WithdrawReciptYes.Visible = False
-        '
-        'MaterialSingleLineTextField1
-        '
-        Me.MaterialSingleLineTextField1.Depth = 0
-        Me.MaterialSingleLineTextField1.Enabled = False
-        Me.MaterialSingleLineTextField1.Hint = ""
-        Me.MaterialSingleLineTextField1.Location = New System.Drawing.Point(12, 72)
-        Me.MaterialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialSingleLineTextField1.Name = "MaterialSingleLineTextField1"
-        Me.MaterialSingleLineTextField1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MaterialSingleLineTextField1.SelectedText = ""
-        Me.MaterialSingleLineTextField1.SelectionLength = 0
-        Me.MaterialSingleLineTextField1.SelectionStart = 0
-        Me.MaterialSingleLineTextField1.Size = New System.Drawing.Size(326, 23)
-        Me.MaterialSingleLineTextField1.TabIndex = 46
-        Me.MaterialSingleLineTextField1.Text = "Please Enter The Amounts You Wish To Deposit"
-        Me.MaterialSingleLineTextField1.UseSystemPasswordChar = False
         '
         'BackB
         '
@@ -351,16 +336,80 @@ Partial Class Deposit
         Me.Another.UseVisualStyleBackColor = True
         Me.Another.Visible = False
         '
+        'MaterialRadioButton3
+        '
+        Me.MaterialRadioButton3.AutoSize = True
+        Me.MaterialRadioButton3.Depth = 0
+        Me.MaterialRadioButton3.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.MaterialRadioButton3.Location = New System.Drawing.Point(12, 190)
+        Me.MaterialRadioButton3.Margin = New System.Windows.Forms.Padding(0)
+        Me.MaterialRadioButton3.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.MaterialRadioButton3.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialRadioButton3.Name = "MaterialRadioButton3"
+        Me.MaterialRadioButton3.Ripple = True
+        Me.MaterialRadioButton3.Size = New System.Drawing.Size(77, 30)
+        Me.MaterialRadioButton3.TabIndex = 51
+        Me.MaterialRadioButton3.Text = "Savings"
+        Me.MaterialRadioButton3.UseVisualStyleBackColor = True
+        Me.MaterialRadioButton3.Visible = False
+        '
+        'MaterialRadioButton4
+        '
+        Me.MaterialRadioButton4.AutoSize = True
+        Me.MaterialRadioButton4.Depth = 0
+        Me.MaterialRadioButton4.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.MaterialRadioButton4.Location = New System.Drawing.Point(12, 220)
+        Me.MaterialRadioButton4.Margin = New System.Windows.Forms.Padding(0)
+        Me.MaterialRadioButton4.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.MaterialRadioButton4.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialRadioButton4.Name = "MaterialRadioButton4"
+        Me.MaterialRadioButton4.Ripple = True
+        Me.MaterialRadioButton4.Size = New System.Drawing.Size(93, 30)
+        Me.MaterialRadioButton4.TabIndex = 52
+        Me.MaterialRadioButton4.Text = "Checkings"
+        Me.MaterialRadioButton4.UseVisualStyleBackColor = True
+        Me.MaterialRadioButton4.Visible = False
+        '
+        'MaterialLabel1
+        '
+        Me.MaterialLabel1.AutoSize = True
+        Me.MaterialLabel1.Depth = 0
+        Me.MaterialLabel1.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.MaterialLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialLabel1.Location = New System.Drawing.Point(8, 160)
+        Me.MaterialLabel1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel1.Name = "MaterialLabel1"
+        Me.MaterialLabel1.Size = New System.Drawing.Size(132, 19)
+        Me.MaterialLabel1.TabIndex = 53
+        Me.MaterialLabel1.Text = "Where to Deposit?"
+        Me.MaterialLabel1.Visible = False
+        '
+        'MaterialSingleLineTextField1
+        '
+        Me.MaterialSingleLineTextField1.AutoSize = True
+        Me.MaterialSingleLineTextField1.Depth = 0
+        Me.MaterialSingleLineTextField1.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.MaterialSingleLineTextField1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialSingleLineTextField1.Location = New System.Drawing.Point(8, 74)
+        Me.MaterialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialSingleLineTextField1.Name = "MaterialSingleLineTextField1"
+        Me.MaterialSingleLineTextField1.Size = New System.Drawing.Size(328, 19)
+        Me.MaterialSingleLineTextField1.TabIndex = 54
+        Me.MaterialSingleLineTextField1.Text = "Please Enter The Amounts You Wish to Deposit"
+        '
         'Deposit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(711, 599)
+        Me.Controls.Add(Me.MaterialSingleLineTextField1)
+        Me.Controls.Add(Me.MaterialLabel1)
+        Me.Controls.Add(Me.MaterialRadioButton4)
+        Me.Controls.Add(Me.MaterialRadioButton3)
         Me.Controls.Add(Me.Another)
         Me.Controls.Add(Me.BackB)
         Me.Controls.Add(Me.info)
         Me.Controls.Add(Me.Logout)
-        Me.Controls.Add(Me.MaterialSingleLineTextField1)
         Me.Controls.Add(Me.WithdrawReciptNo)
         Me.Controls.Add(Me.WithdrawReciptYes)
         Me.Controls.Add(Me.MaterialRadioButton2)
@@ -404,9 +453,12 @@ Partial Class Deposit
     Friend WithEvents MaterialRadioButton2 As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents WithdrawReciptNo As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents WithdrawReciptYes As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents MaterialSingleLineTextField1 As MaterialSkin.Controls.MaterialSingleLineTextField
     Friend WithEvents BackB As Button
     Friend WithEvents info As Button
     Friend WithEvents Logout As Button
     Friend WithEvents Another As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents MaterialRadioButton3 As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents MaterialRadioButton4 As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
+    Friend WithEvents MaterialSingleLineTextField1 As MaterialSkin.Controls.MaterialLabel
 End Class

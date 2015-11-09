@@ -59,6 +59,7 @@ Partial Class Withdraw
         Me.WithdrawReciptYes = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.WithdrawTimer = New System.Windows.Forms.Timer(Me.components)
         Me.WithdrawFinish = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.SuspendLayout()
         '
         'CheckBalance
@@ -485,7 +486,7 @@ Partial Class Withdraw
         'WithdrawFinish
         '
         Me.WithdrawFinish.Depth = 0
-        Me.WithdrawFinish.Location = New System.Drawing.Point(379, 460)
+        Me.WithdrawFinish.Location = New System.Drawing.Point(12, 460)
         Me.WithdrawFinish.MouseState = MaterialSkin.MouseState.HOVER
         Me.WithdrawFinish.Name = "WithdrawFinish"
         Me.WithdrawFinish.Primary = True
@@ -495,9 +496,23 @@ Partial Class Withdraw
         Me.WithdrawFinish.UseVisualStyleBackColor = True
         Me.WithdrawFinish.Visible = False
         '
+        'MaterialRaisedButton1
+        '
+        Me.MaterialRaisedButton1.Depth = 0
+        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(12, 366)
+        Me.MaterialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialRaisedButton1.Name = "MaterialRaisedButton1"
+        Me.MaterialRaisedButton1.Primary = True
+        Me.MaterialRaisedButton1.Size = New System.Drawing.Size(320, 88)
+        Me.MaterialRaisedButton1.TabIndex = 45
+        Me.MaterialRaisedButton1.Text = "Perform Another Action"
+        Me.MaterialRaisedButton1.UseVisualStyleBackColor = True
+        Me.MaterialRaisedButton1.Visible = False
+        '
         'Withdraw
         '
         Me.ClientSize = New System.Drawing.Size(711, 599)
+        Me.Controls.Add(Me.MaterialRaisedButton1)
         Me.Controls.Add(Me.WithdrawFinish)
         Me.Controls.Add(Me.WithdrawReciptNo)
         Me.Controls.Add(Me.WithdrawReciptYes)
@@ -570,7 +585,7 @@ Partial Class Withdraw
     Friend WithEvents WithdrawReciptYes As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents WithdrawTimer As System.Windows.Forms.Timer
     Friend WithEvents WithdrawFinish As MaterialSkin.Controls.MaterialRaisedButton
-
+    Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
 
 
 

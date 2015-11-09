@@ -286,7 +286,7 @@ Public Class Withdraw
         MsgBox("RECIPT TEXT")
     End Sub
     Private Sub WithdrawReciptNo_Click(sender As Object, e As EventArgs) Handles WithdrawReciptNo.Click
-        MaterialLabel2.Text = ("Now Printing")
+        MaterialLabel2.Text = ("Receipt Not Needed")
         WithdrawReciptNo.Hide()
         WithdrawReciptYes.Hide()
         WithdrawTimer.Enabled = True
@@ -300,6 +300,7 @@ Public Class Withdraw
             WithdrawTimer.Enabled = False
             MaterialLabel2.Text = "Please take your money."
             WithdrawFinish.Show()
+            MaterialRaisedButton1.Show()
         End If
     End Sub
 
@@ -314,5 +315,14 @@ Public Class Withdraw
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
+    End Sub
+
+    Private Sub MaterialRaisedButton1_Click_1(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
+        WithdrawFinish.Hide()
+        MaterialRaisedButton1.Hide()
+        MaterialLabel2.Text = ""
+        WithdrawReset()
+        Me.Hide()
+        Form2.Show()
     End Sub
 End Class
