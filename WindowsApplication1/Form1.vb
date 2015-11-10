@@ -136,7 +136,7 @@ Public Class Form1
 
         Else
             Beep()
-            MsgBox("Pin invalid, please try again")
+            MsgBox("Pin invalid, please enter 4 digits.")
         End If
 
 

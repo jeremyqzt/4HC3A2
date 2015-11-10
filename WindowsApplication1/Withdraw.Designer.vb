@@ -60,6 +60,9 @@ Partial Class Withdraw
         Me.WithdrawTimer = New System.Windows.Forms.Timer(Me.components)
         Me.WithdrawFinish = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.Chequing = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.Savings = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.SelectPayee = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.SuspendLayout()
         '
         'CheckBalance
@@ -509,9 +512,63 @@ Partial Class Withdraw
         Me.MaterialRaisedButton1.UseVisualStyleBackColor = True
         Me.MaterialRaisedButton1.Visible = False
         '
+        'Chequing
+        '
+        Me.Chequing.AutoSize = True
+        Me.Chequing.BackColor = System.Drawing.Color.Transparent
+        Me.Chequing.Depth = 0
+        Me.Chequing.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.Chequing.Location = New System.Drawing.Point(12, 279)
+        Me.Chequing.Margin = New System.Windows.Forms.Padding(0)
+        Me.Chequing.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.Chequing.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Chequing.Name = "Chequing"
+        Me.Chequing.Ripple = True
+        Me.Chequing.Size = New System.Drawing.Size(87, 30)
+        Me.Chequing.TabIndex = 95
+        Me.Chequing.TabStop = True
+        Me.Chequing.Text = "Chequing"
+        Me.Chequing.UseVisualStyleBackColor = False
+        Me.Chequing.Visible = False
+        '
+        'Savings
+        '
+        Me.Savings.AutoSize = True
+        Me.Savings.BackColor = System.Drawing.Color.Transparent
+        Me.Savings.Depth = 0
+        Me.Savings.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.Savings.Location = New System.Drawing.Point(12, 309)
+        Me.Savings.Margin = New System.Windows.Forms.Padding(0)
+        Me.Savings.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.Savings.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Savings.Name = "Savings"
+        Me.Savings.Ripple = True
+        Me.Savings.Size = New System.Drawing.Size(77, 30)
+        Me.Savings.TabIndex = 94
+        Me.Savings.TabStop = True
+        Me.Savings.Text = "Savings"
+        Me.Savings.UseVisualStyleBackColor = False
+        Me.Savings.Visible = False
+        '
+        'SelectPayee
+        '
+        Me.SelectPayee.Depth = 0
+        Me.SelectPayee.Location = New System.Drawing.Point(277, 475)
+        Me.SelectPayee.MouseState = MaterialSkin.MouseState.HOVER
+        Me.SelectPayee.Name = "SelectPayee"
+        Me.SelectPayee.Primary = True
+        Me.SelectPayee.Size = New System.Drawing.Size(153, 88)
+        Me.SelectPayee.TabIndex = 93
+        Me.SelectPayee.Text = "Select"
+        Me.SelectPayee.UseVisualStyleBackColor = True
+        Me.SelectPayee.Visible = False
+        '
         'Withdraw
         '
         Me.ClientSize = New System.Drawing.Size(711, 599)
+        Me.Controls.Add(Me.Chequing)
+        Me.Controls.Add(Me.Savings)
+        Me.Controls.Add(Me.SelectPayee)
         Me.Controls.Add(Me.MaterialRaisedButton1)
         Me.Controls.Add(Me.WithdrawFinish)
         Me.Controls.Add(Me.WithdrawReciptNo)
@@ -586,6 +643,9 @@ Partial Class Withdraw
     Friend WithEvents WithdrawTimer As System.Windows.Forms.Timer
     Friend WithEvents WithdrawFinish As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents Chequing As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents Savings As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents SelectPayee As MaterialSkin.Controls.MaterialRaisedButton
 
 
 

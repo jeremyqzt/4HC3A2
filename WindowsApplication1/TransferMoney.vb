@@ -4,6 +4,7 @@ Public Class TransferMoney
     Dim transferSelect As String = ""
     Dim TransferAmount As String = ""
     Dim pinTrack As Integer = 0
+    Dim Account As String = ""
     Dim PaymentPayee As String = ""
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
@@ -30,11 +31,9 @@ Public Class TransferMoney
             MaterialRadioButton10.Show()
             SelectPayee.Show()
             MaterialLabel2.Show()
-            MaterialLabel2.Text = "Please choose the payee. " + TransferAmount + " is being transfered."
+            MaterialLabel2.Text = "Please choose the payee. " + TransferAmount + ".00 is being transfered."
             NextPage.Show()
         ElseIf transferSelect = "BtwAcc" Then
-            TransferTo.Show()
-            TransferFrom.Show()
             MaterialLabel1.Show()
             MaterialLabel1.Text = "Please select the account to transfer."
             MaterialLabel2.Show()
@@ -47,8 +46,8 @@ Public Class TransferMoney
             MaterialRadioButton12.Show()
             MaterialRadioButton13.Show()
             MaterialRadioButton14.Show()
-            MaterialLabel1.Show()
-            MaterialLabel1.Text = "Please select the E-mail to send to."
+            MaterialLabel2.Show()
+            MaterialLabel2.Text = "Please choose the E-mail. " + TransferAmount + ".00 is being transfered."
             SelectPayee.Show()
         End If
         Return 0
@@ -66,6 +65,7 @@ Public Class TransferMoney
         PassKey7.Show()
         PassKey8.Show()
         PassKey9.Show()
+        MaterialLabel1.Text = "Please Dictate Amount of Transfer"
         PassKey0.Show()
         MaterialLabel2.Hide()
         PassKeyCor.Show()
@@ -77,6 +77,7 @@ Public Class TransferMoney
     End Function
     Private Function unloadTransfer() As Integer
         MPaymentB.Hide()
+        Account = ""
         TBetweenAccB.Hide()
         TByEmailB.Hide()
         Return 0
@@ -91,19 +92,21 @@ Public Class TransferMoney
         PassKey1.Hide()
         MaterialLabel2.Hide()
         MaterialLabel3.Hide()
-        TransferTo.Hide()
-        TransferFrom.Hide()
         PassKey2.Hide()
         PassKey3.Hide()
+        Account = ""
         PassKey4.Hide()
         PassKey5.Hide()
         PassKey6.Hide()
         NextPage.Hide()
+        Chequing.Hide()
+        Savings.Hide()
+        SelectAccount.Hide()
         Previous.Hide()
         PrintRecipt.Hide()
         ReciptNo.Hide()
         PassField.Text = "$"
-        Dim PaymentPayee As String = ""
+        PaymentPayee = ""
         PassKey7.Hide()
         PassKey8.Hide()
         MaterialRadioButton1.Hide()
@@ -170,6 +173,7 @@ Public Class TransferMoney
         MaterialLabel3.Hide()
         transferSelect = ""
         TransferAmount = ""
+
         unloadKeys()
     End Sub
 
@@ -268,22 +272,29 @@ Public Class TransferMoney
     End Sub
 
     Private Sub PassKeyEnter_Click(sender As Object, e As EventArgs) Handles PassKeyEnter.Click
-        selectTransfer()
-        PassKey1.Hide()
-        PassKey2.Hide()
-        PassKey3.Hide()
-        PassKey4.Hide()
-        PassKey5.Hide()
-        PassKey6.Hide()
-        PassField.Text = "$"
-        PassKey7.Hide()
-        PassKey8.Hide()
-        PassKey9.Hide()
-        PassKey0.Hide()
-        PassKeyCor.Hide()
-        PassKeyEnter.Hide()
-        MaterialLabel1.Hide()
-        PassField.Hide()
+        If PassField.Text = "$" Then
+            Beep()
+            MsgBox("Please enter the amount you want to transfer.")
+        Else
+            selectTransfer()
+            PassKey1.Hide()
+            PassKey2.Hide()
+            PassKey3.Hide()
+            PassKey4.Hide()
+            PassKey5.Hide()
+            PassKey6.Hide()
+            PassField.Text = "$"
+            PassKey7.Hide()
+            PassKey8.Hide()
+            PassKey9.Hide()
+            PassKey0.Hide()
+            PassKeyCor.Hide()
+            SelectPayee.Show()
+            PassKeyEnter.Hide()
+            MaterialLabel1.Hide()
+            PassField.Hide()
+        End If
+
     End Sub
 
     Private Sub TBetweenAccB_Click(sender As Object, e As EventArgs) Handles TBetweenAccB.Click
@@ -334,7 +345,7 @@ Public Class TransferMoney
 
     End Sub
 
-    Private Sub TransferFrom_SelectedIndexChanged(sender As Object, e As EventArgs) Handles TransferFrom.SelectedIndexChanged
+    Private Sub TransferFrom_SelectedIndexChanged(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -391,29 +402,37 @@ Public Class TransferMoney
     End Sub
 
     Private Sub SelectPayee_Click(sender As Object, e As EventArgs) Handles SelectPayee.Click
-        MaterialRadioButton1.Hide()
-        MaterialRadioButton2.Hide()
-        MaterialRadioButton3.Hide()
-        MaterialRadioButton4.Hide()
-        SelectPayee.Hide()
-        MaterialRadioButton5.Hide()
-        MaterialRadioButton6.Hide()
-        MaterialRadioButton7.Hide()
-        MaterialRadioButton8.Hide()
-        MaterialRadioButton9.Hide()
-        MaterialRadioButton10.Hide()
-        MaterialRadioButton11.Hide()
-        MaterialRadioButton12.Hide()
-        MaterialRadioButton13.Hide()
-        MaterialRadioButton14.Hide()
-        MaterialRadioButton15.Hide()
+        If PaymentPayee = "" Then
+            Beep()
+            MsgBox("Please select a payee.")
+        Else
+            MaterialRadioButton1.Hide()
+            MaterialRadioButton2.Hide()
+            MaterialRadioButton3.Hide()
+            MaterialRadioButton4.Hide()
+            SelectPayee.Hide()
+            MaterialRadioButton5.Hide()
+            MaterialRadioButton6.Hide()
+            MaterialRadioButton7.Hide()
+            MaterialRadioButton8.Hide()
+            MaterialRadioButton9.Hide()
+            MaterialRadioButton10.Hide()
+            MaterialRadioButton11.Hide()
+            MaterialRadioButton12.Hide()
+            MaterialRadioButton13.Hide()
+            MaterialRadioButton14.Hide()
+            MaterialRadioButton15.Hide()
+            SelectAccount.Show()
+            NextPage.Hide()
+            Previous.Hide()
 
-        NextPage.Hide()
-        Previous.Hide()
-        PrintRecipt.Show()
-        ReciptNo.Show()
-        MaterialLabel2.Show()
-        MaterialLabel2.Text = TransferAmount + " has been transfered to the payee, " + PaymentPayee + ""
+
+            MaterialLabel2.Show()
+            Savings.Show()
+            Chequing.Show()
+            MaterialLabel2.Text = TransferAmount + ".00 will be transfered to " + PaymentPayee + ". Select the account to send from."
+        End If
+       
 
     End Sub
 
@@ -423,6 +442,8 @@ Public Class TransferMoney
         MaterialLabel1.Text = "You are now logged out."
         PrintRecipt.Hide()
         ReciptNo.Hide()
+        Account = ""
+        PaymentPayee = ""
         TransferContinue.Show()
     End Sub
 
@@ -430,6 +451,9 @@ Public Class TransferMoney
         MaterialLabel1.Hide()
         TransferContinue.Hide()
         loadTransfer()
+        Account = ""
+        PaymentPayee = ""
+        MaterialLabel2.Hide()
         Me.Hide()
         Form1.Show()
     End Sub
@@ -437,6 +461,9 @@ Public Class TransferMoney
     Private Sub ReciptNo_Click(sender As Object, e As EventArgs) Handles ReciptNo.Click
         MaterialLabel1.Hide()
         PrintRecipt.Hide()
+        MaterialLabel2.Hide()
+        Account = ""
+        PaymentPayee = ""
         ReciptNo.Hide()
         loadTransfer()
         Me.Hide()
@@ -467,5 +494,31 @@ Public Class TransferMoney
         loadTransfer()
         Me.Hide()
         Help.Show()
+
+
+    End Sub
+
+    Private Sub SelectAccount_Click(sender As Object, e As EventArgs) Handles SelectAccount.Click
+        If Account = "" Then
+            Beep()
+            MsgBox("Please select an account.")
+        Else
+            Chequing.Hide()
+            Savings.Hide()
+            SelectAccount.Hide()
+
+            PrintRecipt.Show()
+            ReciptNo.Show()
+            MaterialLabel2.Show()
+            MaterialLabel2.Text = TransferAmount + ".00 has been transfered to the payee, " + PaymentPayee + "."
+        End If
+    End Sub
+
+    Private Sub Chequing_CheckedChanged(sender As Object, e As EventArgs) Handles Chequing.CheckedChanged
+        Account = "c"
+    End Sub
+
+    Private Sub Savings_CheckedChanged(sender As Object, e As EventArgs) Handles Savings.CheckedChanged
+        Account = "s"
     End Sub
 End Class

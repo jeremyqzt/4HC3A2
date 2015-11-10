@@ -55,8 +55,6 @@ Partial Class TransferMoney
         Me.MaterialRadioButton9 = New MaterialSkin.Controls.MaterialRadioButton()
         Me.MaterialRadioButton10 = New MaterialSkin.Controls.MaterialRadioButton()
         Me.NextPage = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.TransferFrom = New System.Windows.Forms.ComboBox()
-        Me.TransferTo = New System.Windows.Forms.ComboBox()
         Me.MaterialLabel2 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialLabel3 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialRadioButton11 = New MaterialSkin.Controls.MaterialRadioButton()
@@ -69,6 +67,9 @@ Partial Class TransferMoney
         Me.MaterialRadioButton13 = New MaterialSkin.Controls.MaterialRadioButton()
         Me.MaterialRadioButton14 = New MaterialSkin.Controls.MaterialRadioButton()
         Me.MaterialRadioButton15 = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.Chequing = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.Savings = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.SelectAccount = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.SuspendLayout()
         '
         'Logout
@@ -545,24 +546,6 @@ Partial Class TransferMoney
         Me.NextPage.UseVisualStyleBackColor = True
         Me.NextPage.Visible = False
         '
-        'TransferFrom
-        '
-        Me.TransferFrom.FormattingEnabled = True
-        Me.TransferFrom.Location = New System.Drawing.Point(99, 284)
-        Me.TransferFrom.Name = "TransferFrom"
-        Me.TransferFrom.Size = New System.Drawing.Size(182, 21)
-        Me.TransferFrom.TabIndex = 79
-        Me.TransferFrom.Visible = False
-        '
-        'TransferTo
-        '
-        Me.TransferTo.FormattingEnabled = True
-        Me.TransferTo.Location = New System.Drawing.Point(419, 284)
-        Me.TransferTo.Name = "TransferTo"
-        Me.TransferTo.Size = New System.Drawing.Size(182, 21)
-        Me.TransferTo.TabIndex = 80
-        Me.TransferTo.Visible = False
-        '
         'MaterialLabel2
         '
         Me.MaterialLabel2.AutoSize = True
@@ -753,11 +736,65 @@ Partial Class TransferMoney
         Me.MaterialRadioButton15.UseVisualStyleBackColor = False
         Me.MaterialRadioButton15.Visible = False
         '
+        'Chequing
+        '
+        Me.Chequing.AutoSize = True
+        Me.Chequing.BackColor = System.Drawing.Color.Transparent
+        Me.Chequing.Depth = 0
+        Me.Chequing.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.Chequing.Location = New System.Drawing.Point(12, 279)
+        Me.Chequing.Margin = New System.Windows.Forms.Padding(0)
+        Me.Chequing.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.Chequing.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Chequing.Name = "Chequing"
+        Me.Chequing.Ripple = True
+        Me.Chequing.Size = New System.Drawing.Size(87, 30)
+        Me.Chequing.TabIndex = 94
+        Me.Chequing.TabStop = True
+        Me.Chequing.Text = "Chequing"
+        Me.Chequing.UseVisualStyleBackColor = False
+        Me.Chequing.Visible = False
+        '
+        'Savings
+        '
+        Me.Savings.AutoSize = True
+        Me.Savings.BackColor = System.Drawing.Color.Transparent
+        Me.Savings.Depth = 0
+        Me.Savings.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.Savings.Location = New System.Drawing.Point(12, 309)
+        Me.Savings.Margin = New System.Windows.Forms.Padding(0)
+        Me.Savings.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.Savings.MouseState = MaterialSkin.MouseState.HOVER
+        Me.Savings.Name = "Savings"
+        Me.Savings.Ripple = True
+        Me.Savings.Size = New System.Drawing.Size(77, 30)
+        Me.Savings.TabIndex = 93
+        Me.Savings.TabStop = True
+        Me.Savings.Text = "Savings"
+        Me.Savings.UseVisualStyleBackColor = False
+        Me.Savings.Visible = False
+        '
+        'SelectAccount
+        '
+        Me.SelectAccount.Depth = 0
+        Me.SelectAccount.Location = New System.Drawing.Point(277, 475)
+        Me.SelectAccount.MouseState = MaterialSkin.MouseState.HOVER
+        Me.SelectAccount.Name = "SelectAccount"
+        Me.SelectAccount.Primary = True
+        Me.SelectAccount.Size = New System.Drawing.Size(153, 88)
+        Me.SelectAccount.TabIndex = 95
+        Me.SelectAccount.Text = "Select"
+        Me.SelectAccount.UseVisualStyleBackColor = True
+        Me.SelectAccount.Visible = False
+        '
         'TransferMoney
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(711, 599)
+        Me.Controls.Add(Me.SelectAccount)
+        Me.Controls.Add(Me.Chequing)
+        Me.Controls.Add(Me.Savings)
         Me.Controls.Add(Me.MaterialRadioButton12)
         Me.Controls.Add(Me.MaterialRadioButton13)
         Me.Controls.Add(Me.MaterialRadioButton14)
@@ -770,8 +807,6 @@ Partial Class TransferMoney
         Me.Controls.Add(Me.MaterialRadioButton11)
         Me.Controls.Add(Me.MaterialLabel3)
         Me.Controls.Add(Me.MaterialLabel2)
-        Me.Controls.Add(Me.TransferTo)
-        Me.Controls.Add(Me.TransferFrom)
         Me.Controls.Add(Me.MaterialRadioButton6)
         Me.Controls.Add(Me.MaterialRadioButton7)
         Me.Controls.Add(Me.MaterialRadioButton8)
@@ -843,8 +878,6 @@ Partial Class TransferMoney
     Friend WithEvents MaterialRadioButton9 As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents MaterialRadioButton10 As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents NextPage As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents TransferFrom As System.Windows.Forms.ComboBox
-    Friend WithEvents TransferTo As System.Windows.Forms.ComboBox
     Friend WithEvents MaterialLabel2 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialLabel3 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialRadioButton11 As MaterialSkin.Controls.MaterialRadioButton
@@ -857,4 +890,7 @@ Partial Class TransferMoney
     Friend WithEvents MaterialRadioButton13 As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents MaterialRadioButton14 As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents MaterialRadioButton15 As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents Chequing As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents Savings As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents SelectAccount As MaterialSkin.Controls.MaterialRaisedButton
 End Class

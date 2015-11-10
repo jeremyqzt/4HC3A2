@@ -3,16 +3,16 @@
 Public Class Withdraw
     Dim WithdrawTrack As Integer = 0
     Dim WithdrawTick As Integer = 0
+    Dim WAccount As String = ""
     Dim current As Integer = 0
+    Dim WAmount As String = ""
     Private Sub Withdraw_Load(sender As Object, e As EventArgs)
         Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
         SkinManager.AddFormToManage(Me)
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
         SkinManager.ColorScheme = New ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
     End Sub
-    Private Sub Withdraw_Closing(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
-        Form1.Close()
-    End Sub
+
     Private Function WithdrawReset() As Integer
         W60.Show()
         W80.Show()
@@ -35,9 +35,12 @@ Public Class Withdraw
         W100.Hide()
         W20.Hide()
         W40.Hide()
-        WithdrawReciptNo.Show()
-        WithdrawReciptYes.Show()
-        MaterialLabel2.Text = ("Now withdrawing $" + Numb + ".00. Would you like a recipt?")
+        MaterialLabel2.Text = "Now withdrawing " + Numb + ".00. Please select the account to withdraw from."
+        Chequing.Show()
+        SelectPayee.show()
+        Savings.Show()
+        WAmount = Numb
+
         Return 0
 
     End Function
@@ -68,6 +71,9 @@ Public Class Withdraw
 
     End Sub
     Private Sub Logout_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        MaterialLabel2.Text = "Please select the amount you want to withdraw"
+        WithdrawReciptNo.Hide()
+        WithdrawReciptYes.Hide()
         PassField.Hide()
         PassKey1.Hide()
         PassKey2.Hide()
@@ -76,6 +82,9 @@ Public Class Withdraw
         PassKey5.Hide()
         PassKey6.Hide()
         PassKey7.Hide()
+        Chequing.Hide()
+        Savings.Hide()
+        SelectPayee.Hide()
         PassKey8.Hide()
         PassKey9.Hide()
         PassKey0.Hide()
@@ -121,7 +130,9 @@ Public Class Withdraw
     End Sub
 
     Private Sub BackB_Click(sender As Object, e As EventArgs) Handles BackB.Click
-
+        MaterialLabel2.Text = "Please select the amount you want to withdraw"
+        WithdrawReciptNo.Hide()
+        WithdrawReciptYes.Hide()
         W60.Show()
         W80.Show()
         CustomAmountB.Show()
@@ -140,6 +151,9 @@ Public Class Withdraw
         PassKey7.Hide()
         PassKey8.Hide()
         PassKey9.Hide()
+        Chequing.Hide()
+        Savings.Hide()
+        SelectPayee.Hide()
         PassKey0.Hide()
         PassKeyCor.Hide()
         PassKeyEnter.Hide()
@@ -155,6 +169,9 @@ Public Class Withdraw
         PassField.Hide()
         PassKey1.Hide()
         PassKey2.Hide()
+        Chequing.Hide()
+        Savings.Hide()
+        SelectPayee.Hide()
         PassKey3.Hide()
         PassKey4.Hide()
         PassKey5.Hide()
@@ -345,6 +362,8 @@ Public Class Withdraw
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         MaterialLabel2.Text = "Please select the amount you want to withdraw"
         W60.Show()
+        WithdrawReciptNo.Hide()
+        WithdrawReciptYes.Hide()
         W80.Show()
         CustomAmountB.Show()
         W200.Show()
@@ -357,6 +376,9 @@ Public Class Withdraw
         PassKey2.Hide()
         PassKey3.Hide()
         PassKey4.Hide()
+        Chequing.Hide()
+        Savings.Hide()
+        SelectPayee.Hide()
         PassKey5.Hide()
         PassKey6.Hide()
         PassKey7.Hide()
@@ -383,5 +405,33 @@ Public Class Withdraw
         WithdrawReset()
         Me.Hide()
         Form2.Show()
+    End Sub
+
+    Private Sub Chequing_CheckedChanged(sender As Object, e As EventArgs) Handles Chequing.CheckedChanged
+        WAccount = "c"
+    End Sub
+
+    Private Sub Savings_CheckedChanged(sender As Object, e As EventArgs) Handles Savings.CheckedChanged
+        WAccount = "s"
+    End Sub
+
+    Private Sub SelectPayee_Click(sender As Object, e As EventArgs) Handles SelectPayee.Click
+        If WAccount = "" Then
+            MsgBox("Please select an account to withdraw from.")
+        ElseIf WAccount = "s" Then
+            WithdrawReciptNo.Show()
+            Chequing.Hide()
+            Savings.Hide()
+            SelectPayee.Hide()
+            WithdrawReciptYes.Show()
+            MaterialLabel2.Text = "Now withdrawing $" + WAmount + ".00. Would you like a recipt?"
+        ElseIf WAccount = "c" Then
+            WithdrawReciptNo.Show()
+            Chequing.Hide()
+            Savings.Hide()
+            SelectPayee.Hide()
+            WithdrawReciptYes.Show()
+            MaterialLabel2.Text = "Now withdrawing $" + WAmount + ".00. Would you like a recipt?"
+        End If
     End Sub
 End Class
