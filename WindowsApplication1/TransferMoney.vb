@@ -31,7 +31,7 @@ Public Class TransferMoney
             MaterialRadioButton10.Show()
             SelectPayee.Show()
             MaterialLabel2.Show()
-            MaterialLabel2.Text = "Please choose the payee. " + TransferAmount + ".00 is being transfered."
+            MaterialLabel2.Text = "Please choose the bill to pay."
             NextPage.Show()
         ElseIf transferSelect = "BtwAcc" Then
             MaterialLabel1.Show()
@@ -170,8 +170,10 @@ Public Class TransferMoney
 
     Private Sub MPaymentB_Click(sender As Object, e As EventArgs) Handles MPaymentB.Click
         unloadTransfer()
+        SelectPayee.Show()
         transferSelect = "Payment"
-        loadKeys()
+        selectTransfer()
+
     End Sub
 
 
@@ -448,17 +450,26 @@ Public Class TransferMoney
             MaterialRadioButton13.Hide()
             MaterialRadioButton14.Hide()
             MaterialRadioButton15.Hide()
-            SelectAccount.Show()
             NextPage.Hide()
             Previous.Hide()
 
 
             MaterialLabel2.Show()
-            Savings.Show()
-            Chequing.Show()
-            MaterialLabel2.Text = TransferAmount + ".00 will be transfered to " + PaymentPayee + ". Select the account to send from."
+
+            If transferSelect = "Payment" Then
+                MaterialLabel2.Text = "The bill " + PaymentPayee + " has been paid."
+                Cancel.Hide()
+                PrintRecipt.Show()
+                ReciptNo.Show()
+            Else
+                SelectAccount.Show()
+                Savings.Show()
+                Chequing.Show()
+                MaterialLabel2.Text = TransferAmount + ".00 will be transfered to " + PaymentPayee + ". Select the account to send from."
+            End If
+
         End If
-       
+
 
     End Sub
 

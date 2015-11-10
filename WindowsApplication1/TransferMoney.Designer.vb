@@ -358,10 +358,10 @@ Partial Class TransferMoney
         Me.MaterialRadioButton1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRadioButton1.Name = "MaterialRadioButton1"
         Me.MaterialRadioButton1.Ripple = True
-        Me.MaterialRadioButton1.Size = New System.Drawing.Size(65, 30)
+        Me.MaterialRadioButton1.Size = New System.Drawing.Size(119, 30)
         Me.MaterialRadioButton1.TabIndex = 68
         Me.MaterialRadioButton1.TabStop = True
-        Me.MaterialRadioButton1.Text = "Adam"
+        Me.MaterialRadioButton1.Text = "Adam - $50.00"
         Me.MaterialRadioButton1.UseVisualStyleBackColor = False
         Me.MaterialRadioButton1.Visible = False
         '
@@ -377,10 +377,10 @@ Partial Class TransferMoney
         Me.MaterialRadioButton2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRadioButton2.Name = "MaterialRadioButton2"
         Me.MaterialRadioButton2.Ripple = True
-        Me.MaterialRadioButton2.Size = New System.Drawing.Size(60, 30)
+        Me.MaterialRadioButton2.Size = New System.Drawing.Size(114, 30)
         Me.MaterialRadioButton2.TabIndex = 69
         Me.MaterialRadioButton2.TabStop = True
-        Me.MaterialRadioButton2.Text = "Mary"
+        Me.MaterialRadioButton2.Text = "Mary - $50.00"
         Me.MaterialRadioButton2.UseVisualStyleBackColor = False
         Me.MaterialRadioButton2.Visible = False
         '
@@ -396,10 +396,10 @@ Partial Class TransferMoney
         Me.MaterialRadioButton3.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRadioButton3.Name = "MaterialRadioButton3"
         Me.MaterialRadioButton3.Ripple = True
-        Me.MaterialRadioButton3.Size = New System.Drawing.Size(59, 30)
+        Me.MaterialRadioButton3.Size = New System.Drawing.Size(113, 30)
         Me.MaterialRadioButton3.TabIndex = 70
         Me.MaterialRadioButton3.TabStop = True
-        Me.MaterialRadioButton3.Text = "Jane"
+        Me.MaterialRadioButton3.Text = "Jane - $50.00"
         Me.MaterialRadioButton3.UseVisualStyleBackColor = False
         Me.MaterialRadioButton3.Visible = False
         '
@@ -415,10 +415,10 @@ Partial Class TransferMoney
         Me.MaterialRadioButton4.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRadioButton4.Name = "MaterialRadioButton4"
         Me.MaterialRadioButton4.Ripple = True
-        Me.MaterialRadioButton4.Size = New System.Drawing.Size(72, 30)
+        Me.MaterialRadioButton4.Size = New System.Drawing.Size(127, 30)
         Me.MaterialRadioButton4.TabIndex = 71
         Me.MaterialRadioButton4.TabStop = True
-        Me.MaterialRadioButton4.Text = "Rogers"
+        Me.MaterialRadioButton4.Text = "Rogers - $50.00"
         Me.MaterialRadioButton4.UseVisualStyleBackColor = False
         Me.MaterialRadioButton4.Visible = False
         '
@@ -434,10 +434,10 @@ Partial Class TransferMoney
         Me.MaterialRadioButton5.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRadioButton5.Name = "MaterialRadioButton5"
         Me.MaterialRadioButton5.Ripple = True
-        Me.MaterialRadioButton5.Size = New System.Drawing.Size(89, 30)
+        Me.MaterialRadioButton5.Size = New System.Drawing.Size(143, 30)
         Me.MaterialRadioButton5.TabIndex = 72
         Me.MaterialRadioButton5.TabStop = True
-        Me.MaterialRadioButton5.Text = "Mortgage"
+        Me.MaterialRadioButton5.Text = "Mortgage - $50.00"
         Me.MaterialRadioButton5.UseVisualStyleBackColor = False
         Me.MaterialRadioButton5.Visible = False
         '
@@ -453,10 +453,10 @@ Partial Class TransferMoney
         Me.MaterialRadioButton6.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRadioButton6.Name = "MaterialRadioButton6"
         Me.MaterialRadioButton6.Ripple = True
-        Me.MaterialRadioButton6.Size = New System.Drawing.Size(115, 30)
+        Me.MaterialRadioButton6.Size = New System.Drawing.Size(170, 30)
         Me.MaterialRadioButton6.TabIndex = 78
         Me.MaterialRadioButton6.TabStop = True
-        Me.MaterialRadioButton6.Text = "The Spectator"
+        Me.MaterialRadioButton6.Text = "The Spectator - $50.00"
         Me.MaterialRadioButton6.UseVisualStyleBackColor = False
         Me.MaterialRadioButton6.Visible = False
         '
@@ -472,10 +472,10 @@ Partial Class TransferMoney
         Me.MaterialRadioButton7.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRadioButton7.Name = "MaterialRadioButton7"
         Me.MaterialRadioButton7.Ripple = True
-        Me.MaterialRadioButton7.Size = New System.Drawing.Size(55, 30)
+        Me.MaterialRadioButton7.Size = New System.Drawing.Size(109, 30)
         Me.MaterialRadioButton7.TabIndex = 77
         Me.MaterialRadioButton7.TabStop = True
-        Me.MaterialRadioButton7.Text = "Billy"
+        Me.MaterialRadioButton7.Text = "Billy - $50.00"
         Me.MaterialRadioButton7.UseVisualStyleBackColor = False
         Me.MaterialRadioButton7.Visible = False
         '
@@ -491,10 +491,10 @@ Partial Class TransferMoney
         Me.MaterialRadioButton8.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRadioButton8.Name = "MaterialRadioButton8"
         Me.MaterialRadioButton8.Ripple = True
-        Me.MaterialRadioButton8.Size = New System.Drawing.Size(120, 30)
+        Me.MaterialRadioButton8.Size = New System.Drawing.Size(174, 30)
         Me.MaterialRadioButton8.TabIndex = 76
         Me.MaterialRadioButton8.TabStop = True
-        Me.MaterialRadioButton8.Text = "NRA Magazine"
+        Me.MaterialRadioButton8.Text = "NRA Magazine - $50.00"
         Me.MaterialRadioButton8.UseVisualStyleBackColor = False
         Me.MaterialRadioButton8.Visible = False
         '
@@ -510,10 +510,10 @@ Partial Class TransferMoney
         Me.MaterialRadioButton9.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRadioButton9.Name = "MaterialRadioButton9"
         Me.MaterialRadioButton9.Ripple = True
-        Me.MaterialRadioButton9.Size = New System.Drawing.Size(65, 30)
+        Me.MaterialRadioButton9.Size = New System.Drawing.Size(119, 30)
         Me.MaterialRadioButton9.TabIndex = 75
         Me.MaterialRadioButton9.TabStop = True
-        Me.MaterialRadioButton9.Text = "Water"
+        Me.MaterialRadioButton9.Text = "Water - $50.00"
         Me.MaterialRadioButton9.UseVisualStyleBackColor = False
         Me.MaterialRadioButton9.Visible = False
         '
@@ -529,10 +529,10 @@ Partial Class TransferMoney
         Me.MaterialRadioButton10.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRadioButton10.Name = "MaterialRadioButton10"
         Me.MaterialRadioButton10.Ripple = True
-        Me.MaterialRadioButton10.Size = New System.Drawing.Size(126, 30)
+        Me.MaterialRadioButton10.Size = New System.Drawing.Size(180, 30)
         Me.MaterialRadioButton10.TabIndex = 74
         Me.MaterialRadioButton10.TabStop = True
-        Me.MaterialRadioButton10.Text = "General Electric"
+        Me.MaterialRadioButton10.Text = "General Electric - $50.00"
         Me.MaterialRadioButton10.UseVisualStyleBackColor = False
         Me.MaterialRadioButton10.Visible = False
         '
@@ -585,16 +585,16 @@ Partial Class TransferMoney
         Me.MaterialRadioButton11.BackColor = System.Drawing.Color.Transparent
         Me.MaterialRadioButton11.Depth = 0
         Me.MaterialRadioButton11.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.MaterialRadioButton11.Location = New System.Drawing.Point(12, 279)
+        Me.MaterialRadioButton11.Location = New System.Drawing.Point(12, 278)
         Me.MaterialRadioButton11.Margin = New System.Windows.Forms.Padding(0)
         Me.MaterialRadioButton11.MouseLocation = New System.Drawing.Point(-1, -1)
         Me.MaterialRadioButton11.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRadioButton11.Name = "MaterialRadioButton11"
         Me.MaterialRadioButton11.Ripple = True
-        Me.MaterialRadioButton11.Size = New System.Drawing.Size(100, 30)
+        Me.MaterialRadioButton11.Size = New System.Drawing.Size(155, 30)
         Me.MaterialRadioButton11.TabIndex = 83
         Me.MaterialRadioButton11.TabStop = True
-        Me.MaterialRadioButton11.Text = "Zoo Weekly"
+        Me.MaterialRadioButton11.Text = "Zoo Weekly - $50.00"
         Me.MaterialRadioButton11.UseVisualStyleBackColor = False
         Me.MaterialRadioButton11.Visible = False
         '
