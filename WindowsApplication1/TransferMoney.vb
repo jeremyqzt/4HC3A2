@@ -41,6 +41,10 @@ Public Class TransferMoney
             MaterialLabel2.Text = "Choose the account to transfer from"
             MaterialLabel3.Text = "Choose the account to transfer to"
             MaterialLabel3.Show()
+            SelectPayee.Hide()
+            SelectBA.Show()
+            ComboBox1.Show()
+            ComboBox2.Show()
         ElseIf transferSelect = "ByEmail" Then
             MaterialRadioButton15.Show()
             MaterialRadioButton12.Show()
@@ -93,6 +97,10 @@ Public Class TransferMoney
         MaterialLabel2.Hide()
         MaterialLabel3.Hide()
         PassKey2.Hide()
+        SelectBA.Hide()
+        MaterialLabel3.Hide()
+        ComboBox1.Hide()
+        ComboBox2.Hide()
         PassKey3.Hide()
         Account = ""
         PassKey4.Hide()
@@ -171,6 +179,9 @@ Public Class TransferMoney
         loadTransfer()
         MaterialLabel2.Hide()
         MaterialLabel3.Hide()
+        ComboBox1.Hide()
+        ComboBox2.Hide()
+        MaterialLabel3.Hide()
         transferSelect = ""
         TransferAmount = ""
 
@@ -180,6 +191,7 @@ Public Class TransferMoney
     Private Sub PassKey1_Click(sender As Object, e As EventArgs) Handles PassKey1.Click
         Dim current As String
         current = PassField.Text
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
         current = current + "1"
         pinTrack = pinTrack + 1
         PassField.Text = current
@@ -188,6 +200,7 @@ Public Class TransferMoney
     Private Sub PassKey2_Click(sender As Object, e As EventArgs) Handles PassKey2.Click
         Dim current As String
         current = PassField.Text
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
         pinTrack = pinTrack + 1
         current = current + "2"
         PassField.Text = current
@@ -197,6 +210,7 @@ Public Class TransferMoney
         Dim current As String
         current = PassField.Text
         pinTrack = pinTrack + 1
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
         current = current + "3"
         PassField.Text = current
     End Sub
@@ -206,12 +220,14 @@ Public Class TransferMoney
         current = PassField.Text
         current = current + "4"
         pinTrack = pinTrack + 1
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
         PassField.Text = current
     End Sub
 
     Private Sub PassKey5_Click(sender As Object, e As EventArgs) Handles PassKey5.Click
         Dim current As String
         current = PassField.Text
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
         pinTrack = pinTrack + 1
         current = current + "5"
         PassField.Text = current
@@ -221,6 +237,7 @@ Public Class TransferMoney
         Dim current As String
         current = PassField.Text
         current = current + "6"
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
         PassField.Text = current
         pinTrack = pinTrack + 1
     End Sub
@@ -231,11 +248,13 @@ Public Class TransferMoney
         current = current + "7"
         pinTrack = pinTrack + 1
         PassField.Text = current
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
     End Sub
 
     Private Sub PassKey8_Click(sender As Object, e As EventArgs) Handles PassKey8.Click
         Dim current As String
         current = PassField.Text
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
         current = current + "8"
         PassField.Text = current
         pinTrack = pinTrack + 1
@@ -245,16 +264,23 @@ Public Class TransferMoney
         Dim current As String
         current = PassField.Text
         current = current + "9"
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
         PassField.Text = current
         pinTrack = pinTrack + 1
     End Sub
 
     Private Sub PassKey0_Click(sender As Object, e As EventArgs) Handles PassKey0.Click
-        Dim current As String
-        current = PassField.Text
-        current = current + "0"
-        pinTrack = pinTrack + 1
-        PassField.Text = current
+        If pinTrack = 0 Then
+            Beep()
+        Else
+            Dim current As String
+            current = PassField.Text
+            My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+            current = current + "0"
+            pinTrack = pinTrack + 1
+            PassField.Text = current
+        End If
+
     End Sub
 
     Private Sub PassKeyCor_Click(sender As Object, e As EventArgs) Handles PassKeyCor.Click
@@ -276,6 +302,7 @@ Public Class TransferMoney
             Beep()
             MsgBox("Please enter the amount you want to transfer.")
         Else
+            SelectPayee.Show()
             selectTransfer()
             PassKey1.Hide()
             PassKey2.Hide()
@@ -289,7 +316,6 @@ Public Class TransferMoney
             PassKey9.Hide()
             PassKey0.Hide()
             PassKeyCor.Hide()
-            SelectPayee.Show()
             PassKeyEnter.Hide()
             MaterialLabel1.Hide()
             PassField.Hide()
@@ -439,6 +465,7 @@ Public Class TransferMoney
     Private Sub PrintRecipt_Click(sender As Object, e As EventArgs) Handles PrintRecipt.Click
         MaterialLabel2.Hide()
         MaterialLabel1.Show()
+        Cancel.Hide()
         MaterialLabel1.Text = "You are now logged out."
         PrintRecipt.Hide()
         ReciptNo.Hide()
@@ -506,11 +533,11 @@ Public Class TransferMoney
             Chequing.Hide()
             Savings.Hide()
             SelectAccount.Hide()
-
+            Cancel.Hide()
             PrintRecipt.Show()
             ReciptNo.Show()
             MaterialLabel2.Show()
-            MaterialLabel2.Text = TransferAmount + ".00 has been transfered to the payee, " + PaymentPayee + "."
+            MaterialLabel2.Text = TransferAmount + ".00 has been transfered to " + PaymentPayee + "."
         End If
     End Sub
 
@@ -520,5 +547,40 @@ Public Class TransferMoney
 
     Private Sub Savings_CheckedChanged(sender As Object, e As EventArgs) Handles Savings.CheckedChanged
         Account = "s"
+    End Sub
+
+    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox2.SelectedIndexChanged
+        PaymentPayee = ComboBox2.Text
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        Account = ComboBox1.Text
+    End Sub
+
+    Private Sub SelectBA_Click(sender As Object, e As EventArgs) Handles SelectBA.Click
+        If Account = "" Then
+            MsgBox("Please select the transfer accounts.")
+            Beep()
+        Else
+            If PaymentPayee = "" Then
+                MsgBox("Please select the transfer accounts.")
+                Beep()
+            Else
+                If Account = PaymentPayee Then
+                    MsgBox("The accounts cannot be the same.")
+                    Beep()
+                Else
+                    ComboBox2.Hide()
+                    ComboBox1.Hide()
+                    SelectBA.Hide()
+                    MaterialLabel3.Hide()
+                    Cancel.Hide()
+                    PrintRecipt.Show()
+                    ReciptNo.Show()
+                    MaterialLabel2.Show()
+                    MaterialLabel2.Text = TransferAmount + ".00 has been transfered to " + PaymentPayee + "."
+                End If
+            End If
+        End If
     End Sub
 End Class

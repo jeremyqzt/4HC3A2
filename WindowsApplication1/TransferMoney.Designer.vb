@@ -70,6 +70,9 @@ Partial Class TransferMoney
         Me.Chequing = New MaterialSkin.Controls.MaterialRadioButton()
         Me.Savings = New MaterialSkin.Controls.MaterialRadioButton()
         Me.SelectAccount = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.SelectBA = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.SuspendLayout()
         '
         'Logout
@@ -787,11 +790,49 @@ Partial Class TransferMoney
         Me.SelectAccount.UseVisualStyleBackColor = True
         Me.SelectAccount.Visible = False
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.AllowDrop = True
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Chequing", "Savings"})
+        Me.ComboBox1.Location = New System.Drawing.Point(93, 279)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(199, 21)
+        Me.ComboBox1.TabIndex = 96
+        Me.ComboBox1.Visible = False
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.AllowDrop = True
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {"Chequing", "Savings"})
+        Me.ComboBox2.Location = New System.Drawing.Point(416, 279)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(199, 21)
+        Me.ComboBox2.TabIndex = 97
+        Me.ComboBox2.Visible = False
+        '
+        'SelectBA
+        '
+        Me.SelectBA.Depth = 0
+        Me.SelectBA.Location = New System.Drawing.Point(277, 475)
+        Me.SelectBA.MouseState = MaterialSkin.MouseState.HOVER
+        Me.SelectBA.Name = "SelectBA"
+        Me.SelectBA.Primary = True
+        Me.SelectBA.Size = New System.Drawing.Size(153, 88)
+        Me.SelectBA.TabIndex = 98
+        Me.SelectBA.Text = "Select"
+        Me.SelectBA.UseVisualStyleBackColor = True
+        Me.SelectBA.Visible = False
+        '
         'TransferMoney
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(711, 599)
+        Me.Controls.Add(Me.SelectBA)
+        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.SelectAccount)
         Me.Controls.Add(Me.Chequing)
         Me.Controls.Add(Me.Savings)
@@ -893,4 +934,7 @@ Partial Class TransferMoney
     Friend WithEvents Chequing As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents Savings As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents SelectAccount As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents SelectBA As MaterialSkin.Controls.MaterialRaisedButton
 End Class

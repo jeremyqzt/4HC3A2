@@ -186,19 +186,33 @@ Public Class Deposit
     End Sub
 
     Private Sub PassKey0_Click(sender As Object, e As EventArgs) Handles PassKey0.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+
+
         Dim field As String
         If focus = "Cash" Then
-            field = cash.Text + "0"
-            cash.Text = field
-            cash.Focus()
+            If cash.Text = "$" Then
+                Beep()
+            Else
+                field = cash.Text + "0"
+                cash.Text = field
+                cash.Focus()
+                My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+            End If
+
 
         ElseIf focus = "Cheque" Then
-            field = cheque.Text + "0"
-            cheque.Text = field
-            cheque.Focus()
+            If cheque.Text = "$" Then
+                Beep()
+            Else
+                field = cheque.Text + "0"
+                cheque.Text = field
+                cheque.Focus()
+                My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+            End If
+
         Else
             MsgBox("Please Select Cash or Cheque Deposit")
+            Beep()
         End If
     End Sub
 

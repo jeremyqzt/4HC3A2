@@ -237,8 +237,14 @@ Public Class Withdraw
     End Sub
 
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles PassKey0.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
-        CustomWithdraw("0", 0)
+
+        If PassField.Text = "$" Then
+            Beep()
+        Else
+            My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+            CustomWithdraw("0", 0)
+        End If
+
     End Sub
 
     Private Sub PassKeyCor_Click(sender As Object, e As EventArgs) Handles PassKeyCor.Click
