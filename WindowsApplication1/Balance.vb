@@ -7,7 +7,9 @@ Public Class Balance
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
         SkinManager.ColorScheme = New ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
     End Sub
-
+    Private Sub Balance_Closing(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
+        Form1.Close()
+    End Sub
     Private Sub TByEmailB_Click(sender As Object, e As EventArgs) Handles TByEmailB.Click
         MaterialLabel1.Visible = True
         MaterialLabel2.Visible = True
@@ -64,6 +66,16 @@ Public Class Balance
     Private Sub Logout_Click(sender As Object, e As EventArgs) Handles Logout.Click
         Me.Hide()
         Form1.Show()
+        MaterialLabel1.Visible = False
+        MaterialLabel2.Visible = False
+        MaterialLabel3.Visible = False
+        MaterialLabel5.Visible = False
+        MaterialLabel4.Visible = False
+    End Sub
+
+    Private Sub info_Click(sender As Object, e As EventArgs) Handles info.Click
+        Me.Hide()
+        Help.Show()
         MaterialLabel1.Visible = False
         MaterialLabel2.Visible = False
         MaterialLabel3.Visible = False

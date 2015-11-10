@@ -10,7 +10,9 @@ Public Class Deposit
         focus = "Cash"
         MaterialRadioButton1.Checked = True
     End Sub
-
+    Private Sub Deposit_Closing(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
+        Form1.Close()
+    End Sub
     Private Sub PassKey1_Click(sender As Object, e As EventArgs) Handles PassKey1.Click
         My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
 
@@ -34,6 +36,7 @@ Public Class Deposit
         If MaterialRadioButton1.Checked = True Then
             MaterialRadioButton2.Checked = False
             focus = "Cheque"
+            cash.Text = "$"
 
         End If
     End Sub
@@ -42,7 +45,7 @@ Public Class Deposit
         If MaterialRadioButton2.Checked = True Then
             MaterialRadioButton1.Checked = False
             focus = "Cash"
-
+            cheque.Text = "$"
         End If
     End Sub
 
@@ -446,5 +449,40 @@ Public Class Deposit
         If MaterialRadioButton4.Checked = True Then
             MaterialRadioButton3.Checked = False
         End If
+    End Sub
+
+    Private Sub info_Click(sender As Object, e As EventArgs) Handles info.Click
+        MaterialRadioButton1.Checked = True
+        MaterialLabel1.Visible = False
+        MaterialRadioButton3.Visible = False
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech On.wav")
+        MaterialRadioButton4.Visible = False
+        Another.Visible = False
+        PassKey0.Visible = True
+        PassKey1.Visible = True
+        PassKey2.Visible = True
+        PassKey3.Visible = True
+        PassKey4.Visible = True
+        PassKey5.Visible = True
+        PassKey6.Visible = True
+        PassKey7.Visible = True
+        PassKey8.Visible = True
+        PassKey9.Visible = True
+        PassKeyEnter.Visible = True
+        MaterialRadioButton1.Visible = True
+        MaterialRadioButton2.Visible = True
+        PassKeyCor.Visible = True
+        cash.Visible = True
+        Another.Visible = False
+        cheque.Visible = True
+        WithdrawReciptYes.Visible = False
+        WithdrawReciptNo.Visible = False
+        MaterialRadioButton1.Checked = True
+        MaterialRadioButton2.Checked = False
+        MaterialSingleLineTextField1.Text = "Please Enter The Amounts You Wish To Deposit "
+        cheque.Text = "$"
+        cash.Text = "$"
+        Me.Hide()
+        Help.Show()
     End Sub
 End Class

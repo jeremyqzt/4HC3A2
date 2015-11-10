@@ -647,7 +647,7 @@ Partial Class TransferMoney
         Me.PrintRecipt.Primary = True
         Me.PrintRecipt.Size = New System.Drawing.Size(224, 88)
         Me.PrintRecipt.TabIndex = 86
-        Me.PrintRecipt.Text = "Logout"
+        Me.PrintRecipt.Text = "PRESS HERE TO FINISH"
         Me.PrintRecipt.UseVisualStyleBackColor = True
         Me.PrintRecipt.Visible = False
         '

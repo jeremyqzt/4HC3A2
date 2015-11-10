@@ -12,6 +12,9 @@ Public Class TransferMoney
         SkinManager.ColorScheme = New ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
 
     End Sub
+    Private Sub Transfer_Closing(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
+        Form1.Close()
+    End Sub
     Private Function selectTransfer() As Integer
         TransferAmount = PassField.Text
         If transferSelect = "Payment" Then
@@ -454,5 +457,15 @@ Public Class TransferMoney
 
     Private Sub MaterialRadioButton15_CheckedChanged(sender As Object, e As EventArgs) Handles MaterialRadioButton15.CheckedChanged
         PaymentPayee = MaterialRadioButton15.Text
+    End Sub
+
+    Private Sub info_Click(sender As Object, e As EventArgs) Handles info.Click
+
+        unloadKeys()
+        PrintRecipt.Hide()
+        ReciptNo.Hide()
+        loadTransfer()
+        Me.Hide()
+        Help.Show()
     End Sub
 End Class

@@ -10,6 +10,9 @@ Public Class Withdraw
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
         SkinManager.ColorScheme = New ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
     End Sub
+    Private Sub Withdraw_Closing(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
+        Form1.Close()
+    End Sub
     Private Function WithdrawReset() As Integer
         W60.Show()
         W80.Show()
@@ -118,7 +121,7 @@ Public Class Withdraw
     End Sub
 
     Private Sub BackB_Click(sender As Object, e As EventArgs) Handles BackB.Click
-        Me.Hide()
+
         W60.Show()
         W80.Show()
         CustomAmountB.Show()
@@ -144,6 +147,7 @@ Public Class Withdraw
         PassField.Text = "$"
         current = 0
         WithdrawTrack = 0
+        Me.Hide()
         Form2.Show()
     End Sub
 
@@ -154,6 +158,7 @@ Public Class Withdraw
         PassKey3.Hide()
         PassKey4.Hide()
         PassKey5.Hide()
+        MaterialLabel2.Text = "Please select the amount you want to withdraw"
         PassKey6.Hide()
         PassKey7.Hide()
         PassKey8.Hide()
@@ -329,21 +334,52 @@ Public Class Withdraw
     Private Sub WithdrawFinish_Click(sender As Object, e As EventArgs) Handles WithdrawFinish.Click
         My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech Off.wav")
         WithdrawFinish.Hide()
-        MaterialLabel2.Text = ""
+        'MaterialLabel2.Text = ""
+        MaterialLabel2.Show()
+        MaterialLabel2.Text = "Please select the amount you want to withdraw"
         WithdrawReset()
         Me.Hide()
         Form1.Show()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+        MaterialLabel2.Text = "Please select the amount you want to withdraw"
+        W60.Show()
+        W80.Show()
+        CustomAmountB.Show()
+        W200.Show()
+        W140.Show()
+        W100.Show()
+        W20.Show()
+        W40.Show()
+        PassField.Hide()
+        PassKey1.Hide()
+        PassKey2.Hide()
+        PassKey3.Hide()
+        PassKey4.Hide()
+        PassKey5.Hide()
+        PassKey6.Hide()
+        PassKey7.Hide()
+        PassKey8.Hide()
+        PassKey9.Hide()
+        PassKey0.Hide()
+        PassKeyCor.Hide()
+        PassKeyEnter.Hide()
+        Cancel.Hide()
+        PassField.Text = "$"
+        current = 0
+        WithdrawTrack = 0
+        Me.Hide()
+        Help.Show()
     End Sub
 
     Private Sub MaterialRaisedButton1_Click_1(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
         My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech On.wav")
         WithdrawFinish.Hide()
         MaterialRaisedButton1.Hide()
-        MaterialLabel2.Text = ""
+        'MaterialLabel2.Text = ""
+        MaterialLabel2.Show()
+        MaterialLabel2.Text = "Please select the amount you want to withdraw"
         WithdrawReset()
         Me.Hide()
         Form2.Show()
