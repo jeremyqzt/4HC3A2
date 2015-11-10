@@ -3,6 +3,7 @@
 Public Class TransferMoney
     Dim transferSelect As String = ""
     Dim TransferAmount As String = ""
+    Dim pinTrack As Integer = 0
     Dim PaymentPayee As String = ""
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
@@ -38,6 +39,14 @@ Public Class TransferMoney
             MaterialLabel2.Text = "Choose the account to transfer from"
             MaterialLabel3.Text = "Choose the account to transfer to"
             MaterialLabel3.Show()
+        ElseIf transferSelect = "ByEmail" Then
+            MaterialRadioButton15.Show()
+            MaterialRadioButton12.Show()
+            MaterialRadioButton13.Show()
+            MaterialRadioButton14.Show()
+            MaterialLabel1.Show()
+            MaterialLabel1.Text = "Please select the E-mail to send to."
+            SelectPayee.Show()
         End If
         Return 0
     End Function
@@ -157,12 +166,14 @@ Public Class TransferMoney
         Dim current As String
         current = PassField.Text
         current = current + "1"
+        pinTrack = pinTrack + 1
         PassField.Text = current
     End Sub
 
     Private Sub PassKey2_Click(sender As Object, e As EventArgs) Handles PassKey2.Click
         Dim current As String
         current = PassField.Text
+        pinTrack = pinTrack + 1
         current = current + "2"
         PassField.Text = current
     End Sub
@@ -170,6 +181,7 @@ Public Class TransferMoney
     Private Sub PassKey3_Click(sender As Object, e As EventArgs) Handles PassKey3.Click
         Dim current As String
         current = PassField.Text
+        pinTrack = pinTrack + 1
         current = current + "3"
         PassField.Text = current
     End Sub
@@ -178,12 +190,14 @@ Public Class TransferMoney
         Dim current As String
         current = PassField.Text
         current = current + "4"
+        pinTrack = pinTrack + 1
         PassField.Text = current
     End Sub
 
     Private Sub PassKey5_Click(sender As Object, e As EventArgs) Handles PassKey5.Click
         Dim current As String
         current = PassField.Text
+        pinTrack = pinTrack + 1
         current = current + "5"
         PassField.Text = current
     End Sub
@@ -193,12 +207,14 @@ Public Class TransferMoney
         current = PassField.Text
         current = current + "6"
         PassField.Text = current
+        pinTrack = pinTrack + 1
     End Sub
 
     Private Sub PassKey7_Click(sender As Object, e As EventArgs) Handles PassKey7.Click
         Dim current As String
         current = PassField.Text
         current = current + "7"
+        pinTrack = pinTrack + 1
         PassField.Text = current
     End Sub
 
@@ -207,6 +223,7 @@ Public Class TransferMoney
         current = PassField.Text
         current = current + "8"
         PassField.Text = current
+        pinTrack = pinTrack + 1
     End Sub
 
     Private Sub PassKey9_Click(sender As Object, e As EventArgs) Handles PassKey9.Click
@@ -214,12 +231,14 @@ Public Class TransferMoney
         current = PassField.Text
         current = current + "9"
         PassField.Text = current
+        pinTrack = pinTrack + 1
     End Sub
 
     Private Sub PassKey0_Click(sender As Object, e As EventArgs) Handles PassKey0.Click
         Dim current As String
         current = PassField.Text
         current = current + "0"
+        pinTrack = pinTrack + 1
         PassField.Text = current
     End Sub
 
@@ -228,8 +247,12 @@ Public Class TransferMoney
         Dim length As Long
         current = PassField.Text
         length = current.Length
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+
         If length > 1 Then
-            PassField.Text = current.Substring(0, CInt(length))
+
+            PassField.Text = current.Substring(0, CInt(length - 1))
+            pinTrack = pinTrack - 1
         End If
     End Sub
 
@@ -369,10 +392,16 @@ Public Class TransferMoney
         MaterialRadioButton9.Hide()
         MaterialRadioButton10.Hide()
         MaterialRadioButton11.Hide()
+        MaterialRadioButton12.Hide()
+        MaterialRadioButton13.Hide()
+        MaterialRadioButton14.Hide()
+        MaterialRadioButton15.Hide()
+
         NextPage.Hide()
         Previous.Hide()
         PrintRecipt.Show()
         ReciptNo.Show()
+        MaterialLabel2.Show()
         MaterialLabel2.Text = TransferAmount + " has been transfered to the payee, " + PaymentPayee + ""
 
     End Sub
@@ -401,5 +430,21 @@ Public Class TransferMoney
         loadTransfer()
         Me.Hide()
         Form2.Show()
+    End Sub
+
+    Private Sub MaterialRadioButton12_CheckedChanged(sender As Object, e As EventArgs) Handles MaterialRadioButton12.CheckedChanged
+        PaymentPayee = MaterialRadioButton12.Text
+    End Sub
+
+    Private Sub MaterialRadioButton13_CheckedChanged(sender As Object, e As EventArgs) Handles MaterialRadioButton13.CheckedChanged
+        PaymentPayee = MaterialRadioButton13.Text
+    End Sub
+
+    Private Sub MaterialRadioButton14_CheckedChanged(sender As Object, e As EventArgs) Handles MaterialRadioButton14.CheckedChanged
+        PaymentPayee = MaterialRadioButton14.Text
+    End Sub
+
+    Private Sub MaterialRadioButton15_CheckedChanged(sender As Object, e As EventArgs) Handles MaterialRadioButton15.CheckedChanged
+        PaymentPayee = MaterialRadioButton15.Text
     End Sub
 End Class

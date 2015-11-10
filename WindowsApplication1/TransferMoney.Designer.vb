@@ -65,6 +65,10 @@ Partial Class TransferMoney
         Me.PrintRecipt = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.ReciptNo = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.TransferContinue = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.MaterialRadioButton12 = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.MaterialRadioButton13 = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.MaterialRadioButton14 = New MaterialSkin.Controls.MaterialRadioButton()
+        Me.MaterialRadioButton15 = New MaterialSkin.Controls.MaterialRadioButton()
         Me.SuspendLayout()
         '
         'Logout
@@ -548,7 +552,6 @@ Partial Class TransferMoney
         Me.TransferFrom.Name = "TransferFrom"
         Me.TransferFrom.Size = New System.Drawing.Size(182, 21)
         Me.TransferFrom.TabIndex = 79
-        Me.TransferFrom.Text = "Chequing Account"
         Me.TransferFrom.Visible = False
         '
         'TransferTo
@@ -644,7 +647,7 @@ Partial Class TransferMoney
         Me.PrintRecipt.Primary = True
         Me.PrintRecipt.Size = New System.Drawing.Size(224, 88)
         Me.PrintRecipt.TabIndex = 86
-        Me.PrintRecipt.Text = "Yes"
+        Me.PrintRecipt.Text = "Logout"
         Me.PrintRecipt.UseVisualStyleBackColor = True
         Me.PrintRecipt.Visible = False
         '
@@ -674,11 +677,91 @@ Partial Class TransferMoney
         Me.TransferContinue.UseVisualStyleBackColor = True
         Me.TransferContinue.Visible = False
         '
+        'MaterialRadioButton12
+        '
+        Me.MaterialRadioButton12.AutoSize = True
+        Me.MaterialRadioButton12.BackColor = System.Drawing.Color.Transparent
+        Me.MaterialRadioButton12.Depth = 0
+        Me.MaterialRadioButton12.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.MaterialRadioButton12.Location = New System.Drawing.Point(12, 279)
+        Me.MaterialRadioButton12.Margin = New System.Windows.Forms.Padding(0)
+        Me.MaterialRadioButton12.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.MaterialRadioButton12.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialRadioButton12.Name = "MaterialRadioButton12"
+        Me.MaterialRadioButton12.Ripple = True
+        Me.MaterialRadioButton12.Size = New System.Drawing.Size(190, 30)
+        Me.MaterialRadioButton12.TabIndex = 92
+        Me.MaterialRadioButton12.TabStop = True
+        Me.MaterialRadioButton12.Text = "ZooWeekly@mcmaster.ca"
+        Me.MaterialRadioButton12.UseVisualStyleBackColor = False
+        Me.MaterialRadioButton12.Visible = False
+        '
+        'MaterialRadioButton13
+        '
+        Me.MaterialRadioButton13.AutoSize = True
+        Me.MaterialRadioButton13.BackColor = System.Drawing.Color.Transparent
+        Me.MaterialRadioButton13.Depth = 0
+        Me.MaterialRadioButton13.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.MaterialRadioButton13.Location = New System.Drawing.Point(12, 309)
+        Me.MaterialRadioButton13.Margin = New System.Windows.Forms.Padding(0)
+        Me.MaterialRadioButton13.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.MaterialRadioButton13.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialRadioButton13.Name = "MaterialRadioButton13"
+        Me.MaterialRadioButton13.Ripple = True
+        Me.MaterialRadioButton13.Size = New System.Drawing.Size(144, 30)
+        Me.MaterialRadioButton13.TabIndex = 91
+        Me.MaterialRadioButton13.TabStop = True
+        Me.MaterialRadioButton13.Text = "Billy@outlook.com"
+        Me.MaterialRadioButton13.UseVisualStyleBackColor = False
+        Me.MaterialRadioButton13.Visible = False
+        '
+        'MaterialRadioButton14
+        '
+        Me.MaterialRadioButton14.AutoSize = True
+        Me.MaterialRadioButton14.BackColor = System.Drawing.Color.Transparent
+        Me.MaterialRadioButton14.Depth = 0
+        Me.MaterialRadioButton14.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.MaterialRadioButton14.Location = New System.Drawing.Point(12, 339)
+        Me.MaterialRadioButton14.Margin = New System.Windows.Forms.Padding(0)
+        Me.MaterialRadioButton14.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.MaterialRadioButton14.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialRadioButton14.Name = "MaterialRadioButton14"
+        Me.MaterialRadioButton14.Ripple = True
+        Me.MaterialRadioButton14.Size = New System.Drawing.Size(161, 30)
+        Me.MaterialRadioButton14.TabIndex = 90
+        Me.MaterialRadioButton14.TabStop = True
+        Me.MaterialRadioButton14.Text = "GeneralE@gmail.com"
+        Me.MaterialRadioButton14.UseVisualStyleBackColor = False
+        Me.MaterialRadioButton14.Visible = False
+        '
+        'MaterialRadioButton15
+        '
+        Me.MaterialRadioButton15.AutoSize = True
+        Me.MaterialRadioButton15.BackColor = System.Drawing.Color.Transparent
+        Me.MaterialRadioButton15.Depth = 0
+        Me.MaterialRadioButton15.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.MaterialRadioButton15.Location = New System.Drawing.Point(12, 369)
+        Me.MaterialRadioButton15.Margin = New System.Windows.Forms.Padding(0)
+        Me.MaterialRadioButton15.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.MaterialRadioButton15.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialRadioButton15.Name = "MaterialRadioButton15"
+        Me.MaterialRadioButton15.Ripple = True
+        Me.MaterialRadioButton15.Size = New System.Drawing.Size(136, 30)
+        Me.MaterialRadioButton15.TabIndex = 89
+        Me.MaterialRadioButton15.TabStop = True
+        Me.MaterialRadioButton15.Text = "Jane@email.com"
+        Me.MaterialRadioButton15.UseVisualStyleBackColor = False
+        Me.MaterialRadioButton15.Visible = False
+        '
         'TransferMoney
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(711, 599)
+        Me.Controls.Add(Me.MaterialRadioButton12)
+        Me.Controls.Add(Me.MaterialRadioButton13)
+        Me.Controls.Add(Me.MaterialRadioButton14)
+        Me.Controls.Add(Me.MaterialRadioButton15)
         Me.Controls.Add(Me.TransferContinue)
         Me.Controls.Add(Me.ReciptNo)
         Me.Controls.Add(Me.PrintRecipt)
@@ -770,4 +853,8 @@ Partial Class TransferMoney
     Friend WithEvents PrintRecipt As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents ReciptNo As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents TransferContinue As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents MaterialRadioButton12 As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents MaterialRadioButton13 As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents MaterialRadioButton14 As MaterialSkin.Controls.MaterialRadioButton
+    Friend WithEvents MaterialRadioButton15 As MaterialSkin.Controls.MaterialRadioButton
 End Class
