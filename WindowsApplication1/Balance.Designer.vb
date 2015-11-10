@@ -87,7 +87,7 @@ Partial Class Balance
         Me.MaterialLabel2.Name = "MaterialLabel2"
         Me.MaterialLabel2.Size = New System.Drawing.Size(271, 19)
         Me.MaterialLabel2.TabIndex = 21
-        Me.MaterialLabel2.Text = "Your Checkings Account Balance: $720"
+        Me.MaterialLabel2.Text = "Your Checkings Account Balance: $500"
         Me.MaterialLabel2.Visible = False
         '
         'MaterialLabel3
@@ -99,9 +99,9 @@ Partial Class Balance
         Me.MaterialLabel3.Location = New System.Drawing.Point(338, 241)
         Me.MaterialLabel3.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel3.Name = "MaterialLabel3"
-        Me.MaterialLabel3.Size = New System.Drawing.Size(261, 19)
+        Me.MaterialLabel3.Size = New System.Drawing.Size(237, 19)
         Me.MaterialLabel3.TabIndex = 23
-        Me.MaterialLabel3.Text = "Your Savings Account Balance: $4520"
+        Me.MaterialLabel3.Text = "Your Savings Account Balance: $0"
         Me.MaterialLabel3.Visible = False
         '
         'MaterialLabel4

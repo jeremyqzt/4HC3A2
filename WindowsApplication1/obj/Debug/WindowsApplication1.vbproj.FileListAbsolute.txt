@@ -48,3 +48,4 @@ C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\WindowsApplication1
 C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\WindowsApplication1\obj\Debug\WindowsApplication1.Balance.resources
 C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\obj\Debug\WindowsApplication1.Balance.resources
 C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\obj\Debug\WindowsApplication1.Help.resources
+C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\WindowsApplication1\obj\Debug\WindowsApplication1.Help.resources

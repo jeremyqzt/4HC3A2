@@ -1,17 +1,30 @@
 ﻿Imports MaterialSkin
 
 Public Class Balance
+    Dim Savings As Integer
+    Dim Checkings As Integer
+    Public Function updateSavings(ByVal change As Integer) As Integer
+        Savings = Savings + change
+        Return 0
+    End Function
+    Public Function updateChecking(ByVal change2 As Integer) As Integer
+        Checkings = Checkings + change2
+        Return 0
+    End Function
     Private Sub Balance_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
         SkinManager.AddFormToManage(Me)
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
         SkinManager.ColorScheme = New ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
+        Checkings = 500
+        Savings = 0
     End Sub
     Private Sub Balance_Closing(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
         Form1.Close()
     End Sub
     Private Sub TByEmailB_Click(sender As Object, e As EventArgs) Handles TByEmailB.Click
         MaterialLabel1.Visible = True
+        MaterialLabel2.Text = " Your Total Checkings Blance: $" + CStr(Checkings)
         MaterialLabel2.Visible = True
         My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
 
@@ -21,6 +34,7 @@ Public Class Balance
     Private Sub MPaymentB_Click(sender As Object, e As EventArgs) Handles MPaymentB.Click
         My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
         MaterialLabel3.Visible = True
+        MaterialLabel3.Text = "Your Total Savings Blance: $" + CStr(Savings)
         MaterialLabel5.Visible = True
         MaterialLabel4.Visible = True
     End Sub
