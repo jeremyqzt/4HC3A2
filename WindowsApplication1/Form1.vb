@@ -94,6 +94,7 @@ Public Class Form1
         PassKey1.Show()
         PassKey2.Show()
         PassKey3.Show()
+        'Info.Show()
         PassKey4.Show()
         PassKey5.Show()
         PassKey6.Show()
@@ -131,6 +132,8 @@ Public Class Form1
             ProgressBar1.Visible = True
             ProgressBar1.ForeColor = Color.Blue
             Timer1.Enabled = True
+            'Info.Hide()
+
         Else
             Beep()
             MsgBox("Pin invalid, please try again")

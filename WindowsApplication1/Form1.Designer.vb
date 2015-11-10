@@ -41,7 +41,7 @@ Partial Class Form1
         Me.ToMain = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
-        Me.Logout = New System.Windows.Forms.Button()
+        Me.Info = New System.Windows.Forms.Button()
         Me.PassKey0 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.SuspendLayout()
         '
@@ -258,17 +258,18 @@ Partial Class Form1
         Me.ProgressBar1.TabIndex = 15
         Me.ProgressBar1.Visible = False
         '
-        'Logout
+        'Info
         '
-        Me.Logout.BackColor = System.Drawing.Color.SlateGray
-        Me.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Logout.ForeColor = System.Drawing.Color.Black
-        Me.Logout.Image = CType(resources.GetObject("Logout.Image"), System.Drawing.Image)
-        Me.Logout.Location = New System.Drawing.Point(669, 28)
-        Me.Logout.Name = "Logout"
-        Me.Logout.Size = New System.Drawing.Size(30, 30)
-        Me.Logout.TabIndex = 16
-        Me.Logout.UseVisualStyleBackColor = False
+        Me.Info.BackColor = System.Drawing.Color.SlateGray
+        Me.Info.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Info.ForeColor = System.Drawing.Color.Black
+        Me.Info.Image = CType(resources.GetObject("Info.Image"), System.Drawing.Image)
+        Me.Info.Location = New System.Drawing.Point(669, 28)
+        Me.Info.Name = "Info"
+        Me.Info.Size = New System.Drawing.Size(30, 30)
+        Me.Info.TabIndex = 16
+        Me.Info.UseVisualStyleBackColor = False
+        Me.Info.Visible = False
         '
         'PassKey0
         '
@@ -289,7 +290,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(711, 599)
         Me.Controls.Add(Me.PassKey0)
-        Me.Controls.Add(Me.Logout)
+        Me.Controls.Add(Me.Info)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.ToMain)
         Me.Controls.Add(Me.MaterialLabel1)
@@ -330,7 +331,7 @@ Partial Class Form1
     Friend WithEvents ToMain As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents Timer1 As Timer
     Friend WithEvents ProgressBar1 As ProgressBar
-    Friend WithEvents Logout As System.Windows.Forms.Button
+    Friend WithEvents Info As System.Windows.Forms.Button
     Friend WithEvents PassKey0 As MaterialSkin.Controls.MaterialRaisedButton
 
 End Class

@@ -58,4 +58,9 @@ Public Class Form2
         My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
         Me.Hide()
     End Sub
+
+    Private Sub info_Click(sender As Object, e As EventArgs) Handles info.Click
+        Me.Hide()
+        Help.Show()
+    End Sub
 End Class
