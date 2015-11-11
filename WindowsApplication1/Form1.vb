@@ -12,65 +12,76 @@ Public Class Form1
     End Sub
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles PassKey1.Click
         My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
-        Call AddStar()
+        Call AddStar(1)
     End Sub
 
     Private Sub MaterialRaisedButton1_Click_1(sender As Object, e As EventArgs) Handles PassKey2.Click
         My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
-        Call AddStar()
+        Call AddStar(2)
     End Sub
-    Public Function AddStar() As Integer
-        If (pinTrack < 4) Then
-            Dim current As String
-            current = PassField.Text
-            current = current + "   *"
-            PassField.Text = current
-            pinTrack = pinTrack + 1
+    Public Function AddStar(ByVal numb As Integer) As Integer
+        If MaterialLabel1.Text = "Please enter your pin" Then
+            If (pinTrack < 4) Then
+                Dim current As String
+                current = PassField.Text
+                current = current + "   *"
+                PassField.Text = current
+                pinTrack = pinTrack + 1
 
+            End If
+        Else
+            If (pinTrack < 8) Then
+                Dim current As String
+                current = PassField.Text
+                current = current + "   " + CStr(numb)
+                PassField.Text = current
+                pinTrack = pinTrack + 1
+
+            End If
         End If
         Return 0
     End Function
 
     Private Sub MaterialRaisedButton2_Click(sender As Object, e As EventArgs) Handles PassKey3.Click
-        Call AddStar()
+        Call AddStar(3)
         My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
     End Sub
 
     Private Sub MaterialRaisedButton3_Click(sender As Object, e As EventArgs) Handles PassKey4.Click
-        Call AddStar()
+        Call AddStar(4)
         My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
 
     End Sub
 
     Private Sub MaterialRaisedButton4_Click(sender As Object, e As EventArgs) Handles PassKey5.Click
-        Call AddStar()
+        Call AddStar(5)
         My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
 
     End Sub
 
     Private Sub MaterialRaisedButton5_Click(sender As Object, e As EventArgs) Handles PassKey6.Click
         My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
-        Call AddStar()
+        Call AddStar(6)
     End Sub
 
     Private Sub MaterialRaisedButton6_Click(sender As Object, e As EventArgs) Handles PassKey7.Click
         My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
-        Call AddStar()
+        Call AddStar(7)
     End Sub
 
     Private Sub MaterialRaisedButton7_Click(sender As Object, e As EventArgs) Handles PassKey8.Click
         My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
-        Call AddStar()
+        Call AddStar(8)
     End Sub
 
     Private Sub MaterialRaisedButton8_Click(sender As Object, e As EventArgs) Handles PassKey9.Click
         My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
-        Call AddStar()
+        Call AddStar(9)
     End Sub
 
 
     Private Sub MaterialRaisedButton1_Click_2(sender As Object, e As EventArgs) Handles PassKey0.Click
-        Call AddStar()
+        Call AddStar(0)
     End Sub
 
     Private Sub MaterialRaisedButton10_Click(sender As Object, e As EventArgs) Handles PassKeyCor.Click
@@ -89,6 +100,7 @@ Public Class Form1
     End Sub
 
     Private Sub ToMain_Click_1(sender As Object, e As EventArgs) Handles ToMain.Click
+        MaterialRaisedButton1.Hide()
         My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         ToMain.Visible = False
         PassField.Show()
@@ -111,35 +123,42 @@ Public Class Form1
         Me.Text = "Welcome"
     End Sub
     Private Sub PassKeyEnter_Click(sender As Object, e As EventArgs) Handles PassKeyEnter.Click
-        If (pinTrack = 4) Then
-            PassField.Hide()
-            PassKey1.Hide()
-            PassKey2.Hide()
-            PassKey3.Hide()
-            PassKey4.Hide()
-            PassKey5.Hide()
-            PassKey6.Hide()
-            PassKey7.Hide()
-            PassKey8.Hide()
-            PassKey9.Hide()
-            PassKey0.Hide()
-            PassKeyCor.Hide()
-            MaterialLabel1.Text = "Please Wait While We Fetch Your Account Details..."
-            PassKeyEnter.Hide()
-            Cancel.Hide()
-            My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech On.wav")
-            pinTrack = 0
+        If MaterialLabel1.Text = "Please enter your pin" Then
+            If (pinTrack = 4) Then
+                PassField.Hide()
+                PassKey1.Hide()
+                PassKey2.Hide()
+                PassKey3.Hide()
+                PassKey4.Hide()
+                PassKey5.Hide()
+                PassKey6.Hide()
+                PassKey7.Hide()
+                PassKey8.Hide()
+                PassKey9.Hide()
+                PassKey0.Hide()
+                PassKeyCor.Hide()
+                MaterialLabel1.Text = "Please Wait While We Fetch Your Account Details..."
+                PassKeyEnter.Hide()
+                Cancel.Hide()
+                My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech On.wav")
+                pinTrack = 0
 
-            ProgressBar1.Visible = True
-            ProgressBar1.ForeColor = Color.Blue
-            Timer1.Enabled = True
-            'Info.Hide()
+                ProgressBar1.Visible = True
+                ProgressBar1.ForeColor = Color.Blue
+                Timer1.Enabled = True
+                'Info.Hide()
 
+            Else
+                Beep()
+                MsgBox("Pin invalid, please enter 4 digits.")
+            End If
         Else
-            Beep()
-            MsgBox("Pin invalid, please enter 4 digits.")
-        End If
+            My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech On.wav")
 
+            MaterialLabel1.Text = "Please enter your pin"
+            PassField.Text = ""
+            pinTrack = 0
+        End If
 
     End Sub
     Private Sub PassField_Click(sender As Object, e As EventArgs) Handles PassField.Click
@@ -182,6 +201,8 @@ Public Class Form1
             MaterialLabel1.Text = ""
             PassField.Text = ""
             ToMain.Show()
+            MaterialRaisedButton1.Show()
+
             Me.Hide()
             Form2.Show()
         End If
@@ -190,5 +211,29 @@ Public Class Form1
     Private Sub Info_Click(sender As Object, e As EventArgs) Handles Info.Click
         My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech On.wav")
 
+    End Sub
+
+    Private Sub MaterialRaisedButton1_Click_3(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
+        MaterialRaisedButton1.Hide()
+        ToMain.Visible = False
+        PassField.Show()
+        PassKey1.Show()
+        PassKey2.Show()
+        PassKey3.Show()
+        'Info.Show()
+        PassKey4.Show()
+        PassKey5.Show()
+        PassKey6.Show()
+        PassKey7.Show()
+        PassKey8.Show()
+        PassKey9.Show()
+        PassKey0.Show()
+        PassKeyCor.Show()
+        PassKeyEnter.Show()
+        MaterialLabel1.Show()
+        Cancel.Show()
+        MaterialLabel1.Text = "Please enter your 8-digit account number"
+        Me.Text = "Welcome"
     End Sub
 End Class

@@ -237,4 +237,8 @@ Partial Class Balance
     Friend WithEvents Logout As Button
     Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents MaterialLabel5 As Label
+
+    Friend Shared Sub updateCheckings(v As Integer)
+        Throw New NotImplementedException()
+    End Sub
 End Class

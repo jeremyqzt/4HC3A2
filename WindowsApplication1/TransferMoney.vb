@@ -304,6 +304,8 @@ Public Class TransferMoney
     End Sub
 
     Private Sub PassKeyEnter_Click(sender As Object, e As EventArgs) Handles PassKeyEnter.Click
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech On.wav")
+
         If PassField.Text = "$" Then
             Beep()
             MsgBox("Please enter the amount you want to transfer.")
@@ -549,10 +551,16 @@ Public Class TransferMoney
     End Sub
 
     Private Sub SelectAccount_Click(sender As Object, e As EventArgs) Handles SelectAccount.Click
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech On.wav")
         If Account = "" Then
             Beep()
             MsgBox("Please select an account.")
         Else
+            If Account = "Chequings" Then
+                Balance.updateCheckings(-1 * CInt(TransferAmount.Substring(1, TransferAmount.Length - 1)))
+            ElseIf Account = "Savings"
+                Balance.updateSavings(-1 * CInt(TransferAmount.Substring(1, TransferAmount.Length - 1)))
+            End If
             Chequing.Hide()
             Savings.Hide()
             SelectAccount.Hide()
@@ -582,20 +590,37 @@ Public Class TransferMoney
     End Sub
 
     Private Sub SelectBA_Click(sender As Object, e As EventArgs) Handles SelectBA.Click
+
         My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         If Account = "" Then
             MsgBox("Please select the transfer accounts.")
             Beep()
+        ElseIf Account = PaymentPayee Then
+            MsgBox("The accounts cannot be the same.")
+            Beep()
+        ElseIf PaymentPayee = "" Then
+            MsgBox("Please select the transfer accounts.")
+            Beep()
+        ElseIf PaymentPayee = "" Then
+            MsgBox("Please select the transfer accounts.")
+            Beep()
         Else
-            If PaymentPayee = "" Then
-                MsgBox("Please select the transfer accounts.")
-                Beep()
-            Else
-                If Account = PaymentPayee Then
-                    MsgBox("The accounts cannot be the same.")
-                    Beep()
-                Else
-                    ComboBox2.Hide()
+            If Account = "Chequing" Then
+                Balance.updateChecking(-1 * CInt(TransferAmount.Substring(1, TransferAmount.Length - 1)))
+                Balance.updateSavings(CInt(TransferAmount.Substring(1, TransferAmount.Length - 1)))
+                ComboBox2.Hide()
+                    ComboBox1.Hide()
+                    SelectBA.Hide()
+                    MaterialLabel3.Hide()
+                    Cancel.Hide()
+                    PrintRecipt.Show()
+                    ReciptNo.Show()
+                    MaterialLabel2.Show()
+                    MaterialLabel2.Text = TransferAmount + ".00 has been transfered to " + PaymentPayee + "."
+                ElseIf Account = "Savings" Then
+                Balance.updateSavings(-1 * CInt(TransferAmount.Substring(1, TransferAmount.Length - 1)))
+                Balance.updateChecking(1 * CInt(TransferAmount.Substring(1, TransferAmount.Length - 1)))
+                ComboBox2.Hide()
                     ComboBox1.Hide()
                     SelectBA.Hide()
                     MaterialLabel3.Hide()
@@ -606,6 +631,7 @@ Public Class TransferMoney
                     MaterialLabel2.Text = TransferAmount + ".00 has been transfered to " + PaymentPayee + "."
                 End If
             End If
-        End If
+
+
     End Sub
 End Class

@@ -800,7 +800,7 @@ Partial Class TransferMoney
         'SelectBA
         '
         Me.SelectBA.Depth = 0
-        Me.SelectBA.Location = New System.Drawing.Point(277, 475)
+        Me.SelectBA.Location = New System.Drawing.Point(277, 460)
         Me.SelectBA.MouseState = MaterialSkin.MouseState.HOVER
         Me.SelectBA.Name = "SelectBA"
         Me.SelectBA.Primary = True

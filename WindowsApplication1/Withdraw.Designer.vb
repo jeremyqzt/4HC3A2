@@ -490,7 +490,7 @@ Partial Class Withdraw
         'WithdrawFinish
         '
         Me.WithdrawFinish.Depth = 0
-        Me.WithdrawFinish.Location = New System.Drawing.Point(8, 486)
+        Me.WithdrawFinish.Location = New System.Drawing.Point(8, 392)
         Me.WithdrawFinish.MouseState = MaterialSkin.MouseState.HOVER
         Me.WithdrawFinish.Name = "WithdrawFinish"
         Me.WithdrawFinish.Primary = True
@@ -503,7 +503,7 @@ Partial Class Withdraw
         'MaterialRaisedButton1
         '
         Me.MaterialRaisedButton1.Depth = 0
-        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(8, 392)
+        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(8, 486)
         Me.MaterialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton1.Name = "MaterialRaisedButton1"
         Me.MaterialRaisedButton1.Primary = True

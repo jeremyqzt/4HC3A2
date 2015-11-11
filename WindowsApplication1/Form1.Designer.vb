@@ -43,6 +43,7 @@ Partial Class Form1
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Info = New System.Windows.Forms.Button()
         Me.PassKey0 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.SuspendLayout()
         '
         'MaterialLabel1
@@ -284,11 +285,24 @@ Partial Class Form1
         Me.PassKey0.UseVisualStyleBackColor = True
         Me.PassKey0.Visible = False
         '
+        'MaterialRaisedButton1
+        '
+        Me.MaterialRaisedButton1.Depth = 0
+        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(204, 391)
+        Me.MaterialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialRaisedButton1.Name = "MaterialRaisedButton1"
+        Me.MaterialRaisedButton1.Primary = True
+        Me.MaterialRaisedButton1.Size = New System.Drawing.Size(271, 83)
+        Me.MaterialRaisedButton1.TabIndex = 18
+        Me.MaterialRaisedButton1.Text = "Click Me to Manually Enter Account Number"
+        Me.MaterialRaisedButton1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(711, 599)
+        Me.Controls.Add(Me.MaterialRaisedButton1)
         Me.Controls.Add(Me.PassKey0)
         Me.Controls.Add(Me.Info)
         Me.Controls.Add(Me.ProgressBar1)
@@ -333,5 +347,5 @@ Partial Class Form1
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents Info As System.Windows.Forms.Button
     Friend WithEvents PassKey0 As MaterialSkin.Controls.MaterialRaisedButton
-
+    Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
 End Class
