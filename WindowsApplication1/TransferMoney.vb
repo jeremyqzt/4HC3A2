@@ -147,6 +147,7 @@ Public Class TransferMoney
     End Function
 
     Private Sub Logout_Click(sender As Object, e As EventArgs) Handles Logout.Click
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech Off.wav")
         unloadKeys()
         loadTransfer()
         MaterialLabel2.Hide()
@@ -158,6 +159,7 @@ Public Class TransferMoney
 
 
     Private Sub BackB_Click(sender As Object, e As EventArgs) Handles BackB.Click
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech On.wav")
         unloadKeys()
         transferSelect = ""
         loadTransfer()
@@ -169,7 +171,7 @@ Public Class TransferMoney
 
 
     Private Sub MPaymentB_Click(sender As Object, e As EventArgs) Handles MPaymentB.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         unloadTransfer()
         SelectPayee.Show()
         transferSelect = "Payment"
@@ -179,7 +181,7 @@ Public Class TransferMoney
 
 
     Private Sub Cancel_Click(sender As Object, e As EventArgs) Handles Cancel.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech On.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech On.wav")
         loadTransfer()
         MaterialLabel2.Hide()
         MaterialLabel3.Hide()
@@ -195,7 +197,7 @@ Public Class TransferMoney
     Private Sub PassKey1_Click(sender As Object, e As EventArgs) Handles PassKey1.Click
         Dim current As String
         current = PassField.Text
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         current = current + "1"
         pinTrack = pinTrack + 1
         PassField.Text = current
@@ -204,7 +206,7 @@ Public Class TransferMoney
     Private Sub PassKey2_Click(sender As Object, e As EventArgs) Handles PassKey2.Click
         Dim current As String
         current = PassField.Text
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         pinTrack = pinTrack + 1
         current = current + "2"
         PassField.Text = current
@@ -214,7 +216,7 @@ Public Class TransferMoney
         Dim current As String
         current = PassField.Text
         pinTrack = pinTrack + 1
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         current = current + "3"
         PassField.Text = current
     End Sub
@@ -224,14 +226,14 @@ Public Class TransferMoney
         current = PassField.Text
         current = current + "4"
         pinTrack = pinTrack + 1
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         PassField.Text = current
     End Sub
 
     Private Sub PassKey5_Click(sender As Object, e As EventArgs) Handles PassKey5.Click
         Dim current As String
         current = PassField.Text
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         pinTrack = pinTrack + 1
         current = current + "5"
         PassField.Text = current
@@ -241,7 +243,7 @@ Public Class TransferMoney
         Dim current As String
         current = PassField.Text
         current = current + "6"
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         PassField.Text = current
         pinTrack = pinTrack + 1
     End Sub
@@ -252,13 +254,13 @@ Public Class TransferMoney
         current = current + "7"
         pinTrack = pinTrack + 1
         PassField.Text = current
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
     End Sub
 
     Private Sub PassKey8_Click(sender As Object, e As EventArgs) Handles PassKey8.Click
         Dim current As String
         current = PassField.Text
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         current = current + "8"
         PassField.Text = current
         pinTrack = pinTrack + 1
@@ -268,7 +270,7 @@ Public Class TransferMoney
         Dim current As String
         current = PassField.Text
         current = current + "9"
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         PassField.Text = current
         pinTrack = pinTrack + 1
     End Sub
@@ -279,7 +281,7 @@ Public Class TransferMoney
         Else
             Dim current As String
             current = PassField.Text
-            My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+            My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
             current = current + "0"
             pinTrack = pinTrack + 1
             PassField.Text = current
@@ -292,7 +294,7 @@ Public Class TransferMoney
         Dim length As Long
         current = PassField.Text
         length = current.Length
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
 
         If length > 1 Then
 
@@ -328,7 +330,7 @@ Public Class TransferMoney
     End Sub
 
     Private Sub TBetweenAccB_Click(sender As Object, e As EventArgs) Handles TBetweenAccB.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         unloadTransfer()
         loadKeys()
         transferSelect = "BtwAcc"
@@ -347,7 +349,7 @@ Public Class TransferMoney
     End Sub
 
     Private Sub TByEmailB_Click(sender As Object, e As EventArgs) Handles TByEmailB.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         unloadTransfer()
         transferSelect = "ByEmail"
         loadKeys()
@@ -382,7 +384,7 @@ Public Class TransferMoney
     End Sub
 
     Private Sub Previous_Click(sender As Object, e As EventArgs) Handles Previous.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         MaterialRadioButton1.Show()
         MaterialRadioButton2.Show()
         MaterialRadioButton3.Show()
@@ -479,7 +481,7 @@ Public Class TransferMoney
     End Sub
 
     Private Sub PrintRecipt_Click(sender As Object, e As EventArgs) Handles PrintRecipt.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech Off.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech Off.wav")
         MaterialLabel2.Hide()
         MaterialLabel1.Show()
         Cancel.Hide()
@@ -492,7 +494,7 @@ Public Class TransferMoney
     End Sub
 
     Private Sub TransferContinue_Click(sender As Object, e As EventArgs) Handles TransferContinue.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         MaterialLabel1.Hide()
         TransferContinue.Hide()
         loadTransfer()
@@ -504,7 +506,7 @@ Public Class TransferMoney
     End Sub
 
     Private Sub ReciptNo_Click(sender As Object, e As EventArgs) Handles ReciptNo.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech On.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech On.wav")
         MaterialLabel1.Hide()
         PrintRecipt.Hide()
         MaterialLabel2.Hide()
@@ -521,7 +523,7 @@ Public Class TransferMoney
     End Sub
 
     Private Sub MaterialRadioButton13_CheckedChanged(sender As Object, e As EventArgs) Handles MaterialRadioButton13.CheckedChanged
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech On.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech On.wav")
         PaymentPayee = MaterialRadioButton13.Text
     End Sub
 
@@ -534,7 +536,7 @@ Public Class TransferMoney
     End Sub
 
     Private Sub info_Click(sender As Object, e As EventArgs) Handles info.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech On.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech On.wav")
 
         unloadKeys()
         PrintRecipt.Hide()
@@ -563,7 +565,7 @@ Public Class TransferMoney
     End Sub
 
     Private Sub Chequing_CheckedChanged(sender As Object, e As EventArgs) Handles Chequing.CheckedChanged
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech On.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech On.wav")
         Account = "c"
     End Sub
 
@@ -580,7 +582,7 @@ Public Class TransferMoney
     End Sub
 
     Private Sub SelectBA_Click(sender As Object, e As EventArgs) Handles SelectBA.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         If Account = "" Then
             MsgBox("Please select the transfer accounts.")
             Beep()

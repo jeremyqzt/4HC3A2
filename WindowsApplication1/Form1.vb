@@ -1,6 +1,7 @@
 ﻿Imports MaterialSkin
 
 Public Class Form1
+    Dim path As String = My.Application.Info.DirectoryPath
     Dim tick As Integer
     Dim pinTrack As Integer = 0
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -10,12 +11,12 @@ Public Class Form1
         SkinManager.ColorScheme = New ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
     End Sub
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles PassKey1.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         Call AddStar()
     End Sub
 
     Private Sub MaterialRaisedButton1_Click_1(sender As Object, e As EventArgs) Handles PassKey2.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         Call AddStar()
     End Sub
     Public Function AddStar() As Integer
@@ -32,38 +33,38 @@ Public Class Form1
 
     Private Sub MaterialRaisedButton2_Click(sender As Object, e As EventArgs) Handles PassKey3.Click
         Call AddStar()
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
     End Sub
 
     Private Sub MaterialRaisedButton3_Click(sender As Object, e As EventArgs) Handles PassKey4.Click
         Call AddStar()
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
 
     End Sub
 
     Private Sub MaterialRaisedButton4_Click(sender As Object, e As EventArgs) Handles PassKey5.Click
         Call AddStar()
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
 
     End Sub
 
     Private Sub MaterialRaisedButton5_Click(sender As Object, e As EventArgs) Handles PassKey6.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         Call AddStar()
     End Sub
 
     Private Sub MaterialRaisedButton6_Click(sender As Object, e As EventArgs) Handles PassKey7.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         Call AddStar()
     End Sub
 
     Private Sub MaterialRaisedButton7_Click(sender As Object, e As EventArgs) Handles PassKey8.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         Call AddStar()
     End Sub
 
     Private Sub MaterialRaisedButton8_Click(sender As Object, e As EventArgs) Handles PassKey9.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         Call AddStar()
     End Sub
 
@@ -77,7 +78,7 @@ Public Class Form1
         Dim Amount As Integer
         Removed = PassField.Text
         Amount = Removed.Length
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
 
         If Amount > 3 Then
 
@@ -88,7 +89,7 @@ Public Class Form1
     End Sub
 
     Private Sub ToMain_Click_1(sender As Object, e As EventArgs) Handles ToMain.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         ToMain.Visible = False
         PassField.Show()
         PassKey1.Show()
@@ -126,7 +127,7 @@ Public Class Form1
             MaterialLabel1.Text = "Please Wait While We Fetch Your Account Details..."
             PassKeyEnter.Hide()
             Cancel.Hide()
-            My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech On.wav")
+            My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech On.wav")
             pinTrack = 0
 
             ProgressBar1.Visible = True
@@ -149,7 +150,7 @@ Public Class Form1
     End Sub
     Private Sub Cancel_Click(sender As Object, e As EventArgs) Handles Cancel.Click
         ToMain.Visible = True
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech Off.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech Off.wav")
         PassField.Text = ""
         PassField.Hide()
         PassKey1.Hide()
@@ -187,7 +188,7 @@ Public Class Form1
     End Sub
 
     Private Sub Info_Click(sender As Object, e As EventArgs) Handles Info.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech On.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech On.wav")
 
     End Sub
 End Class

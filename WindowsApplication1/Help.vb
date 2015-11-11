@@ -15,7 +15,7 @@ Public Class Help
 
     Private Sub Logout_Click(sender As Object, e As EventArgs) Handles Logout.Click
         Me.Hide()
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech Off.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech Off.wav")
         Form1.Show()
     End Sub
 
@@ -23,12 +23,12 @@ Public Class Help
     Private Sub BackB_Click(sender As Object, e As EventArgs) Handles BackB.Click
         Me.Hide()
         Form1.Show()
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech Off.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech Off.wav")
 
     End Sub
 
     Private Sub CheckBalanceB_Click(sender As Object, e As EventArgs)
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         Me.Hide()
         Balance.Show()
     End Sub

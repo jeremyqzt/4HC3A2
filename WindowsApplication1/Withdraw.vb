@@ -112,6 +112,7 @@ Public Class Withdraw
 
     End Sub
     Private Sub Logout_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech Off.wav")
         Chequing.Show()
         Savings.Show()
         MaterialLabel1.Show()
@@ -146,7 +147,7 @@ Public Class Withdraw
 
 
     Private Sub MaterialRaisedButton4_Click(sender As Object, e As EventArgs) Handles CustomAmountB.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         W60.Hide()
         W80.Hide()
         CustomAmountB.Hide()
@@ -174,6 +175,7 @@ Public Class Withdraw
     End Sub
 
     Private Sub BackB_Click(sender As Object, e As EventArgs) Handles BackB.Click
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech On.wav")
         Chequing.Show()
         Savings.Show()
         MaterialLabel1.Show()
@@ -239,47 +241,47 @@ Public Class Withdraw
     End Sub
 
     Private Sub PassKey1_Click(sender As Object, e As EventArgs) Handles PassKey1.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         CustomWithdraw("1", 1)
     End Sub
 
     Private Sub PassKey2_Click(sender As Object, e As EventArgs) Handles PassKey2.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         CustomWithdraw("2", 2)
     End Sub
 
     Private Sub PassKey3_Click(sender As Object, e As EventArgs) Handles PassKey3.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         CustomWithdraw("3", 3)
     End Sub
 
     Private Sub PassKey4_Click(sender As Object, e As EventArgs) Handles PassKey4.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         CustomWithdraw("4", 4)
     End Sub
 
     Private Sub PassKey5_Click(sender As Object, e As EventArgs) Handles PassKey5.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         CustomWithdraw("5", 5)
     End Sub
 
     Private Sub PassKey6_Click(sender As Object, e As EventArgs) Handles PassKey6.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         CustomWithdraw("6", 6)
     End Sub
 
     Private Sub PassKey7_Click(sender As Object, e As EventArgs) Handles PassKey7.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         CustomWithdraw("7", 7)
     End Sub
 
     Private Sub PassKey8_Click(sender As Object, e As EventArgs) Handles PassKey8.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         CustomWithdraw("8", 8)
     End Sub
 
     Private Sub PassKey9_Click(sender As Object, e As EventArgs) Handles PassKey9.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         CustomWithdraw("9", 9)
     End Sub
 
@@ -288,14 +290,14 @@ Public Class Withdraw
         If PassField.Text = "$" Then
             Beep()
         Else
-            My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+            My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
             CustomWithdraw("0", 0)
         End If
 
     End Sub
 
     Private Sub PassKeyCor_Click(sender As Object, e As EventArgs) Handles PassKeyCor.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         Dim Removed As String
         Dim Amount As Integer
         Removed = PassField.Text
@@ -311,7 +313,7 @@ Public Class Withdraw
     End Sub
 
     Private Sub PassKeyEnter_Click(sender As Object, e As EventArgs) Handles PassKeyEnter.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         If ((current Mod 20) = 0) And (current > 0) Then
             PassField.Hide()
             PassKey1.Hide()
@@ -341,12 +343,12 @@ Public Class Withdraw
     End Sub
 
     Private Sub W20_Click(sender As Object, e As EventArgs) Handles W20.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         Quick_withrdraw(20)
     End Sub
 
     Private Sub W40_Click(sender As Object, e As EventArgs) Handles W40.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         Quick_withrdraw(40)
     End Sub
 
@@ -355,27 +357,27 @@ Public Class Withdraw
     End Sub
 
     Private Sub W80_Click(sender As Object, e As EventArgs) Handles W80.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         Quick_withrdraw(80)
     End Sub
 
     Private Sub W100_Click(sender As Object, e As EventArgs) Handles W100.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         Quick_withrdraw(100)
     End Sub
 
     Private Sub W140_Click(sender As Object, e As EventArgs) Handles W140.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         Quick_withrdraw(140)
     End Sub
 
     Private Sub W200_Click(sender As Object, e As EventArgs) Handles W200.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         Quick_withrdraw(200)
     End Sub
 
     Private Sub WithdrawReciptYes_Click(sender As Object, e As EventArgs) Handles WithdrawReciptYes.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Print.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Print.wav")
         MaterialLabel2.Text = ("Now Printing")
         WithdrawReciptNo.Hide()
         WithdrawReciptYes.Hide()
@@ -383,7 +385,7 @@ Public Class Withdraw
         MsgBox("RECIPT TEXT")
     End Sub
     Private Sub WithdrawReciptNo_Click(sender As Object, e As EventArgs) Handles WithdrawReciptNo.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         MaterialLabel2.Text = ("Receipt Not Needed")
         WithdrawReciptNo.Hide()
         WithdrawReciptYes.Hide()
@@ -404,7 +406,7 @@ Public Class Withdraw
 
 
     Private Sub WithdrawFinish_Click(sender As Object, e As EventArgs) Handles WithdrawFinish.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech Off.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech Off.wav")
         WithdrawFinish.Hide()
         'MaterialLabel2.Text = ""
         MaterialLabel2.Show()
@@ -418,7 +420,7 @@ Public Class Withdraw
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech On.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech On.wav")
         MaterialLabel2.Text = "Please select the amount you want to withdraw"
         W60.Show()
         WithdrawReciptNo.Hide()
@@ -455,7 +457,7 @@ Public Class Withdraw
     End Sub
 
     Private Sub MaterialRaisedButton1_Click_1(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech On.wav")
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech On.wav")
         WithdrawFinish.Hide()
         MaterialRaisedButton1.Hide()
         'MaterialLabel2.Text = ""
