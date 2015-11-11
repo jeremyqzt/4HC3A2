@@ -60,6 +60,7 @@ Public Class Form2
     End Sub
 
     Private Sub info_Click(sender As Object, e As EventArgs) Handles info.Click
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech On.wav")
         Me.Hide()
         Help.Show()
     End Sub

@@ -360,7 +360,6 @@ Partial Class TransferMoney
         Me.MaterialRadioButton1.Ripple = True
         Me.MaterialRadioButton1.Size = New System.Drawing.Size(119, 30)
         Me.MaterialRadioButton1.TabIndex = 68
-        Me.MaterialRadioButton1.TabStop = True
         Me.MaterialRadioButton1.Text = "Adam - $50.00"
         Me.MaterialRadioButton1.UseVisualStyleBackColor = False
         Me.MaterialRadioButton1.Visible = False
@@ -379,7 +378,6 @@ Partial Class TransferMoney
         Me.MaterialRadioButton2.Ripple = True
         Me.MaterialRadioButton2.Size = New System.Drawing.Size(114, 30)
         Me.MaterialRadioButton2.TabIndex = 69
-        Me.MaterialRadioButton2.TabStop = True
         Me.MaterialRadioButton2.Text = "Mary - $50.00"
         Me.MaterialRadioButton2.UseVisualStyleBackColor = False
         Me.MaterialRadioButton2.Visible = False
@@ -398,7 +396,6 @@ Partial Class TransferMoney
         Me.MaterialRadioButton3.Ripple = True
         Me.MaterialRadioButton3.Size = New System.Drawing.Size(113, 30)
         Me.MaterialRadioButton3.TabIndex = 70
-        Me.MaterialRadioButton3.TabStop = True
         Me.MaterialRadioButton3.Text = "Jane - $50.00"
         Me.MaterialRadioButton3.UseVisualStyleBackColor = False
         Me.MaterialRadioButton3.Visible = False
@@ -417,7 +414,6 @@ Partial Class TransferMoney
         Me.MaterialRadioButton4.Ripple = True
         Me.MaterialRadioButton4.Size = New System.Drawing.Size(127, 30)
         Me.MaterialRadioButton4.TabIndex = 71
-        Me.MaterialRadioButton4.TabStop = True
         Me.MaterialRadioButton4.Text = "Rogers - $50.00"
         Me.MaterialRadioButton4.UseVisualStyleBackColor = False
         Me.MaterialRadioButton4.Visible = False
@@ -436,7 +432,6 @@ Partial Class TransferMoney
         Me.MaterialRadioButton5.Ripple = True
         Me.MaterialRadioButton5.Size = New System.Drawing.Size(143, 30)
         Me.MaterialRadioButton5.TabIndex = 72
-        Me.MaterialRadioButton5.TabStop = True
         Me.MaterialRadioButton5.Text = "Mortgage - $50.00"
         Me.MaterialRadioButton5.UseVisualStyleBackColor = False
         Me.MaterialRadioButton5.Visible = False
@@ -455,7 +450,6 @@ Partial Class TransferMoney
         Me.MaterialRadioButton6.Ripple = True
         Me.MaterialRadioButton6.Size = New System.Drawing.Size(170, 30)
         Me.MaterialRadioButton6.TabIndex = 78
-        Me.MaterialRadioButton6.TabStop = True
         Me.MaterialRadioButton6.Text = "The Spectator - $50.00"
         Me.MaterialRadioButton6.UseVisualStyleBackColor = False
         Me.MaterialRadioButton6.Visible = False
@@ -474,7 +468,6 @@ Partial Class TransferMoney
         Me.MaterialRadioButton7.Ripple = True
         Me.MaterialRadioButton7.Size = New System.Drawing.Size(109, 30)
         Me.MaterialRadioButton7.TabIndex = 77
-        Me.MaterialRadioButton7.TabStop = True
         Me.MaterialRadioButton7.Text = "Billy - $50.00"
         Me.MaterialRadioButton7.UseVisualStyleBackColor = False
         Me.MaterialRadioButton7.Visible = False
@@ -493,7 +486,6 @@ Partial Class TransferMoney
         Me.MaterialRadioButton8.Ripple = True
         Me.MaterialRadioButton8.Size = New System.Drawing.Size(174, 30)
         Me.MaterialRadioButton8.TabIndex = 76
-        Me.MaterialRadioButton8.TabStop = True
         Me.MaterialRadioButton8.Text = "NRA Magazine - $50.00"
         Me.MaterialRadioButton8.UseVisualStyleBackColor = False
         Me.MaterialRadioButton8.Visible = False
@@ -512,7 +504,6 @@ Partial Class TransferMoney
         Me.MaterialRadioButton9.Ripple = True
         Me.MaterialRadioButton9.Size = New System.Drawing.Size(119, 30)
         Me.MaterialRadioButton9.TabIndex = 75
-        Me.MaterialRadioButton9.TabStop = True
         Me.MaterialRadioButton9.Text = "Water - $50.00"
         Me.MaterialRadioButton9.UseVisualStyleBackColor = False
         Me.MaterialRadioButton9.Visible = False
@@ -531,7 +522,6 @@ Partial Class TransferMoney
         Me.MaterialRadioButton10.Ripple = True
         Me.MaterialRadioButton10.Size = New System.Drawing.Size(180, 30)
         Me.MaterialRadioButton10.TabIndex = 74
-        Me.MaterialRadioButton10.TabStop = True
         Me.MaterialRadioButton10.Text = "General Electric - $50.00"
         Me.MaterialRadioButton10.UseVisualStyleBackColor = False
         Me.MaterialRadioButton10.Visible = False
@@ -593,7 +583,6 @@ Partial Class TransferMoney
         Me.MaterialRadioButton11.Ripple = True
         Me.MaterialRadioButton11.Size = New System.Drawing.Size(155, 30)
         Me.MaterialRadioButton11.TabIndex = 83
-        Me.MaterialRadioButton11.TabStop = True
         Me.MaterialRadioButton11.Text = "Zoo Weekly - $50.00"
         Me.MaterialRadioButton11.UseVisualStyleBackColor = False
         Me.MaterialRadioButton11.Visible = False
@@ -677,7 +666,6 @@ Partial Class TransferMoney
         Me.MaterialRadioButton12.Ripple = True
         Me.MaterialRadioButton12.Size = New System.Drawing.Size(190, 30)
         Me.MaterialRadioButton12.TabIndex = 92
-        Me.MaterialRadioButton12.TabStop = True
         Me.MaterialRadioButton12.Text = "ZooWeekly@mcmaster.ca"
         Me.MaterialRadioButton12.UseVisualStyleBackColor = False
         Me.MaterialRadioButton12.Visible = False
@@ -696,7 +684,6 @@ Partial Class TransferMoney
         Me.MaterialRadioButton13.Ripple = True
         Me.MaterialRadioButton13.Size = New System.Drawing.Size(144, 30)
         Me.MaterialRadioButton13.TabIndex = 91
-        Me.MaterialRadioButton13.TabStop = True
         Me.MaterialRadioButton13.Text = "Billy@outlook.com"
         Me.MaterialRadioButton13.UseVisualStyleBackColor = False
         Me.MaterialRadioButton13.Visible = False
@@ -715,7 +702,6 @@ Partial Class TransferMoney
         Me.MaterialRadioButton14.Ripple = True
         Me.MaterialRadioButton14.Size = New System.Drawing.Size(161, 30)
         Me.MaterialRadioButton14.TabIndex = 90
-        Me.MaterialRadioButton14.TabStop = True
         Me.MaterialRadioButton14.Text = "GeneralE@gmail.com"
         Me.MaterialRadioButton14.UseVisualStyleBackColor = False
         Me.MaterialRadioButton14.Visible = False
@@ -734,7 +720,6 @@ Partial Class TransferMoney
         Me.MaterialRadioButton15.Ripple = True
         Me.MaterialRadioButton15.Size = New System.Drawing.Size(136, 30)
         Me.MaterialRadioButton15.TabIndex = 89
-        Me.MaterialRadioButton15.TabStop = True
         Me.MaterialRadioButton15.Text = "Jane@email.com"
         Me.MaterialRadioButton15.UseVisualStyleBackColor = False
         Me.MaterialRadioButton15.Visible = False
@@ -743,9 +728,10 @@ Partial Class TransferMoney
         '
         Me.Chequing.AutoSize = True
         Me.Chequing.BackColor = System.Drawing.Color.Transparent
+        Me.Chequing.Checked = True
         Me.Chequing.Depth = 0
         Me.Chequing.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.Chequing.Location = New System.Drawing.Point(12, 279)
+        Me.Chequing.Location = New System.Drawing.Point(12, 278)
         Me.Chequing.Margin = New System.Windows.Forms.Padding(0)
         Me.Chequing.MouseLocation = New System.Drawing.Point(-1, -1)
         Me.Chequing.MouseState = MaterialSkin.MouseState.HOVER
@@ -772,7 +758,6 @@ Partial Class TransferMoney
         Me.Savings.Ripple = True
         Me.Savings.Size = New System.Drawing.Size(77, 30)
         Me.Savings.TabIndex = 93
-        Me.Savings.TabStop = True
         Me.Savings.Text = "Savings"
         Me.Savings.UseVisualStyleBackColor = False
         Me.Savings.Visible = False

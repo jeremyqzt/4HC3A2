@@ -34,8 +34,8 @@ Partial Class Balance
         Me.BackB = New System.Windows.Forms.Button()
         Me.info = New System.Windows.Forms.Button()
         Me.Logout = New System.Windows.Forms.Button()
-        Me.MaterialLabel5 = New MaterialSkin.Controls.MaterialLabel()
         Me.MaterialRaisedButton1 = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.MaterialLabel5 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'TByEmailB
@@ -71,9 +71,9 @@ Partial Class Balance
         Me.MaterialLabel1.Location = New System.Drawing.Point(338, 182)
         Me.MaterialLabel1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel1.Name = "MaterialLabel1"
-        Me.MaterialLabel1.Size = New System.Drawing.Size(332, 19)
+        Me.MaterialLabel1.Size = New System.Drawing.Size(295, 19)
         Me.MaterialLabel1.TabIndex = 20
-        Me.MaterialLabel1.Text = "Your Most Recent Tranaction was: Deposit $120"
+        Me.MaterialLabel1.Text = "Your Most Recent Transaction Was: Today"
         Me.MaterialLabel1.Visible = False
         '
         'MaterialLabel2
@@ -113,9 +113,9 @@ Partial Class Balance
         Me.MaterialLabel4.Location = New System.Drawing.Point(338, 276)
         Me.MaterialLabel4.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel4.Name = "MaterialLabel4"
-        Me.MaterialLabel4.Size = New System.Drawing.Size(335, 19)
+        Me.MaterialLabel4.Size = New System.Drawing.Size(295, 19)
         Me.MaterialLabel4.TabIndex = 22
-        Me.MaterialLabel4.Text = "Your Most Recent Tranaction was: Interest $1.12"
+        Me.MaterialLabel4.Text = "Your Most Recent Transaction Was: Today"
         Me.MaterialLabel4.Visible = False
         '
         'Another
@@ -176,20 +176,6 @@ Partial Class Balance
         Me.Logout.TabIndex = 54
         Me.Logout.UseVisualStyleBackColor = False
         '
-        'MaterialLabel5
-        '
-        Me.MaterialLabel5.AutoSize = True
-        Me.MaterialLabel5.Depth = 0
-        Me.MaterialLabel5.Font = New System.Drawing.Font("Roboto", 11.0!)
-        Me.MaterialLabel5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel5.Location = New System.Drawing.Point(338, 91)
-        Me.MaterialLabel5.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialLabel5.Name = "MaterialLabel5"
-        Me.MaterialLabel5.Size = New System.Drawing.Size(183, 19)
-        Me.MaterialLabel5.TabIndex = 57
-        Me.MaterialLabel5.Text = "Your Checkings Balances:"
-        Me.MaterialLabel5.Visible = False
-        '
         'MaterialRaisedButton1
         '
         Me.MaterialRaisedButton1.Depth = 0
@@ -202,13 +188,24 @@ Partial Class Balance
         Me.MaterialRaisedButton1.Text = "Print Balances on Receipt"
         Me.MaterialRaisedButton1.UseVisualStyleBackColor = True
         '
+        'MaterialLabel5
+        '
+        Me.MaterialLabel5.AutoSize = True
+        Me.MaterialLabel5.BackColor = System.Drawing.Color.Transparent
+        Me.MaterialLabel5.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MaterialLabel5.Location = New System.Drawing.Point(342, 95)
+        Me.MaterialLabel5.Name = "MaterialLabel5"
+        Me.MaterialLabel5.Size = New System.Drawing.Size(212, 31)
+        Me.MaterialLabel5.TabIndex = 59
+        Me.MaterialLabel5.Text = "Your Balances:"
+        '
         'Balance
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(695, 560)
-        Me.Controls.Add(Me.MaterialRaisedButton1)
         Me.Controls.Add(Me.MaterialLabel5)
+        Me.Controls.Add(Me.MaterialRaisedButton1)
         Me.Controls.Add(Me.BackB)
         Me.Controls.Add(Me.info)
         Me.Controls.Add(Me.Logout)
@@ -238,6 +235,6 @@ Partial Class Balance
     Friend WithEvents BackB As Button
     Friend WithEvents info As Button
     Friend WithEvents Logout As Button
-    Friend WithEvents MaterialLabel5 As MaterialSkin.Controls.MaterialLabel
     Friend WithEvents MaterialRaisedButton1 As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents MaterialLabel5 As Label
 End Class

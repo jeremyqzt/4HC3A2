@@ -186,4 +186,8 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub Info_Click(sender As Object, e As EventArgs) Handles Info.Click
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech On.wav")
+
+    End Sub
 End Class

@@ -169,6 +169,7 @@ Public Class TransferMoney
 
 
     Private Sub MPaymentB_Click(sender As Object, e As EventArgs) Handles MPaymentB.Click
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
         unloadTransfer()
         SelectPayee.Show()
         transferSelect = "Payment"
@@ -178,6 +179,7 @@ Public Class TransferMoney
 
 
     Private Sub Cancel_Click(sender As Object, e As EventArgs) Handles Cancel.Click
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech On.wav")
         loadTransfer()
         MaterialLabel2.Hide()
         MaterialLabel3.Hide()
@@ -326,6 +328,7 @@ Public Class TransferMoney
     End Sub
 
     Private Sub TBetweenAccB_Click(sender As Object, e As EventArgs) Handles TBetweenAccB.Click
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
         unloadTransfer()
         loadKeys()
         transferSelect = "BtwAcc"
@@ -344,6 +347,7 @@ Public Class TransferMoney
     End Sub
 
     Private Sub TByEmailB_Click(sender As Object, e As EventArgs) Handles TByEmailB.Click
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
         unloadTransfer()
         transferSelect = "ByEmail"
         loadKeys()
@@ -378,6 +382,7 @@ Public Class TransferMoney
     End Sub
 
     Private Sub Previous_Click(sender As Object, e As EventArgs) Handles Previous.Click
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
         MaterialRadioButton1.Show()
         MaterialRadioButton2.Show()
         MaterialRadioButton3.Show()
@@ -474,6 +479,7 @@ Public Class TransferMoney
     End Sub
 
     Private Sub PrintRecipt_Click(sender As Object, e As EventArgs) Handles PrintRecipt.Click
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech Off.wav")
         MaterialLabel2.Hide()
         MaterialLabel1.Show()
         Cancel.Hide()
@@ -486,6 +492,7 @@ Public Class TransferMoney
     End Sub
 
     Private Sub TransferContinue_Click(sender As Object, e As EventArgs) Handles TransferContinue.Click
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
         MaterialLabel1.Hide()
         TransferContinue.Hide()
         loadTransfer()
@@ -497,6 +504,7 @@ Public Class TransferMoney
     End Sub
 
     Private Sub ReciptNo_Click(sender As Object, e As EventArgs) Handles ReciptNo.Click
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech On.wav")
         MaterialLabel1.Hide()
         PrintRecipt.Hide()
         MaterialLabel2.Hide()
@@ -513,6 +521,7 @@ Public Class TransferMoney
     End Sub
 
     Private Sub MaterialRadioButton13_CheckedChanged(sender As Object, e As EventArgs) Handles MaterialRadioButton13.CheckedChanged
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech On.wav")
         PaymentPayee = MaterialRadioButton13.Text
     End Sub
 
@@ -525,6 +534,7 @@ Public Class TransferMoney
     End Sub
 
     Private Sub info_Click(sender As Object, e As EventArgs) Handles info.Click
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech On.wav")
 
         unloadKeys()
         PrintRecipt.Hide()
@@ -553,6 +563,7 @@ Public Class TransferMoney
     End Sub
 
     Private Sub Chequing_CheckedChanged(sender As Object, e As EventArgs) Handles Chequing.CheckedChanged
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech On.wav")
         Account = "c"
     End Sub
 
@@ -569,6 +580,7 @@ Public Class TransferMoney
     End Sub
 
     Private Sub SelectBA_Click(sender As Object, e As EventArgs) Handles SelectBA.Click
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
         If Account = "" Then
             MsgBox("Please select the transfer accounts.")
             Beep()

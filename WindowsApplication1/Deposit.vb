@@ -2,6 +2,7 @@
 
 Public Class Deposit
     Dim focus As String
+    Dim total As Integer
     Private Sub Deposit_Load(sender As Object, e As EventArgs)
         Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
         SkinManager.AddFormToManage(Me)
@@ -242,7 +243,6 @@ Public Class Deposit
 
         MaterialRadioButton3.Checked = True
         My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
-        Dim Total As Long
         If cash.Text.Length > 1 Then
             Total = CInt((cash.Text.Substring(0, cash.Text.Length)))
         End If
@@ -279,6 +279,12 @@ Public Class Deposit
 
     Private Sub WithdrawReciptYes_Click(sender As Object, e As EventArgs) Handles WithdrawReciptYes.Click
         If WithdrawReciptYes.Text = "Deposit" Then
+            If MaterialRadioButton3.Checked = True Then
+                Balance.updateSavings(total)
+            ElseIf MaterialRadioButton4.Checked = True Then
+                Balance.updateChecking(total)
+
+            End If
             WithdrawReciptYes.Text = "Press Here to Finish"
             WithdrawReciptNo.Visible = False
             MaterialRadioButton1.Checked = True
@@ -466,6 +472,7 @@ Public Class Deposit
     End Sub
 
     Private Sub info_Click(sender As Object, e As EventArgs) Handles info.Click
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech On.wav")
         MaterialRadioButton1.Checked = True
         MaterialLabel1.Visible = False
         MaterialRadioButton3.Visible = False

@@ -11,32 +11,51 @@ Public Class Balance
         Checkings = Checkings + change2
         Return 0
     End Function
+    Public Function getChecking() As Integer
+        Return Checkings
+    End Function
+    Public Function getSaving() As Integer
+        Return Savings
+    End Function
     Private Sub Balance_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim SkinManager As MaterialSkinManager = MaterialSkinManager.Instance
         SkinManager.AddFormToManage(Me)
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
         SkinManager.ColorScheme = New ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
-        Checkings = 500
-        Savings = 0
     End Sub
     Private Sub Balance_Closing(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
         Form1.Close()
     End Sub
     Private Sub TByEmailB_Click(sender As Object, e As EventArgs) Handles TByEmailB.Click
-        MaterialLabel1.Visible = True
-        MaterialLabel2.Text = " Your Total Checkings Blance: $" + CStr(Checkings)
-        MaterialLabel2.Visible = True
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
-
-        MaterialLabel5.Visible = True
+        If TByEmailB.Text = "Show Checkings Balance" Then
+            MaterialLabel1.Visible = True
+            MaterialLabel2.Text = " Your Total Checkings Blance: $" + CStr(Checkings)
+            MaterialLabel2.Visible = True
+            My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+            MaterialLabel5.Visible = True
+            TByEmailB.Text = "Hide My Checkings Balances"
+        Else
+            My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+            MaterialLabel2.Visible = False
+            MaterialLabel1.Visible = False
+            TByEmailB.Text = "Show Checkings Balance"
+        End If
     End Sub
 
     Private Sub MPaymentB_Click(sender As Object, e As EventArgs) Handles MPaymentB.Click
-        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
-        MaterialLabel3.Visible = True
-        MaterialLabel3.Text = "Your Total Savings Blance: $" + CStr(Savings)
-        MaterialLabel5.Visible = True
-        MaterialLabel4.Visible = True
+        If MPaymentB.Text = "Show Savings Balance" Then
+            My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+            MaterialLabel3.Visible = True
+            MaterialLabel3.Text = "Your Total Savings Blance: $" + CStr(Savings)
+            MaterialLabel5.Visible = True
+            MaterialLabel4.Visible = True
+            MPaymentB.Text = "Hide My Savings Balances"
+        Else
+            My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
+            MaterialLabel3.Visible = False
+            MaterialLabel4.Visible = False
+            MPaymentB.Text = "Show Savings Balance"
+        End If
     End Sub
 
     Private Sub WithdrawReciptYes_Click(sender As Object, e As EventArgs) Handles WithdrawReciptYes.Click
@@ -88,6 +107,7 @@ Public Class Balance
     End Sub
 
     Private Sub info_Click(sender As Object, e As EventArgs) Handles info.Click
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech On.wav")
         Me.Hide()
         Help.Show()
         MaterialLabel1.Visible = False

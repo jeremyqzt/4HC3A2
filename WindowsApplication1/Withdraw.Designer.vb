@@ -63,6 +63,7 @@ Partial Class Withdraw
         Me.Chequing = New MaterialSkin.Controls.MaterialRadioButton()
         Me.Savings = New MaterialSkin.Controls.MaterialRadioButton()
         Me.SelectPayee = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.MaterialLabel1 = New MaterialSkin.Controls.MaterialLabel()
         Me.SuspendLayout()
         '
         'CheckBalance
@@ -153,7 +154,7 @@ Partial Class Withdraw
         'W20
         '
         Me.W20.Depth = 0
-        Me.W20.Location = New System.Drawing.Point(12, 178)
+        Me.W20.Location = New System.Drawing.Point(8, 204)
         Me.W20.MouseState = MaterialSkin.MouseState.HOVER
         Me.W20.Name = "W20"
         Me.W20.Primary = True
@@ -165,7 +166,7 @@ Partial Class Withdraw
         'W40
         '
         Me.W40.Depth = 0
-        Me.W40.Location = New System.Drawing.Point(12, 272)
+        Me.W40.Location = New System.Drawing.Point(8, 298)
         Me.W40.MouseState = MaterialSkin.MouseState.HOVER
         Me.W40.Name = "W40"
         Me.W40.Primary = True
@@ -177,7 +178,7 @@ Partial Class Withdraw
         'W60
         '
         Me.W60.Depth = 0
-        Me.W60.Location = New System.Drawing.Point(12, 366)
+        Me.W60.Location = New System.Drawing.Point(8, 392)
         Me.W60.MouseState = MaterialSkin.MouseState.HOVER
         Me.W60.Name = "W60"
         Me.W60.Primary = True
@@ -189,7 +190,7 @@ Partial Class Withdraw
         'W80
         '
         Me.W80.Depth = 0
-        Me.W80.Location = New System.Drawing.Point(12, 460)
+        Me.W80.Location = New System.Drawing.Point(8, 486)
         Me.W80.MouseState = MaterialSkin.MouseState.HOVER
         Me.W80.Name = "W80"
         Me.W80.Primary = True
@@ -201,7 +202,7 @@ Partial Class Withdraw
         'CustomAmountB
         '
         Me.CustomAmountB.Depth = 0
-        Me.CustomAmountB.Location = New System.Drawing.Point(379, 460)
+        Me.CustomAmountB.Location = New System.Drawing.Point(375, 486)
         Me.CustomAmountB.MouseState = MaterialSkin.MouseState.HOVER
         Me.CustomAmountB.Name = "CustomAmountB"
         Me.CustomAmountB.Primary = True
@@ -213,7 +214,7 @@ Partial Class Withdraw
         'W200
         '
         Me.W200.Depth = 0
-        Me.W200.Location = New System.Drawing.Point(379, 366)
+        Me.W200.Location = New System.Drawing.Point(375, 392)
         Me.W200.MouseState = MaterialSkin.MouseState.HOVER
         Me.W200.Name = "W200"
         Me.W200.Primary = True
@@ -225,7 +226,7 @@ Partial Class Withdraw
         'W140
         '
         Me.W140.Depth = 0
-        Me.W140.Location = New System.Drawing.Point(379, 272)
+        Me.W140.Location = New System.Drawing.Point(375, 298)
         Me.W140.MouseState = MaterialSkin.MouseState.HOVER
         Me.W140.Name = "W140"
         Me.W140.Primary = True
@@ -237,7 +238,7 @@ Partial Class Withdraw
         'W100
         '
         Me.W100.Depth = 0
-        Me.W100.Location = New System.Drawing.Point(379, 178)
+        Me.W100.Location = New System.Drawing.Point(375, 204)
         Me.W100.MouseState = MaterialSkin.MouseState.HOVER
         Me.W100.Name = "W100"
         Me.W100.Primary = True
@@ -253,7 +254,7 @@ Partial Class Withdraw
         Me.MaterialLabel2.Depth = 0
         Me.MaterialLabel2.Font = New System.Drawing.Font("Roboto", 11.0!)
         Me.MaterialLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialLabel2.Location = New System.Drawing.Point(12, 112)
+        Me.MaterialLabel2.Location = New System.Drawing.Point(12, 153)
         Me.MaterialLabel2.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialLabel2.Name = "MaterialLabel2"
         Me.MaterialLabel2.Size = New System.Drawing.Size(325, 19)
@@ -263,7 +264,7 @@ Partial Class Withdraw
         'PassKeyCor
         '
         Me.PassKeyCor.Depth = 0
-        Me.PassKeyCor.Location = New System.Drawing.Point(304, 484)
+        Me.PassKeyCor.Location = New System.Drawing.Point(300, 510)
         Me.PassKeyCor.MouseState = MaterialSkin.MouseState.HOVER
         Me.PassKeyCor.Name = "PassKeyCor"
         Me.PassKeyCor.Primary = True
@@ -276,7 +277,7 @@ Partial Class Withdraw
         'PassKeyEnter
         '
         Me.PassKeyEnter.Depth = 0
-        Me.PassKeyEnter.Location = New System.Drawing.Point(403, 484)
+        Me.PassKeyEnter.Location = New System.Drawing.Point(399, 510)
         Me.PassKeyEnter.MouseState = MaterialSkin.MouseState.HOVER
         Me.PassKeyEnter.Name = "PassKeyEnter"
         Me.PassKeyEnter.Primary = True
@@ -289,7 +290,7 @@ Partial Class Withdraw
         'PassKey9
         '
         Me.PassKey9.Depth = 0
-        Me.PassKey9.Location = New System.Drawing.Point(403, 398)
+        Me.PassKey9.Location = New System.Drawing.Point(399, 424)
         Me.PassKey9.MouseState = MaterialSkin.MouseState.HOVER
         Me.PassKey9.Name = "PassKey9"
         Me.PassKey9.Primary = True
@@ -302,7 +303,7 @@ Partial Class Withdraw
         'PassKey8
         '
         Me.PassKey8.Depth = 0
-        Me.PassKey8.Location = New System.Drawing.Point(304, 398)
+        Me.PassKey8.Location = New System.Drawing.Point(300, 424)
         Me.PassKey8.MouseState = MaterialSkin.MouseState.HOVER
         Me.PassKey8.Name = "PassKey8"
         Me.PassKey8.Primary = True
@@ -315,7 +316,7 @@ Partial Class Withdraw
         'PassKey7
         '
         Me.PassKey7.Depth = 0
-        Me.PassKey7.Location = New System.Drawing.Point(204, 398)
+        Me.PassKey7.Location = New System.Drawing.Point(200, 424)
         Me.PassKey7.MouseState = MaterialSkin.MouseState.HOVER
         Me.PassKey7.Name = "PassKey7"
         Me.PassKey7.Primary = True
@@ -328,7 +329,7 @@ Partial Class Withdraw
         'PassKey6
         '
         Me.PassKey6.Depth = 0
-        Me.PassKey6.Location = New System.Drawing.Point(403, 306)
+        Me.PassKey6.Location = New System.Drawing.Point(399, 332)
         Me.PassKey6.MouseState = MaterialSkin.MouseState.HOVER
         Me.PassKey6.Name = "PassKey6"
         Me.PassKey6.Primary = True
@@ -341,7 +342,7 @@ Partial Class Withdraw
         'PassKey5
         '
         Me.PassKey5.Depth = 0
-        Me.PassKey5.Location = New System.Drawing.Point(304, 306)
+        Me.PassKey5.Location = New System.Drawing.Point(300, 332)
         Me.PassKey5.MouseState = MaterialSkin.MouseState.HOVER
         Me.PassKey5.Name = "PassKey5"
         Me.PassKey5.Primary = True
@@ -354,7 +355,7 @@ Partial Class Withdraw
         'PassKey4
         '
         Me.PassKey4.Depth = 0
-        Me.PassKey4.Location = New System.Drawing.Point(204, 306)
+        Me.PassKey4.Location = New System.Drawing.Point(200, 332)
         Me.PassKey4.MouseState = MaterialSkin.MouseState.HOVER
         Me.PassKey4.Name = "PassKey4"
         Me.PassKey4.Primary = True
@@ -367,7 +368,7 @@ Partial Class Withdraw
         'PassKey3
         '
         Me.PassKey3.Depth = 0
-        Me.PassKey3.Location = New System.Drawing.Point(403, 217)
+        Me.PassKey3.Location = New System.Drawing.Point(399, 243)
         Me.PassKey3.MouseState = MaterialSkin.MouseState.HOVER
         Me.PassKey3.Name = "PassKey3"
         Me.PassKey3.Primary = True
@@ -380,7 +381,7 @@ Partial Class Withdraw
         'PassKey2
         '
         Me.PassKey2.Depth = 0
-        Me.PassKey2.Location = New System.Drawing.Point(304, 217)
+        Me.PassKey2.Location = New System.Drawing.Point(300, 243)
         Me.PassKey2.MouseState = MaterialSkin.MouseState.HOVER
         Me.PassKey2.Name = "PassKey2"
         Me.PassKey2.Primary = True
@@ -393,7 +394,7 @@ Partial Class Withdraw
         'PassKey1
         '
         Me.PassKey1.Depth = 0
-        Me.PassKey1.Location = New System.Drawing.Point(204, 217)
+        Me.PassKey1.Location = New System.Drawing.Point(200, 243)
         Me.PassKey1.MouseState = MaterialSkin.MouseState.HOVER
         Me.PassKey1.Name = "PassKey1"
         Me.PassKey1.Primary = True
@@ -407,7 +408,7 @@ Partial Class Withdraw
         '
         Me.PassField.Depth = 0
         Me.PassField.Hint = ""
-        Me.PassField.Location = New System.Drawing.Point(204, 158)
+        Me.PassField.Location = New System.Drawing.Point(200, 184)
         Me.PassField.MouseState = MaterialSkin.MouseState.HOVER
         Me.PassField.Name = "PassField"
         Me.PassField.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
@@ -447,7 +448,7 @@ Partial Class Withdraw
         'PassKey0
         '
         Me.PassKey0.Depth = 0
-        Me.PassKey0.Location = New System.Drawing.Point(204, 484)
+        Me.PassKey0.Location = New System.Drawing.Point(200, 510)
         Me.PassKey0.MouseState = MaterialSkin.MouseState.HOVER
         Me.PassKey0.Name = "PassKey0"
         Me.PassKey0.Primary = True
@@ -460,7 +461,7 @@ Partial Class Withdraw
         'WithdrawReciptNo
         '
         Me.WithdrawReciptNo.Depth = 0
-        Me.WithdrawReciptNo.Location = New System.Drawing.Point(12, 366)
+        Me.WithdrawReciptNo.Location = New System.Drawing.Point(8, 392)
         Me.WithdrawReciptNo.MouseState = MaterialSkin.MouseState.HOVER
         Me.WithdrawReciptNo.Name = "WithdrawReciptNo"
         Me.WithdrawReciptNo.Primary = True
@@ -473,7 +474,7 @@ Partial Class Withdraw
         'WithdrawReciptYes
         '
         Me.WithdrawReciptYes.Depth = 0
-        Me.WithdrawReciptYes.Location = New System.Drawing.Point(12, 272)
+        Me.WithdrawReciptYes.Location = New System.Drawing.Point(8, 298)
         Me.WithdrawReciptYes.MouseState = MaterialSkin.MouseState.HOVER
         Me.WithdrawReciptYes.Name = "WithdrawReciptYes"
         Me.WithdrawReciptYes.Primary = True
@@ -489,7 +490,7 @@ Partial Class Withdraw
         'WithdrawFinish
         '
         Me.WithdrawFinish.Depth = 0
-        Me.WithdrawFinish.Location = New System.Drawing.Point(12, 460)
+        Me.WithdrawFinish.Location = New System.Drawing.Point(8, 486)
         Me.WithdrawFinish.MouseState = MaterialSkin.MouseState.HOVER
         Me.WithdrawFinish.Name = "WithdrawFinish"
         Me.WithdrawFinish.Primary = True
@@ -502,7 +503,7 @@ Partial Class Withdraw
         'MaterialRaisedButton1
         '
         Me.MaterialRaisedButton1.Depth = 0
-        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(12, 366)
+        Me.MaterialRaisedButton1.Location = New System.Drawing.Point(8, 392)
         Me.MaterialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialRaisedButton1.Name = "MaterialRaisedButton1"
         Me.MaterialRaisedButton1.Primary = True
@@ -518,7 +519,7 @@ Partial Class Withdraw
         Me.Chequing.BackColor = System.Drawing.Color.Transparent
         Me.Chequing.Depth = 0
         Me.Chequing.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.Chequing.Location = New System.Drawing.Point(12, 279)
+        Me.Chequing.Location = New System.Drawing.Point(93, 111)
         Me.Chequing.Margin = New System.Windows.Forms.Padding(0)
         Me.Chequing.MouseLocation = New System.Drawing.Point(-1, -1)
         Me.Chequing.MouseState = MaterialSkin.MouseState.HOVER
@@ -526,18 +527,17 @@ Partial Class Withdraw
         Me.Chequing.Ripple = True
         Me.Chequing.Size = New System.Drawing.Size(87, 30)
         Me.Chequing.TabIndex = 95
-        Me.Chequing.TabStop = True
         Me.Chequing.Text = "Chequing"
         Me.Chequing.UseVisualStyleBackColor = False
-        Me.Chequing.Visible = False
         '
         'Savings
         '
         Me.Savings.AutoSize = True
         Me.Savings.BackColor = System.Drawing.Color.Transparent
+        Me.Savings.Checked = True
         Me.Savings.Depth = 0
         Me.Savings.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.Savings.Location = New System.Drawing.Point(12, 309)
+        Me.Savings.Location = New System.Drawing.Point(16, 111)
         Me.Savings.Margin = New System.Windows.Forms.Padding(0)
         Me.Savings.MouseLocation = New System.Drawing.Point(-1, -1)
         Me.Savings.MouseState = MaterialSkin.MouseState.HOVER
@@ -548,24 +548,38 @@ Partial Class Withdraw
         Me.Savings.TabStop = True
         Me.Savings.Text = "Savings"
         Me.Savings.UseVisualStyleBackColor = False
-        Me.Savings.Visible = False
         '
         'SelectPayee
         '
         Me.SelectPayee.Depth = 0
-        Me.SelectPayee.Location = New System.Drawing.Point(277, 475)
+        Me.SelectPayee.Location = New System.Drawing.Point(273, 501)
         Me.SelectPayee.MouseState = MaterialSkin.MouseState.HOVER
         Me.SelectPayee.Name = "SelectPayee"
         Me.SelectPayee.Primary = True
         Me.SelectPayee.Size = New System.Drawing.Size(153, 88)
         Me.SelectPayee.TabIndex = 93
-        Me.SelectPayee.Text = "Select"
+        Me.SelectPayee.Text = "Confirm"
         Me.SelectPayee.UseVisualStyleBackColor = True
         Me.SelectPayee.Visible = False
+        '
+        'MaterialLabel1
+        '
+        Me.MaterialLabel1.AutoSize = True
+        Me.MaterialLabel1.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.MaterialLabel1.Depth = 0
+        Me.MaterialLabel1.Font = New System.Drawing.Font("Roboto", 11.0!)
+        Me.MaterialLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.MaterialLabel1.Location = New System.Drawing.Point(12, 92)
+        Me.MaterialLabel1.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialLabel1.Name = "MaterialLabel1"
+        Me.MaterialLabel1.Size = New System.Drawing.Size(230, 19)
+        Me.MaterialLabel1.TabIndex = 96
+        Me.MaterialLabel1.Text = "Please Select Withdraw Account:"
         '
         'Withdraw
         '
         Me.ClientSize = New System.Drawing.Size(711, 599)
+        Me.Controls.Add(Me.MaterialLabel1)
         Me.Controls.Add(Me.Chequing)
         Me.Controls.Add(Me.Savings)
         Me.Controls.Add(Me.SelectPayee)
@@ -646,7 +660,7 @@ Partial Class Withdraw
     Friend WithEvents Chequing As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents Savings As MaterialSkin.Controls.MaterialRadioButton
     Friend WithEvents SelectPayee As MaterialSkin.Controls.MaterialRaisedButton
-
+    Friend WithEvents MaterialLabel1 As MaterialSkin.Controls.MaterialLabel
 
 
 End Class

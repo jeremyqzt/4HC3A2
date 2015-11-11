@@ -26,21 +26,62 @@ Public Class Withdraw
         Return 0
     End Function
 
-    Private Function Quick_withrdraw(ByVal Numb As String) As Integer
-        W60.Hide()
-        W80.Hide()
-        CustomAmountB.Hide()
-        W200.Hide()
-        W140.Hide()
-        W100.Hide()
-        W20.Hide()
-        W40.Hide()
-        MaterialLabel2.Text = "Now withdrawing " + Numb + ".00. Please select the account to withdraw from."
-        Chequing.Show()
-        SelectPayee.show()
-        Savings.Show()
-        WAmount = Numb
-
+    Private Function Quick_withrdraw(ByVal Numb As Integer) As Integer
+        Dim account As String
+        If Savings.Checked = True Then
+            account = "Savings"
+        ElseIf Chequing.Checked = True Then
+            account = "Checkings"
+        End If
+        If account = "Checkings" Then
+            If Balance.getChecking > Numb Then
+                W60.Hide()
+                W80.Hide()
+                CustomAmountB.Hide()
+                W200.Hide()
+                W140.Hide()
+                Chequing.Hide()
+                Savings.Hide()
+                MaterialLabel1.Hide()
+                W100.Hide()
+                W20.Hide()
+                W40.Hide()
+                MaterialLabel2.Text = "Now withdrawing " + CStr(Numb) + ".00. from your " + account + "  account"
+                Chequing.Show()
+                SelectPayee.Show()
+                Savings.Show()
+                WAmount = CStr(Numb)
+                Chequing.Show()
+                Savings.Show()
+                MaterialLabel1.Show()
+            Else
+                MsgBox("Insufficient Funds")
+            End If
+        ElseIf account = "Savings" Then
+            If Balance.getSaving > Numb Then
+                W60.Hide()
+                W80.Hide()
+                CustomAmountB.Hide()
+                W200.Hide()
+                W140.Hide()
+                Chequing.Hide()
+                Savings.Hide()
+                MaterialLabel1.Hide()
+                W100.Hide()
+                W20.Hide()
+                W40.Hide()
+                MaterialLabel2.Text = "Now withdrawing " + CStr(Numb) + ".00. from your " + account + "  account"
+                Chequing.Show()
+                SelectPayee.Show()
+                Savings.Show()
+                WAmount = CStr(Numb)
+                Chequing.Show()
+                Savings.Show()
+                MaterialLabel1.Show()
+            Else
+                MsgBox("Insufficient Funds")
+            End If
+        End If
         Return 0
 
     End Function
@@ -71,6 +112,9 @@ Public Class Withdraw
 
     End Sub
     Private Sub Logout_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Chequing.Show()
+        Savings.Show()
+        MaterialLabel1.Show()
         MaterialLabel2.Text = "Please select the amount you want to withdraw"
         WithdrawReciptNo.Hide()
         WithdrawReciptYes.Hide()
@@ -130,6 +174,9 @@ Public Class Withdraw
     End Sub
 
     Private Sub BackB_Click(sender As Object, e As EventArgs) Handles BackB.Click
+        Chequing.Show()
+        Savings.Show()
+        MaterialLabel1.Show()
         MaterialLabel2.Text = "Please select the amount you want to withdraw"
         WithdrawReciptNo.Hide()
         WithdrawReciptYes.Hide()
@@ -284,7 +331,9 @@ Public Class Withdraw
             MaterialLabel2.Text = ("Now withdrawing " + PassField.Text + ".00. Would you like a recipt?")
             WithdrawReciptNo.Show()
             WithdrawReciptYes.Show()
-
+            Chequing.Show()
+            Savings.Show()
+            MaterialLabel1.Show()
 
         Else
             MsgBox("Only multiples of $20 is accepted")
@@ -293,36 +342,36 @@ Public Class Withdraw
 
     Private Sub W20_Click(sender As Object, e As EventArgs) Handles W20.Click
         My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
-        Quick_withrdraw("20")
+        Quick_withrdraw(20)
     End Sub
 
     Private Sub W40_Click(sender As Object, e As EventArgs) Handles W40.Click
         My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
-        Quick_withrdraw("40")
+        Quick_withrdraw(40)
     End Sub
 
     Private Sub W60_Click(sender As Object, e As EventArgs) Handles W60.Click
-        Quick_withrdraw("60")
+        Quick_withrdraw(60)
     End Sub
 
     Private Sub W80_Click(sender As Object, e As EventArgs) Handles W80.Click
         My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
-        Quick_withrdraw("80")
+        Quick_withrdraw(80)
     End Sub
 
     Private Sub W100_Click(sender As Object, e As EventArgs) Handles W100.Click
         My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
-        Quick_withrdraw("100")
+        Quick_withrdraw(100)
     End Sub
 
     Private Sub W140_Click(sender As Object, e As EventArgs) Handles W140.Click
         My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
-        Quick_withrdraw("140")
+        Quick_withrdraw(140)
     End Sub
 
     Private Sub W200_Click(sender As Object, e As EventArgs) Handles W200.Click
         My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Windows Information Bar.wav")
-        Quick_withrdraw("200")
+        Quick_withrdraw(200)
     End Sub
 
     Private Sub WithdrawReciptYes_Click(sender As Object, e As EventArgs) Handles WithdrawReciptYes.Click
@@ -359,6 +408,9 @@ Public Class Withdraw
         WithdrawFinish.Hide()
         'MaterialLabel2.Text = ""
         MaterialLabel2.Show()
+        Chequing.Show()
+        Savings.Show()
+        MaterialLabel1.Show()
         MaterialLabel2.Text = "Please select the amount you want to withdraw"
         WithdrawReset()
         Me.Hide()
@@ -366,6 +418,7 @@ Public Class Withdraw
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        My.Computer.Audio.Play("C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\packages\Speech On.wav")
         MaterialLabel2.Text = "Please select the amount you want to withdraw"
         W60.Show()
         WithdrawReciptNo.Hide()
