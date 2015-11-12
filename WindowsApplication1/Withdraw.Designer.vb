@@ -35,7 +35,7 @@ Partial Class Withdraw
         Me.W40 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.W60 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.W80 = New MaterialSkin.Controls.MaterialRaisedButton()
-        Me.CustomAmountB = New MaterialSkin.Controls.MaterialRaisedButton()
+        Me.CashierC = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.W200 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.W140 = New MaterialSkin.Controls.MaterialRaisedButton()
         Me.W100 = New MaterialSkin.Controls.MaterialRaisedButton()
@@ -199,17 +199,17 @@ Partial Class Withdraw
         Me.W80.Text = "$80.00"
         Me.W80.UseVisualStyleBackColor = True
         '
-        'CustomAmountB
+        'CashierC
         '
-        Me.CustomAmountB.Depth = 0
-        Me.CustomAmountB.Location = New System.Drawing.Point(375, 486)
-        Me.CustomAmountB.MouseState = MaterialSkin.MouseState.HOVER
-        Me.CustomAmountB.Name = "CustomAmountB"
-        Me.CustomAmountB.Primary = True
-        Me.CustomAmountB.Size = New System.Drawing.Size(320, 88)
-        Me.CustomAmountB.TabIndex = 25
-        Me.CustomAmountB.Text = "Custom Amount"
-        Me.CustomAmountB.UseVisualStyleBackColor = True
+        Me.CashierC.Depth = 0
+        Me.CashierC.Location = New System.Drawing.Point(375, 486)
+        Me.CashierC.MouseState = MaterialSkin.MouseState.HOVER
+        Me.CashierC.Name = "CashierC"
+        Me.CashierC.Primary = True
+        Me.CashierC.Size = New System.Drawing.Size(320, 88)
+        Me.CashierC.TabIndex = 25
+        Me.CashierC.Text = "Cashier's Cheque"
+        Me.CashierC.UseVisualStyleBackColor = True
         '
         'W200
         '
@@ -534,7 +534,6 @@ Partial Class Withdraw
         '
         Me.Savings.AutoSize = True
         Me.Savings.BackColor = System.Drawing.Color.Transparent
-        Me.Savings.Checked = True
         Me.Savings.Depth = 0
         Me.Savings.Font = New System.Drawing.Font("Roboto", 10.0!)
         Me.Savings.Location = New System.Drawing.Point(16, 111)
@@ -545,7 +544,6 @@ Partial Class Withdraw
         Me.Savings.Ripple = True
         Me.Savings.Size = New System.Drawing.Size(77, 30)
         Me.Savings.TabIndex = 94
-        Me.Savings.TabStop = True
         Me.Savings.Text = "Savings"
         Me.Savings.UseVisualStyleBackColor = False
         '
@@ -603,7 +601,7 @@ Partial Class Withdraw
         Me.Controls.Add(Me.PassKey2)
         Me.Controls.Add(Me.PassKey1)
         Me.Controls.Add(Me.MaterialLabel2)
-        Me.Controls.Add(Me.CustomAmountB)
+        Me.Controls.Add(Me.CashierC)
         Me.Controls.Add(Me.W200)
         Me.Controls.Add(Me.W140)
         Me.Controls.Add(Me.W100)
@@ -632,7 +630,7 @@ Partial Class Withdraw
     Friend WithEvents W40 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents W60 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents W80 As MaterialSkin.Controls.MaterialRaisedButton
-    Friend WithEvents CustomAmountB As MaterialSkin.Controls.MaterialRaisedButton
+    Friend WithEvents CashierC As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents W200 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents W140 As MaterialSkin.Controls.MaterialRaisedButton
     Friend WithEvents W100 As MaterialSkin.Controls.MaterialRaisedButton

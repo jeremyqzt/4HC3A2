@@ -15,4 +15,25 @@ C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\WindowsApplication1
 C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\WindowsApplication1\obj\Release\WindowsApplication1.exe
 C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\WindowsApplication1\obj\Release\WindowsApplication1.xml
 C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\WindowsApplication1\obj\Release\WindowsApplication1.pdb
+<<<<<<< HEAD
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\bin\Release\WindowsApplication1.exe.config
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\obj\Release\WindowsApplication1.exe
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\obj\Release\WindowsApplication1.xml
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\obj\Release\WindowsApplication1.pdb
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\bin\Release\WindowsApplication1.exe
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\bin\Release\WindowsApplication1.pdb
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\bin\Release\WindowsApplication1.xml
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\bin\Release\MaterialSkin.dll
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\obj\Release\BankInterface.vbprojResolveAssemblyReference.cache
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\obj\Release\WindowsApplication1.Balance.resources
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\obj\Release\WindowsApplication1.Deposit.resources
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\obj\Release\WindowsApplication1.Form1.resources
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\obj\Release\WindowsApplication1.Help.resources
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\obj\Release\WindowsApplication1.TransferMoney.resources
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\obj\Release\WindowsApplication1.Withdraw.resources
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\obj\Release\WindowsApplication1.Form2.resources
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\obj\Release\WindowsApplication1.Resources.resources
+C:\Users\Ian\Documents\GitHub\4HC3A2\WindowsApplication1\obj\Release\BankInterface.vbproj.GenerateResource.Cache
+=======
 C:\Users\Jeremy\Documents\Visual Studio 2015\Projects\4HC3A2\WindowsApplication1\obj\Release\BankInterface.vbprojResolveAssemblyReference.cache
+>>>>>>> 8ec7233616d3984474acf49e352fca8fc59f0112

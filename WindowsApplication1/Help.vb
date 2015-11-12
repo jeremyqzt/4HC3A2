@@ -45,6 +45,8 @@ Public Class Help
 
     Private Sub MaterialRaisedButton1_Click(sender As Object, e As EventArgs) Handles MaterialRaisedButton1.Click
         Timer1.Enabled = True
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\CallRing.wav")
+        MaterialRaisedButton1.Hide()
         ProgressBar1.Visible = True
         ProgressBar1.ForeColor = Color.Blue
         MaterialLabel1.Text = "Now connecting, please wait."
@@ -63,14 +65,15 @@ Public Class Help
             liveGif.Show()
             endCall.Show()
             Cancel.Hide()
-            MaterialRaisedButton1.Hide()
             ProgressBar1.Visible = False
+            My.Computer.Audio.Stop()
         End If
     End Sub
 
     Private Sub endCall_Click(sender As Object, e As EventArgs) Handles endCall.Click
         liveGif.Hide()
         endCall.Hide()
+        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech Off.wav")
         MaterialLabel1.Text = "Do you wish to speak with an agent?"
         MaterialRaisedButton1.Show()
         Cancel.Show()

@@ -12,15 +12,36 @@ Public Class Withdraw
         SkinManager.Theme = MaterialSkinManager.Themes.LIGHT
         SkinManager.ColorScheme = New ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE)
     End Sub
+    Private Function checkMoney(ByVal Entered As Integer, ByVal Account As String) As Boolean
+        If Account = "s" Then
+            If Balance.getSaving() >= Entered Then
+                Return True
+            Else
+                Return False
+            End If
+        ElseIf Account = "c" Then
+            If Balance.getChecking >= Entered Then
+                Return True
+            Else
+                Return False
+            End If
+        End If
 
+    End Function
     Private Function WithdrawReset() As Integer
         W60.Show()
         W80.Show()
-        CustomAmountB.Show()
+        CashierC.Show()
         W200.Show()
         W140.Show()
         W100.Show()
         W20.Show()
+        Savings.Show()
+        Chequing.Show()
+        Savings.Checked = False
+        Chequing.Checked = False
+        PassField.Text = "$"
+        WAccount = ""
         W40.Show()
 
         Return 0
@@ -34,10 +55,10 @@ Public Class Withdraw
             account = "Checkings"
         End If
         If account = "Checkings" Then
-            If Balance.getChecking > Numb Then
+            If Balance.getChecking >= Numb Then
                 W60.Hide()
                 W80.Hide()
-                CustomAmountB.Hide()
+                CashierC.Hide()
                 W200.Hide()
                 W140.Hide()
                 Chequing.Hide()
@@ -55,13 +76,14 @@ Public Class Withdraw
                 Savings.Show()
                 MaterialLabel1.Show()
             Else
+                Beep()
                 MsgBox("Insufficient Funds")
             End If
         ElseIf account = "Savings" Then
-            If Balance.getSaving > Numb Then
+            If Balance.getSaving >= Numb Then
                 W60.Hide()
                 W80.Hide()
-                CustomAmountB.Hide()
+                CashierC.Hide()
                 W200.Hide()
                 W140.Hide()
                 Chequing.Hide()
@@ -79,6 +101,7 @@ Public Class Withdraw
                 Savings.Show()
                 MaterialLabel1.Show()
             Else
+                Beep()
                 MsgBox("Insufficient Funds")
             End If
         End If
@@ -115,9 +138,13 @@ Public Class Withdraw
         My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech Off.wav")
         Chequing.Show()
         Savings.Show()
+        Chequing.Checked = False
+        Savings.Checked = False
         MaterialLabel1.Show()
         MaterialLabel2.Text = "Please select the amount you want to withdraw"
         WithdrawReciptNo.Hide()
+        Chequing.Show()
+        Savings.Show()
         WithdrawReciptYes.Hide()
         PassField.Hide()
         PassKey1.Hide()
@@ -127,8 +154,6 @@ Public Class Withdraw
         PassKey5.Hide()
         PassKey6.Hide()
         PassKey7.Hide()
-        Chequing.Hide()
-        Savings.Hide()
         SelectPayee.Hide()
         PassKey8.Hide()
         PassKey9.Hide()
@@ -139,18 +164,18 @@ Public Class Withdraw
         current = 0
         WithdrawTrack = 0
         Cancel.Hide()
-
+        WAccount = ""
         WithdrawReset()
         Me.Hide()
         Form1.Show()
     End Sub
 
 
-    Private Sub MaterialRaisedButton4_Click(sender As Object, e As EventArgs) Handles CustomAmountB.Click
+    Private Sub MaterialRaisedButton4_Click(sender As Object, e As EventArgs) Handles CashierC.Click
         My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         W60.Hide()
         W80.Hide()
-        CustomAmountB.Hide()
+        CashierC.Hide()
         W200.Hide()
         W140.Hide()
         W100.Hide()
@@ -178,15 +203,19 @@ Public Class Withdraw
         My.Computer.Audio.Play(Environment.CurrentDirectory + "\Speech On.wav")
         Chequing.Show()
         Savings.Show()
+        Chequing.Checked = False
+        Savings.Checked = False
         MaterialLabel1.Show()
         MaterialLabel2.Text = "Please select the amount you want to withdraw"
         WithdrawReciptNo.Hide()
         WithdrawReciptYes.Hide()
         W60.Show()
         W80.Show()
-        CustomAmountB.Show()
+        CashierC.Show()
         W200.Show()
         W140.Show()
+        Chequing.Show()
+        Savings.Show()
         W100.Show()
         W20.Show()
         W40.Show()
@@ -200,8 +229,7 @@ Public Class Withdraw
         PassKey7.Hide()
         PassKey8.Hide()
         PassKey9.Hide()
-        Chequing.Hide()
-        Savings.Hide()
+        WAccount = ""
         SelectPayee.Hide()
         PassKey0.Hide()
         PassKeyCor.Hide()
@@ -212,6 +240,7 @@ Public Class Withdraw
         WithdrawTrack = 0
         Me.Hide()
         Form2.Show()
+
     End Sub
 
     Private Sub Cancel_Click(sender As Object, e As EventArgs) Handles Cancel.Click
@@ -236,6 +265,8 @@ Public Class Withdraw
         current = 0
         WithdrawTrack = 0
         Cancel.Hide()
+        Savings.Show()
+        Chequing.Show()
 
         WithdrawReset()
     End Sub
@@ -313,72 +344,186 @@ Public Class Withdraw
     End Sub
 
     Private Sub PassKeyEnter_Click(sender As Object, e As EventArgs) Handles PassKeyEnter.Click
-        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
-        If ((current Mod 20) = 0) And (current > 0) Then
-            PassField.Hide()
-            PassKey1.Hide()
-            PassKey2.Hide()
-            PassKey3.Hide()
-            PassKey4.Hide()
-            PassKey5.Hide()
-            PassKey6.Hide()
-            PassKey7.Hide()
-            PassKey8.Hide()
-            PassKey9.Hide()
-            PassKey0.Hide()
-            PassKeyCor.Hide()
-            PassKeyEnter.Hide()
-            WithdrawTrack = 0
-            Cancel.Hide()
-            MaterialLabel2.Text = ("Now withdrawing " + PassField.Text + ".00. Would you like a recipt?")
-            WithdrawReciptNo.Show()
-            WithdrawReciptYes.Show()
-            Chequing.Show()
-            Savings.Show()
-            MaterialLabel1.Show()
 
+        Dim balanceupdate As Integer
+        Dim removeD As String = PassField.Text.TrimStart(CChar("$"))
+        Int32.TryParse(removeD, balanceupdate)
+        If WAccount = "s" Then
+            If Balance.getSaving() >= balanceupdate Then
+                PassField.Hide()
+                PassKey1.Hide()
+                PassKey2.Hide()
+                PassKey3.Hide()
+                PassKey4.Hide()
+                PassKey5.Hide()
+                PassKey6.Hide()
+                PassKey7.Hide()
+                PassKey8.Hide()
+                PassKey9.Hide()
+                PassKey0.Hide()
+                PassKeyCor.Hide()
+                PassKeyEnter.Hide()
+                WithdrawTrack = 0
+                Cancel.Hide()
+                MaterialLabel2.Text = ("Now withdrawing " + PassField.Text + ".00. Would you like a recipt?")
+                WithdrawReciptNo.Show()
+                WithdrawReciptYes.Show()
+                Chequing.Hide()
+                Savings.Hide()
+                MaterialLabel1.Show()
+
+                PassField.Text = "$"
+            Else
+                Beep()
+                MsgBox("Insufficient funds.")
+            End If
+        ElseIf WAccount = "c" Then
+            If Balance.getChecking >= balanceupdate Then
+                PassField.Hide()
+                PassKey1.Hide()
+                PassKey2.Hide()
+                PassKey3.Hide()
+                PassKey4.Hide()
+                PassKey5.Hide()
+                PassKey6.Hide()
+                PassKey7.Hide()
+                PassKey8.Hide()
+                PassKey9.Hide()
+                PassKey0.Hide()
+                PassKeyCor.Hide()
+                PassKeyEnter.Hide()
+                WithdrawTrack = 0
+                Cancel.Hide()
+                MaterialLabel2.Text = ("Now withdrawing " + PassField.Text + ".00. Would you like a recipt?")
+                WithdrawReciptNo.Show()
+                WithdrawReciptYes.Show()
+                Chequing.Hide()
+                Savings.Hide()
+                MaterialLabel1.Show()
+
+                PassField.Text = "$"
+            Else
+                Beep()
+                MsgBox("Insufficient funds.")
+            End If
         Else
-            MsgBox("Only multiples of $20 is accepted")
+            Beep()
+            MsgBox("Please select an account to withdraw from.")
         End If
+      
     End Sub
 
     Private Sub W20_Click(sender As Object, e As EventArgs) Handles W20.Click
-        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
-        Quick_withrdraw(20)
+        If WAccount = "" Then
+            Beep()
+            MsgBox("Please select an account to withdraw from.")
+
+        ElseIf checkMoney(20, WAccount) Then
+            My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
+            Quick_withrdraw(20)
+        Else
+            Beep()
+            MsgBox("Insufficient funds.")
+        End If
+
     End Sub
 
     Private Sub W40_Click(sender As Object, e As EventArgs) Handles W40.Click
-        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
-        Quick_withrdraw(40)
+        If WAccount = "" Then
+            Beep()
+            MsgBox("Please select an account to withdraw from.")
+
+        ElseIf checkMoney(40, WAccount) Then
+            My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
+            Quick_withrdraw(40)
+        Else
+            Beep()
+            MsgBox("Insufficient funds.")
+        End If
     End Sub
 
     Private Sub W60_Click(sender As Object, e As EventArgs) Handles W60.Click
-        Quick_withrdraw(60)
+        If WAccount = "" Then
+            Beep()
+            MsgBox("Please select an account to withdraw from.")
+
+        ElseIf checkMoney(60, WAccount) Then
+            My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
+            Quick_withrdraw(60)
+        Else
+            Beep()
+            MsgBox("Insufficient funds.")
+        End If
     End Sub
 
     Private Sub W80_Click(sender As Object, e As EventArgs) Handles W80.Click
-        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
-        Quick_withrdraw(80)
+        If WAccount = "" Then
+            Beep()
+            MsgBox("Please select an account to withdraw from.")
+        ElseIf checkMoney(80, WAccount) Then
+            My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
+            Quick_withrdraw(80)
+        Else
+            Beep()
+            MsgBox("Insufficient funds.")
+        End If
     End Sub
 
     Private Sub W100_Click(sender As Object, e As EventArgs) Handles W100.Click
-        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
-        Quick_withrdraw(100)
+        If WAccount = "" Then
+            Beep()
+            MsgBox("Please select an account to withdraw from.")
+        ElseIf checkMoney(100, WAccount) Then
+            My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
+            Quick_withrdraw(100)
+        Else
+            Beep()
+            MsgBox("Insufficient funds.")
+        End If
     End Sub
 
     Private Sub W140_Click(sender As Object, e As EventArgs) Handles W140.Click
-        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
-        Quick_withrdraw(140)
+        If WAccount = "" Then
+            Beep()
+            MsgBox("Please select an account to withdraw from.")
+        ElseIf checkMoney(140, WAccount) Then
+            My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
+            Quick_withrdraw(140)
+        Else
+            Beep()
+            MsgBox("Insufficient funds.")
+
+        End If
     End Sub
 
     Private Sub W200_Click(sender As Object, e As EventArgs) Handles W200.Click
-        My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
-        Quick_withrdraw(200)
+        If WAccount = "" Then
+            Beep()
+            MsgBox("Please select an account to withdraw from.")
+        ElseIf checkMoney(200, WAccount) Then
+            My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
+            Quick_withrdraw(200)
+        Else
+            MsgBox("Insufficient funds.")
+            Beep()
+        End If
     End Sub
 
     Private Sub WithdrawReciptYes_Click(sender As Object, e As EventArgs) Handles WithdrawReciptYes.Click
         My.Computer.Audio.Play(Environment.CurrentDirectory + "\Print.wav")
         MaterialLabel2.Text = ("Now Printing")
+        Chequing.Checked = False
+        Savings.Checked = False
+        Dim balanceupdate As Integer
+        Dim removeD As String = PassField.Text.TrimStart(CChar("$"))
+        Int32.TryParse(removeD, balanceupdate)
+        balanceupdate = balanceupdate * (-1)
+        If WAccount = "s" Then
+            Balance.updateSavings(balanceupdate)
+        ElseIf WAccount = "c" Then
+            Balance.updateChecking(balanceupdate)
+        End If
+        WAccount = ""
         WithdrawReciptNo.Hide()
         WithdrawReciptYes.Hide()
         WithdrawTimer.Enabled = True
@@ -387,6 +532,18 @@ Public Class Withdraw
     Private Sub WithdrawReciptNo_Click(sender As Object, e As EventArgs) Handles WithdrawReciptNo.Click
         My.Computer.Audio.Play(Environment.CurrentDirectory + "\Windows Information Bar.wav")
         MaterialLabel2.Text = ("Receipt Not Needed")
+        Chequing.Checked = False
+        Savings.Checked = False
+        Dim balanceupdate As Integer
+        Dim removeD As String = PassField.Text.TrimStart(CChar("$"))
+        Int32.TryParse(removeD, balanceupdate)
+        balanceupdate = balanceupdate * (-1)
+        If WAccount = "s" Then
+            Balance.updateSavings(balanceupdate)
+        ElseIf WAccount = "c" Then
+            Balance.updateChecking(balanceupdate)
+        End If
+        WAccount = ""
         WithdrawReciptNo.Hide()
         WithdrawReciptYes.Hide()
         WithdrawTimer.Enabled = True
@@ -394,6 +551,7 @@ Public Class Withdraw
     End Sub
     Private Sub WithdrawTimer_Tick(sender As Object, e As EventArgs) Handles WithdrawTimer.Tick
         WithdrawTick = WithdrawTick + 1
+
         If WithdrawTick > 7 Then
             WithdrawTimer.Enabled = False
             WithdrawTick = 0
@@ -426,8 +584,10 @@ Public Class Withdraw
         WithdrawReciptNo.Hide()
         WithdrawReciptYes.Hide()
         W80.Show()
-        CustomAmountB.Show()
+        CashierC.Show()
         W200.Show()
+        Chequing.Checked = False
+        Savings.Checked = False
         W140.Show()
         W100.Show()
         W20.Show()
@@ -436,9 +596,10 @@ Public Class Withdraw
         PassKey1.Hide()
         PassKey2.Hide()
         PassKey3.Hide()
+        WAccount = ""
         PassKey4.Hide()
-        Chequing.Hide()
-        Savings.Hide()
+        Chequing.Show()
+        Savings.Show()
         SelectPayee.Hide()
         PassKey5.Hide()
         PassKey6.Hide()
@@ -478,6 +639,7 @@ Public Class Withdraw
 
     Private Sub SelectPayee_Click(sender As Object, e As EventArgs) Handles SelectPayee.Click
         If WAccount = "" Then
+            Beep()
             MsgBox("Please select an account to withdraw from.")
         ElseIf WAccount = "s" Then
             WithdrawReciptNo.Show()
